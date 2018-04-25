@@ -1,13 +1,15 @@
 ---
-layout: default
+layout: page
 ---
-<article>
-    <h1>카테고리 레이아웃</h1>
-    <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-    </header>
-
-    <div class="post-content">
-    {{ content }}
-    </div>
-</article>
+<h3>카테고리에 포함된 글들 </h3>
+<div>
+  {% if site.categories[page.category] %}
+    <ul class="tags">
+        {% for post in site.categories[page.category] %}
+        <li class="tag"><a class="tag-link" href="{{ site.baseurl }}{{post.url}}">{{post.title}}</a></li>
+        {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no posts for this categories.</p>
+  {% endif %}
+</div>

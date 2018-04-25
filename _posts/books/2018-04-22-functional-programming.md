@@ -2,8 +2,8 @@
 layout: post
 title:  "Functional programming"
 date:   2018-04-21 14:30:43 +0900
-categories: books
-tags: sw, book, javascript
+categories: [books]
+tags: [sw, book, javascript, tag1]
 ---
 
 # 1장 - 왜
