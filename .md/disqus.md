@@ -12,3 +12,18 @@ disqus:
     shortname: your short name
 ```
 
+# 
+
+### js code
+```js
+var disqus_config = function () {
+    this.page.url = "{{site.url}}{{page.url}}";  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = "{{site.url}}{{page.url}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+```
+
+###
+
+```ini
+url: "https://asfrom30.github.io"
+```
