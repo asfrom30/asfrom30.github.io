@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Books"
+date:   2018-04-21 14:30:43 +0900
+---
+<h1>카테고리에 포함된 글들 </h1>
+
+<!-- 여기서 페이지 for문을 돌려줘야 되는구나... -->
+<ul>
+	{% for post in site.categories.books %}
+	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+	{% endfor %}
+</ul>

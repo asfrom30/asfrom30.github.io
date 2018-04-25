@@ -41,3 +41,14 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+paginate: 2
+paginate_path: "/books/page:num/"
+paginate_path: "/categories/books/page:num/"
+
+plugins:
+  - jekyll-paginate
+
+
+
+  
