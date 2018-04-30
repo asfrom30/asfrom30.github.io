@@ -1,6 +1,5 @@
 # Disqus
-
-### shortname
+# shortname setting
 * https://desiredpersona.com/disqus-comments-jekyll/
 * https://help.disqus.com/installation/whats-a-shortname
 
@@ -12,8 +11,20 @@ disqus:
     shortname: your short name
 ```
 
-# 
+```
+# Disqus Comments
+disqus:
+    # Leave shortname blank to disable comments site-wide.
+    # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+    shortname: http-asfrom30-github-io
+```
 
+# Edit the RECOMMENDED CONFIGURATION VARIABLES
+### modify `_config.yml`
+
+```ini
+url: "https://asfrom30.github.io"
+```
 ### js code
 ```js
 var disqus_config = function () {
@@ -22,8 +33,3 @@ var disqus_config = function () {
 };
 ```
 
-###
-
-```ini
-url: "https://asfrom30.github.io"
-```
