@@ -10,7 +10,7 @@
     ```
 1. Jeykyll 설치
     ```
-    $ gem install jekyll bundler
+    $ gem install jekyll
     ```
 1. Init new jekyll
     ```
@@ -57,3 +57,29 @@ $ bundle exec jekyll serve
 * https://jamiekang.github.io/2017/04/28/add-tag-support/
 * https://nolboo.kim/blog/2014/01/09/upgrade-jekyll-github-blog/
 * http://blog.saltfactory.net/upgrad-github-pages-dependencies-in-jekyll/
+
+
+
+# Code Styler with Prism.js
+
+```html
+<pre><code class="language-js">
+...
+</code></pre>
+```
+
+```html
+<pre data-src=""></pre>
+```
+### Power shell
+
+```html
+<pre class="command-line" data-user="" data-host="" data-src=""><code class="language-powershell">
+</code></pre>
+```
+
+### Bash
+```html
+<pre class="command-line" data-user="" data-host="" data-src=""><code class="language-bash">
+</code></pre>
+```
