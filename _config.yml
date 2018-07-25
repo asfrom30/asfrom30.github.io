@@ -24,9 +24,16 @@ url: "https://asfrom30.github.io" # the base hostname & protocol for your site, 
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# Themes
+theme: minima
 # Build settings
 markdown: kramdown
-theme: minima
+
+highlighter: none
+kramdown:
+   syntax_highlighter_opts:
+      disable : true
+
 plugins:
   - jekyll-feed
 

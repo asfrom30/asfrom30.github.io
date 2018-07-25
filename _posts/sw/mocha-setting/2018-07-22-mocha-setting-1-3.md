@@ -6,6 +6,27 @@ categories: []
 tags: []
 ---
 
+
+{: .line-numbers}
+```js
+var myFunction = function(){
+  alert('hello world');
+}
+```
+
+{: .line-numbers}
+```css
+p { color: red }
+```
+
+{: .command-line data-prompt="c:sandbox>"}
+```powershell
+a
+b
+c
+d
+```
+
 세개의 포스팅에 걸쳐서 mocha framework를 사용하는 법을 정리해 보았다. 첫번째는 커맨드 쉘로 모카를 실행하는 방법을 얘기할 것이고. 두번째는 전역에서 쓸 변수나 config 파일을 등록하는 방법. 세번째는 npm script로 만들고 재사용을 위해서 파일(mocha.opt)로 mocha 설정을 저장하는 법으로 나누어 설명하겠다.
 
 # 두줄의 명령어로 mocha 실행
@@ -110,4 +131,3 @@ $ mocha app/**/*.spec.js
 
 다음글
 이전글
-
