@@ -16,6 +16,7 @@ tags: []
 ```powershell
 mocha --version
 ```
+
 제대로 설치가 되었다면 바로 테스트코드를 작성한다. 루트 폴더에 test.js를 만든다.
 
 
