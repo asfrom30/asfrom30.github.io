@@ -4,6 +4,8 @@ author: asfrom30
 title:  "Mocha Test Framework Basic - 3/3"
 categories: []
 tags: []
+dev-category: 'sw'
+dev-tags: ['javscript', 'testing', 'env']
 ---
 
 # Npm script에 등록

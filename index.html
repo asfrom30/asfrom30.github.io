@@ -1,13 +1,91 @@
 ---
-layout: post
-title:  "Books"
-date:   2018-04-21 14:30:43 +0900
+layout: default
 ---
-<h1>카테고리에 포함된 글들 </h1>
+<div class="home">
+  <div class="home-menu">
+    <div class="home-menu__collapse-title">| About Me</div>
+    <div class="home-menu__collapse-list">
+      <ul>
+        <li><a href="/cover-letter">Cover Letter</a></li>
+        <li><a href="/resume">Resume</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="home-menu__collapse-title">Portfolio</div>
+      <div class="home-menu__collapse-list">
+        <ul>
+          <li>Developing</li>
+          <li>Running</li>
+          <li>Complete</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="home-menu__collapse-title">Posts</div>
+      <div class="home-menu__collapse-list">
+        <ul>
+          <li>
+            <a href="/posts/dev">View all list</a>
+          </li>
+          <li>Recent post 1</li>
+          <li>Recent post 2</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="home-menu__collapse-title">Art Series</div>
+    </div>
+    <div>
+      <div class="home-menu__collapse-title">Third Value</div>
+      <div class="home-menu__collapse-list">
+        <ul>
+          <li><a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=8">Camping</a></li>
+          <li>Guitar</li>
+          <li>Surfing</li>
+          <li>Books</li>
+        </ul>
+      </div>
+    </div>
+    <!-- <div>
+      <div class="home-menu__collapse-title">SNS</div>
+      <div class="home-menu__collapse-list">
+        <ul>
+          <li>facebook</li>
+          <li>twitter</li>
+          <li>Instagram</li>
+          <li>Git hub</li>
+          <li>linked in</li>
+        </ul>
+      </div>
+    </div> -->
+  </div>
+</div>
 
-<!-- 여기서 페이지 for문을 돌려줘야 되는구나... -->
-<ul>
-	{% for post in site.categories.books %}
-	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-	{% endfor %}
-</ul>
+<style>
+  .home-menu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(10%, -50%);
+  }
+
+  .home-menu__collapse-title {
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid #eee;
+    /* cursor: pointer; */
+    color: #fff;
+    padding: 10px;
+    margin: 0px;
+    max-height: 40px;
+    overflow: hidden;
+    transition: all 0.4s;
+
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .home-menu__collapse-list li {
+    padding: 5px;
+    margin-left: 20px;
+  }
+</style>

@@ -4,6 +4,9 @@ docs:
 - title: About
   url: /about
 
+- title: Post
+  url: /posts
+
 - title: Category
   url: /categories
 

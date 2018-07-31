@@ -1,0 +1,38 @@
+---
+layout: none
+# description
+# JSON.parse() does not allow trailing commas
+---
+
+
+[
+{% for post in site.posts %}
+  {
+    "title": "{{post.title}}",
+    "parent": "{{post.parent}}",
+    "categories": "{{post.categories}}",
+    "tags": [
+      {% for tag in post.tags %}
+        "{{tag}}"
+        {% if forloop.last == false %}
+        ,
+        {% endif %}
+      {% endfor %}
+    ],
+    {% comment %} category and tags for dev {% endcomment %}
+    "dev-category": "{{post.dev-category}}",
+    "dev-tags": [
+      {% for tag in post.dev-tags %}
+      "{{tag}}"
+      {% if forloop.last == false %}
+      ,
+      {% endif %}
+      {% endfor %}
+    ],
+    "url": "{{site.baseurl}}{{post.url}}"
+  }
+  {% if forloop.last == false %}
+  ,
+  {% endif %}
+{% endfor %}
+]

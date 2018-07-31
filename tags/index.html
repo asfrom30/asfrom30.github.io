@@ -2,3 +2,16 @@
 layout: page
 title: Tags
 ---
+
+<!-- show all tags -->
+
+<div>hi</div>
+
+<h1>Tag</h1>
+{{site.tags}}
+
+<h1>Software Tags</h1>
+{% for swTags in site.data.tag-sorter.sw.tags %}
+  <div>{{swTags}}</div>
+{% endfor %}
+

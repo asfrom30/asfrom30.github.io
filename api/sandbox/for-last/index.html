@@ -1,0 +1,12 @@
+---
+layout: default 
+---
+
+  {% for post in site.posts %}
+  <div>
+    {{post.title}}
+    {% if forloop.last == true %}
+    'this is last'
+    {% endif %}
+  </div>
+  {% endfor %}

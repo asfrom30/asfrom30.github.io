@@ -1,0 +1,62 @@
+---
+layout: default
+title: My page
+permalink: /posts/dev
+---
+
+<div class="padding-for-header"></div>
+<h1>Category Filter</h1>
+<div class="category-and-tag-filter">
+  <div class="category-filter">
+    <input type="radio" name="parent" value="mech">Mechanical</input>
+    <input type="radio" name="parent" value="sw" checked="checked">Software</input>
+    <input type="radio" name="parent" value="elec">Electronic</input>
+  </div>
+  <div class="tags-filter--sw">
+    {% for tag in site.data.dev-sorter.tags.sw %}
+    <input type="checkbox" value="{{tag.value}}">{{tag.title}}</input>
+    {% endfor %}
+  </div>
+  <div class="tags-filter--mech">
+    {% for tag in site.data.dev-sorter.tags.mech %}
+    <input type="checkbox">{{tag.title}}</input>
+    {% endfor %}
+  </div>
+  
+  
+</div>
+
+<div>
+  <h1> text search in title </h1>
+  <input type="textfield" ></input>
+<h1> Filtered Posts </h1>
+
+<div class="filtered-posts-container">
+</div>
+
+
+
+<script src="/assets/js/app/dev.posts.ctrl.js"></script>
+
+
+<style>
+.filtered-post {
+  height: 150px;
+  border: 1px solid white;
+  background-color: black;
+  position: relative;
+}
+
+.filtered-post * {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 40px;
+  color: white;
+}
+
+.filtered-post__title {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+</style>

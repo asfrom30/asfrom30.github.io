@@ -83,3 +83,22 @@ $ bundle exec jekyll serve
 <pre class="command-line" data-user="" data-host="" data-src=""><code class="language-bash">
 </code></pre>
 ```
+
+
+# Todo
+
+### bootstrap or material design
+
+
+### fetch all post summary and sort by select
+* sorting algorithm practice
+
+
+### Replace `/api/posts` to serve Json feature
+* https://arcath.net/2016/02/ajax-page-loading-in-jekyll-or-any-static-site/
+
+
+
+# Todo animation
+### home-menu
+* https://codepen.io/nodws/pen/lahqf

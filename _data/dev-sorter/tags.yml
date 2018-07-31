@@ -1,0 +1,17 @@
+sw:
+  - title : javascript
+    imgUrl :
+  - title: es6
+    value: es6
+  - title: es5
+    value: es5
+  - title: es4
+    value: es4
+mech:
+  - title : draft
+    imgUrl : 
+  - title : solid edge
+    imgUrl :
+  - title : Ug NX
+    imgUrl :
+elec:
