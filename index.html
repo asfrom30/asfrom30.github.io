@@ -1,101 +1,127 @@
 --- 
-layout: default 
+layout: default-without-nav
 ---
 <div class="home">
-  <div class="home-menu">
-    <div class="about-me">
-      <div class="home-menu__collapse-title" onclick="toggleCollapseList('about-me')">
-        <span>| About Me</span>
-        <span>></span>
-      </div>
-      <div class="home-menu__collapse-list">
-        <ul>
-          <li>
-            <a href="/about-me/welcome">Welcome</a>
-          </li>
-          <li>
-            <a href="/cover-letter">Cover Letter</a>
-          </li>
-          <li>
-            <a href="/resume">Resume</a>
-          </li>
-          <li>
-            <a href="/assay">Assay</a>
-          </li>
-        </ul>
-      </div>
+  <div class="home__center">
+    <div class="side-image">
     </div>
-    <div class="portfolio">
-      <div class="home-menu__collapse-title" onclick="toggleCollapseList('portfolio')">
-        <span>| Portfolio</span>
-        <span>></span>
-      </div>
-      <div class="home-menu__collapse-list">
-        <ul>
-          <li>
-            <a>Developing</a>
-          </li>
-          <li>
-            <a>Running</a>
-          </li>
-          <li>
-            <a>Complete</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="dev-posts">
-      <div class="home-menu__collapse-title" onclick="toggleCollapseList('dev-posts')">
-        <span>| Dev-Posts</span>
-        <span>></span>
-      </div>
-      <div class="home-menu__collapse-list">
-        <ul>
-          {% for post in site.categories.dev limit:3 %}
-          <article class="archive-item">
+    <div class="home-menu">
+      <div class="about-me">
+        <div class="home-menu__collapse-title" onclick="toggleCollapseList('about-me')">
+          <span>| About Me</span>
+          <span>></span>
+        </div>
+        <div class="home-menu__collapse-list">
+          <ul>
             <li>
-              <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+              <a href="/about-me/welcome">Welcome</a>
             </li>
-          </article>
-          {% endfor %}
-          <li>
-            <a href="/posts/dev">and see more {{site.categories.dev.size}} posts</a>
-          </li>
-        </ul>
+            <li>
+              <a href="/cover-letter">Cover Letter</a>
+            </li>
+            <li>
+              <a href="/resume">Resume</a>
+            </li>
+            <li>
+              <a href="/assay">Assay</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="dojos disable" onclick="toggleCollapseList('dojos')">
-      <div class="home-menu__collapse-title">
-        <span>| Dojos</span>
-        <span>></span>
+      <div class="portfolio">
+        <div class="home-menu__collapse-title" onclick="toggleCollapseList('portfolio')">
+          <span>| Portfolio</span>
+          <span>></span>
+        </div>
+        <div class="home-menu__collapse-list">
+          <ul>
+            <li>
+              <a>Developing</a>
+            </li>
+            <li>
+              <a>Running</a>
+            </li>
+            <li>
+              <a>Complete</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="home-menu__collapse-list">
+      <div class="dev-posts">
+        <div class="home-menu__collapse-title" onclick="toggleCollapseList('dev-posts')">
+          <span>| Dev-Posts</span>
+          <span>></span>
+        </div>
+        <div class="home-menu__collapse-list">
+          <ul>
+            {% for post in site.categories.dev limit:3 %}
+            <article class="archive-item">
+              <li>
+                <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+              </li>
+            </article>
+            {% endfor %}
+            <li>
+              <a href="/posts/dev">and see more {{site.categories.dev.size}} posts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="dojos disable" onclick="toggleCollapseList('dojos')">
+        <div class="home-menu__collapse-title">
+          <span>| Dojos</span>
+          <span>></span>
+        </div>
+        <div class="home-menu__collapse-list">
 
+        </div>
       </div>
-    </div>
-    <div class="art-series">
-      <div class="home-menu__collapse-title" onclick="toggleCollapseList('art-series')">
-        <span>| Art series</span>
-        <span>></span>
+      <div class="art-series">
+        <div class="home-menu__collapse-title" onclick="toggleCollapseList('art-series')">
+          <span>| Art series</span>
+          <span>></span>
+        </div>
       </div>
-    </div>
-    <div class="third-value" onclick="toggleCollapseList('third-value')">
-      <div class="home-menu__collapse-title">
-        <span>| Third Value</span>
-        <span>></span>
+      <div class="third-value">
+        <div class="home-menu__collapse-title"  onclick="toggleCollapseList('third-value')">
+          <span>| Third Value</span>
+          <span>></span>
+        </div>
+        <div class="home-menu__collapse-list">
+          <ul>
+            <li>
+              <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=8">Camping</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/explore/tags/asfrom30_writing/">Writing</a>
+            </li>
+            <li>
+              <a>Surfing</a>
+            </li>
+            <li>
+              <a>Books</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="home-menu__collapse-list">
-        <ul>
-          <li>
-            <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=8">Camping</a>
-          </li>
-          <li>
-            <a>Writing</a>
-          </li>
-          <li><a>Developing</a></li>
-          <li>Surfing</li>
-          <li>Books</li>
-        </ul>
+      <div class="Gallery">
+        <div class="home-menu__collapse-title"  onclick="toggleCollapseList('Gallery')">
+          <span>| Gallery</span>
+          <span>></span>
+        </div>
+        <div class="home-menu__collapse-list">
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/explore/tags/asfrom30_landscape/">Landscape</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/explore/tags/asfrom30_writing/">Writing</a>
+            </li>
+            <li class="disable">
+              <a>Camping</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -114,22 +140,35 @@ layout: default
 </script>
 <style>
   .home {
-    background-image: url('/assets/images/background-cover/discovery-launch-liftoff-23764.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-color: black; 
     width: 100vw;
     max-width: 100%;
     height: 100vh;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .home-menu {
+  .home__center {
+    display: flex;
+  }
+  
+  .side-image {
+    background-image: url('/assets/images/background-cover/astronomy-crater-dark.jpg');
+    width: 170px;
+    height: 300px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  /* .home-menu {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(10%, -50%);
-  }
+  } */
 
   .home-menu__collapse-title {
     background-color: rgba(255, 255, 255, 0);
@@ -168,9 +207,10 @@ layout: default
     color: rgba(255, 255, 255, 1);
   }
 
-  /* .disable *{
-    opacity: 0.5;
-  } */
+  .disable *, .disable a:hover, a:active{
+    color: rgba(255, 255, 255, 0.5);
+  }
+
   .highlight {
     color: rgba(255, 255, 255, 1);
   }

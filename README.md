@@ -12,6 +12,10 @@ $ bundle exec jekyll serve --livereload
     * pagenate를 적용했더니 이게 그냥 계속 늘어난다. /page2 /page3 url에도 네비게이션에 자동으로 삽입된다.
 
 
+# Next Task
+* dev-posts sorter
+* make footer
+
 # Todo
 
 ### make footer
