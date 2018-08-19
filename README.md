@@ -13,6 +13,8 @@ $ bundle exec jekyll serve --livereload
 
 
 # Next Task
+* password organize
+* wordlist from iphone anylist app
 * dev-posts sorter
 * make footer
 

@@ -29,7 +29,8 @@ layout: none
       {% endif %}
       {% endfor %}
     ],
-    "url": "{{site.baseurl}}{{post.url}}"
+    "url": "{{site.baseurl}}{{post.url}}",
+    "date": "{{post.date}}"
   }
   {% if forloop.last == false %}
   ,

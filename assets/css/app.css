@@ -1,4 +1,33 @@
-/** nav bar **/
+
+footer {
+  margin-top: 60px;
+}
+
+
+/** padding-for-header **/
+.padding-for-header {
+  padding-top: 80px;
+}
+
+body {
+  background-color: #00171F;
+  color: white;
+}
+
+.content {
+  max-width: 960px;
+  margin: auto;
+}
+
+@media (max-width: 960px) {
+  .content {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* nav */
 .nav__container {
   position: fixed;
   top: 0;
@@ -22,4 +51,3 @@
   font-size: 35px;
 }
 
-/* home */

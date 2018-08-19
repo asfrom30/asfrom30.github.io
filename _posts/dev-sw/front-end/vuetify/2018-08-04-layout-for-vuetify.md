@@ -4,7 +4,7 @@ author: asfrom30
 title: Vuetify Layout Master
 slug:  
 dev-category: 'sw'
-dev-tags: ['front-end', 'vue', 'vuetify', 'layout'] 
+dev-tags: ['front-end', 'vue', 'vuetify'] 
 categories: [dev, 'software']
 tags: []
 ---

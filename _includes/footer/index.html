@@ -1,34 +1,224 @@
-<footer class="site-footer h-card">
-  <!-- <data class="u-url" href="{{ "/" | relative_url }}"></data>
+<footer>
+  <div class="container-for-align">
+    <div class="footer_head">
+      <div class="head__main text-align-center">asfrom30 </div>
+      <!-- <div class="head__main text-align-center"> <pre style="color:white"><span>&lt;</span><span style="color:rgb(235, 82, 120)">asfrom30</span><span style="color: rgb(43, 255, 0)"> class</span>=<span style="color: rgb(255, 251, 0)">"first"</span>&gt;</pre></div> -->
+      <div class="head__sub text-align-center">Christian, Mechanical designer, Software engineer, Camper, Explorer</div>
+    </div>
+    <div class="footer__content flex f-w-around">
+      <div class="w-30-pct">
 
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
       </div>
+      <div class="w-30-pct">
 
-      <div class="footer-col footer-col-2">
-        {%- include /utils/social/index.html -%}
       </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
+      <div class="contact-container w-30-pct">
+        <div>
+          <div class="contact-container__title">
+            <i class="material-icons"> location_on </i>
+            <span class="p-l-3 f-w-900">Home</span>
+          </div>
+          <div class="contact-container__content">
+            Baekhyeon-ro, Bundang-gu, Seongnam-si, Gyeonggi-do
+          </div>
+        </div>
+        <div>
+          <div class="contact-container__title">
+            <i class="material-icons"> location_on </i>
+            <span class="p-l-3 f-w-900">Work</span>
+          </div>
+          <div class="contact-container__content">
+            Pangyo-ro, Bundang-gu, Seongnam-si, Gyeonggi-do
+          </div>
+        </div>
+        <div>
+          <div class="contact-container__title">
+            <i class="material-icons">email</i>
+            <span class="p-l-3 f-w-900">E-mail</span>
+          </div>
+          <div class="contact-container__content">
+            asfrom30@gmail.com
+          </div>
+        </div>
       </div>
     </div>
-
-  </div> -->
+    <div class="signature">
+      <p>© 2018 <a class="remove-default" href="/">asfrom30</a> ALL RIGHTS RESERVED</p>
+      <p>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook"></i>
+        <a href="https://www.linkedin.com/in/doyoon-kim-863b15143/"><i class="fab fa-linkedin-in"></i></a>
+        <i class="fab fa-twitter"></i>
+        <a href="https://github.com/asfrom30"><i class="fab fa-github"></i></a>
+      </p>
+      <p>Made with
+        <i class="much-heart"></i> by
+        <span class="f-w-b">God</span>
+      </p>
+    </div>
+  </div>
 </footer>
+
+<style>
+  /* footer */
+
+  footer {
+    background-color: black;
+    padding-top: 30px;
+    overflow: hidden;
+  }
+
+  .container-for-align {
+    margin: auto;
+    width: 80%;
+    max-width: 960px;
+  }
+
+  @media (max-width: 960px) {
+    .container-for-align {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .footer_head {
+    font-family: 'Nanum Gothic', sans-serif;
+    border-bottom: 1px solid gray;
+    padding-bottom: 18px;
+  }
+
+  footer .head__main {
+    font-weight: 900;
+    font-size: 32px;
+  }
+
+  @media (max-width: 960px) {
+    footer .head__main {
+      font-size: 20px;
+    }
+  }
+
+  footer .head__sub {
+    font-size: 18px;
+    margin-top: 18px;
+  }
+
+  @media (max-width: 960px) {
+    footer .head__sub {
+      font-size: 12px;
+      margin-top: 12px;
+    }
+  }
+
+  .footer__content {
+    margin-top: 20px;
+  }
+  .contact-container {
+    color: #aaaaaa;
+  }
+  .contact-container > div {
+    margin-bottom: 20px;
+  }
+  .contact-container span {
+    line-height: 24px;
+  }
+  .contact-container i {
+    font-size: 16px;
+  }
+  @media (max-width: 960px) {
+    .contact-container i {
+      font-size: 12px;
+    }
+  }
+
+  .contact-container__title {
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-container__content {
+    font-size: 16px;
+    padding-left: 24px;
+    line-height: 24px
+  }
+  @media (max-width: 960px) {
+    .contact-container__content {
+      padding-left: 6px;
+      line-height: 14px;
+      font-size: 12px;
+    }
+  }
+
+  .signature {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .signature p {
+    text-align: center;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 16px;
+    color: #AAAAAA;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 960px) {
+    .signature p {
+      font-size: 14px;
+    }
+  }
+
+  .signature i {
+    font-size: 20px;
+    margin: 0 3px;
+  }
+  @media (max-width: 960px) {
+    .signature i {
+      font-size: 16px;
+    }
+  }
+
+  .signature .much-heart {
+    display: inline-block;
+    position: relative;
+    margin: 0 4px;
+    height: 10px;
+    width: 10px;
+    background: #AC1D3F;
+    border-radius: 4px;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .signature .much-heart::before,
+  .signature .much-heart::after {
+    display: block;
+    content: '';
+    position: absolute;
+    margin: auto;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background: #AC1D3F;
+    top: -4px;
+  }
+
+  .signature .much-heart::after {
+    bottom: 0;
+    top: auto;
+    left: -4px;
+  }
+
+  .signature a {
+    color: #AAAAAA;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .signature a:hover {
+    color:white;
+  }
+
+</style>

@@ -1,4 +1,4 @@
---- 
+---
 layout: default-without-nav
 ---
 <div class="home">
@@ -25,6 +25,7 @@ layout: default-without-nav
             <li>
               <a href="/assay">Assay</a>
             </li>
+            
           </ul>
         </div>
       </div>
@@ -47,6 +48,13 @@ layout: default-without-nav
           </ul>
         </div>
       </div>
+      <div class="posts">
+        <div class="home-menu__collapse-title" onclick="toggleCollapseList('posts')">
+          <span>| Assay</span>
+        </div>
+        <!-- <div class="home-menu__collapse-list">
+        </div> -->
+      </div>
       <div class="dev-posts">
         <div class="home-menu__collapse-title" onclick="toggleCollapseList('dev-posts')">
           <span>| Dev-Posts</span>
@@ -67,45 +75,58 @@ layout: default-without-nav
           </ul>
         </div>
       </div>
-      <div class="dojos disable" onclick="toggleCollapseList('dojos')">
+      <!-- <div class="dojos disable" onclick="toggleCollapseList('dojos')">
         <div class="home-menu__collapse-title">
           <span>| Dojos</span>
           <span>></span>
         </div>
         <div class="home-menu__collapse-list">
-
         </div>
-      </div>
-      <div class="art-series">
-        <div class="home-menu__collapse-title" onclick="toggleCollapseList('art-series')">
-          <span>| Art series</span>
-          <span>></span>
-        </div>
-      </div>
+      </div> -->
       <div class="third-value">
-        <div class="home-menu__collapse-title"  onclick="toggleCollapseList('third-value')">
+        <div class="home-menu__collapse-title" onclick="toggleCollapseList('third-value')">
           <span>| Third Value</span>
           <span>></span>
         </div>
         <div class="home-menu__collapse-list">
           <ul>
             <li>
-              <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=8">Camping</a>
+              <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=8">Camping Location</a>
+            </li>
+
+            <li>
+              <a>Playing Guitar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="books">
+        <div class="home-menu__collapse-title" onclick="toggleCollapseList('books')">
+          <span>| Books</span>
+          <span>></span>
+        </div>
+        <div class="home-menu__collapse-list">
+          <ul>
+            <li>
+              <a>My favorites</a>
             </li>
             <li>
-              <a href="https://www.instagram.com/explore/tags/asfrom30_writing/">Writing</a>
+              <a>Art Series</a>
             </li>
             <li>
-              <a>Surfing</a>
+              <a>Read books</a>
             </li>
             <li>
-              <a>Books</a>
+              <a>Dev Books</a>
+            </li>
+            <li>
+              <a>Dev Book Queue</a>
             </li>
           </ul>
         </div>
       </div>
       <div class="Gallery">
-        <div class="home-menu__collapse-title"  onclick="toggleCollapseList('Gallery')">
+        <div class="home-menu__collapse-title" onclick="toggleCollapseList('Gallery')">
           <span>| Gallery</span>
           <span>></span>
         </div>
@@ -119,6 +140,9 @@ layout: default-without-nav
             </li>
             <li class="disable">
               <a>Camping</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/asfrom30_log">Monologue Twitter</a>
             </li>
           </ul>
         </div>
@@ -140,7 +164,7 @@ layout: default-without-nav
 </script>
 <style>
   .home {
-    background-color: black; 
+    background-color: black;
     width: 100vw;
     max-width: 100%;
     height: 100vh;
@@ -153,7 +177,7 @@ layout: default-without-nav
   .home__center {
     display: flex;
   }
-  
+
   .side-image {
     background-image: url('/assets/images/background-cover/astronomy-crater-dark.jpg');
     width: 170px;
@@ -199,15 +223,20 @@ layout: default-without-nav
     margin-left: 20px;
   }
 
-  a, a:focus, a:active {
+  a,
+  a:focus,
+  a:active {
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
   }
+
   a:hover {
     color: rgba(255, 255, 255, 1);
   }
 
-  .disable *, .disable a:hover, a:active{
+  .disable *,
+  .disable a:hover,
+  a:active {
     color: rgba(255, 255, 255, 0.5);
   }
 

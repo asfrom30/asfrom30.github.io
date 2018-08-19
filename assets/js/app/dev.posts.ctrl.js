@@ -22,15 +22,9 @@ function initForDev() {
 function init() {
   fetchAllPosts();
   addListenerToAllCategoryFilterInputElems();
-}
 
-function addListenerToAllCategoryFilterInputElems() {
-  $('.category-and-tag-filter input').click(function() {
-    const selects = getSelectsObjFromFilter();
-    const filteredPosts = filterPosts(selects);
-    inflatePosts(filteredPosts);
-    console.log(filteredPosts);
-  });
+  // url query parser
+
 }
 
 /* Controller */
@@ -38,6 +32,14 @@ function fetchAllPosts() {
   $.ajax(baseUrl).done(function(data) {
     const res = JSON.parse(data);
     setGlobalPosts(res);
+  });
+}
+
+function addListenerToAllCategoryFilterInputElems() {
+  $('.category-and-tag-filter input').click(function() {
+    const selects = getSelectsObjFromFilter();
+    const filteredPosts = filterPosts(selects);
+    inflatePosts(filteredPosts);
   });
 }
 
@@ -56,10 +58,13 @@ function filterPosts(selects) {
   const filteredPosts = [];
   const option = 'and';
   // const option = 'or';
+  var selectedDevCategory = selects.category;
+  if(selectedDevCategory === 'all') return posts;
+
   for(let post of posts) {
     const categoryInPost = getCategoryFromPost(post);
     const tagsInPost = getTagsFromPost(post);
-    if(categoryInPost !== selects.category) {
+    if(selectedDevCategory !== 'all' && categoryInPost !== selectedDevCategory) {
       continue;
     }
     // and condition
@@ -87,16 +92,24 @@ function inflatePosts(posts) {
 
 /* View */
 function makePostHtml(post) {
-  const html =
+  let date = new Date(post.date);
+
+  let html =
   `<a href="${post.url}">`
-    + `<div class="filtered-post" style="padding-top:20px">`
+    + `<div class="filtered-post">`
     // + `<div class="filtered-post__child-post-count">${post.childPost}</div>`
     + `<div class="filtered-post__title">${post.title}</div>`
-    // + `<div>`
-    //   + `<div class="filtered-post__tags">${post.tags}</div>`
-    //   + `<div class="filtered-post__date">${post.date}</div>`
-    // + `</div>`
-  + `</div></a>`
+    + `<div class="filtered-post__date">${date.getFullYear()}/${date.getMonth()}/${date.getDay()}</div>`
+    + `<div class="filtered-post__tags-container">`;
+
+  // append tags
+  const devTags = post['dev-tags'];
+  for (let tag of devTags) {
+    html += `<img class="filtered-post__tags" alt="${tag}" src="/assets/images/tech-stack/${tag}.png">`;
+  }
+
+  html += `</div>`;
+  + `</div></a>`;
   return html;
 }
 

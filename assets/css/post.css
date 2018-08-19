@@ -68,3 +68,7 @@
   color: #676767;
   margin-left: -1em;
 }
+
+.separator {
+  border-bottom: 1px dashed rgba(#FAFAFA,.15);
+}
