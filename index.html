@@ -7,7 +7,7 @@ layout: default-without-nav
     </div>
     <div class="home-menu">
       <div class="about-me">
-        <div class="home-menu__collapse-title" onclick="toggleCollapseList('about-me')">
+        <div class="home-menu__collapse-title" onclick="toggleCollapseList('about-me', event)">
           <span>| Index</span>
           <span>></span>
         </div>
@@ -19,12 +19,12 @@ layout: default-without-nav
             <li>
               <a href="/about-me/brief-history">About me</a>
             </li>
-            
+
           </ul>
         </div>
       </div>
       <div class="portfolio">
-        <div class="home-menu__collapse-title" onclick="toggleCollapseList('portfolio')">
+        <div class="home-menu__collapse-title" onclick="toggleCollapseList('portfolio', event)">
           <span>| Career</span>
           <span>></span>
         </div>
@@ -46,14 +46,14 @@ layout: default-without-nav
         </div>
       </div>
       <div class="posts">
-        <div class="home-menu__collapse-title" onclick="toggleCollapseList('posts')">
+        <div class="home-menu__collapse-title" onclick="toggleCollapseList('posts', event)">
           <a href="/assay"><span>| Assay</span></a>
         </div>
         <!-- <div class="home-menu__collapse-list">
         </div> -->
       </div>
       <div class="dev-posts">
-        <div class="home-menu__collapse-title" onclick="toggleCollapseList('dev-posts')">
+        <div class="home-menu__collapse-title" onclick="toggleCollapseList('dev-posts', event)">
           <span>| Dev-Posts</span>
           <span>></span>
         </div>
@@ -81,14 +81,15 @@ layout: default-without-nav
         </div>
       </div> -->
       <div class="third-value">
-        <div class="home-menu__collapse-title" onclick="toggleCollapseList('third-value')">
+        <div class="home-menu__collapse-title" onclick="toggleCollapseList('third-value', event)">
           <span>| Third Value</span>
           <span>></span>
         </div>
         <div class="home-menu__collapse-list">
           <ul>
             <li>
-              <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=8">Camping Location</a>
+              <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=8">Camping
+                Location</a>
             </li>
 
             <li>
@@ -98,7 +99,7 @@ layout: default-without-nav
         </div>
       </div>
       <div class="books">
-        <div class="home-menu__collapse-title" onclick="toggleCollapseList('books')">
+        <div class="home-menu__collapse-title" onclick="toggleCollapseList('books', event)">
           <span>| Books</span>
           <span>></span>
         </div>
@@ -123,7 +124,8 @@ layout: default-without-nav
         </div>
       </div>
       <div class="Gallery">
-        <div class="home-menu__collapse-title" onclick="toggleCollapseList('Gallery')">
+        <div class="home-menu__collapse-title" onclick="toggleCollapseList('Gallery', event)">
+          <!-- <div class="home-menu__collapse-title" onclick="toggleCollapseList(event)"> -->
           <span>| Gallery</span>
           <span>></span>
         </div>
@@ -149,14 +151,21 @@ layout: default-without-nav
 </div>
 
 <script>
-  function toggleCollapseList(containerClassName) {
+  function toggleCollapseList(containerClassName, event) {
+    const $_target = $(event.target);
+    const flag = $_target.hasClass('highlight');
+
     // highlight clicked title
     $('.highlight').removeClass('highlight');
-    $(`.${containerClassName} .home-menu__collapse-title`).addClass('highlight');
+   
+    if (flag) {
+      $(`.${containerClassName} .home-menu__collapse-list`).hide('slow')
+    } else {
+      $(`.${containerClassName} .home-menu__collapse-title`).addClass('highlight');
+      $(`.home-menu__collapse-list`).hide('slow'); // collapse all
+      $(`.${containerClassName} .home-menu__collapse-list`).toggle('slow');
+    }
 
-    // collapse list and spread out
-    $(`.home-menu__collapse-list`).hide('slow');
-    $(`.${containerClassName} .home-menu__collapse-list`).toggle('slow');
   }
 </script>
 <style>
@@ -182,6 +191,11 @@ layout: default-without-nav
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
+  }
+
+  .home-menu {
+    height: 300px;
+    width: 170px;
   }
 
   /* .home-menu {
