@@ -72,3 +72,7 @@
 .separator {
   border-bottom: 1px dashed rgba(#FAFAFA,.15);
 }
+
+.post-body img {
+  max-width: 100%;
+}

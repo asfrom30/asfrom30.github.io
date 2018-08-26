@@ -9,7 +9,7 @@ body {
 }
 
 @media (max-width: 960px) {
-  .body {
+  body {
     background-color: black;
   }
 }
