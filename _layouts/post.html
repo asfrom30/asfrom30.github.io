@@ -6,26 +6,19 @@ author: asfrom30
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
   <div class="padding-for-header"></div>
   <header class="post-header">
-    <div class="post-header__container">
-      <h1 itemprop="name headline">{{ page.title | escape }}</h1>
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%} {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%} •
-      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span class="p-author h-card" itemprop="name">by {{ page.author }}</span>
-      </span>
-      {%- endif -%}
+    <div>
+      <div class="post-header__title"> {{ page.title | escape }}</div>
+      <div class="post-header__meta">
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%} {{ page.date | date: date_format }}
+        </time>
+        {%- if page.author -%} •
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span class="p-author h-card" itemprop="name">by {{ page.author }}</span>
+        </span>
+        {%- endif -%}
+      </div>
     </div>
-
-    <div class="post-header__meta">
-      <div class="post-header__date"></div>
-      <div class="post-header__"></div>
-    </div>
-    <div class="post-header__dev-metas">
-
-    </div>
-
     <!-- Category Link -->
     <!-- <div class="post-categories">
       {% if post %} {% assign categories = post.categories %} {% else %} {% assign categories = page.categories %} {% endif %}
@@ -42,12 +35,14 @@ author: asfrom30
     </div> -->
   </header>
 
-  <div class="post-body post-body--content" itemprop="articleBody">
-    {{ content }}
+  <div class="post-content post-content__outer" itemprop="articleBody">
+    <div class="post-content__inner">
+      {{ content }}
+    </div>
   </div>
 
   <!-- Load disqus comments -->
-  <div class="post-body post-body--comment">
+  <div class="post-body post-comment">
     {%- if site.disqus.shortname -%} {%- include /utils/disqus-comments/index.html -%} {%- endif -%}
   </div>
 

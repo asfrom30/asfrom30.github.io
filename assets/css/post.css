@@ -1,67 +1,66 @@
 /** post header **/
-
 .post-header {
-  width: 100%;
-  height: 300px;
   background-color: black;
   color: white;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.post-header__container {
-  max-width: 50%;
-  max-height: 100%;
-}
-
-.post-header h1 {
-  font-size: 32px;
+  font-size: 42px;
+  line-height: 2em;
   font-family: 'Black Han Sans', sans-serif;
+  white-space: nowrap;
 }
 
-@media only screen and (max-width: 600px) {
-  .post-header {
-    height: 100px;
-  }
+.post-header__meta {
+  text-align: right;
+  font-size: 18px;
 }
 
-/** post content **/
-.post-body {
+.post-content__outer {
   width: 100%;
-  max-width: 600px;
+  background-color: #00171F;
+}
+
+.post-content__inner {
   margin: auto;
+  max-width: 960px;
 }
 
 @media only screen and (max-width: 600px) {
-  .post-body {
-    width: 90%;
-    margin: auto;
+  .post-content__inner {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
 
-.post-body--content p,
-.post-body--content li {
+/** POST STYLE **/
+.post-content h1 {
+  font-size: 36px;
+  line-height: 3em;
+}
+
+.post-content p,
+.post-content li {
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 18px;
-  line-height: 34px;
-  color: #676767;
+  line-height: 2em;
+  color: #c5c5c5;
 }
 
 @media only screen and (max-width: 600px) {
-  .post-body--content p,
-  .post-body--content li {
+  .post-content p,
+  .post-content li {
     font-size: 14px;
     line-height: 22px;
   }
 }
 
-.post-body--content li {
+.post-content li {
   padding-left: 1.5em;
 }
 
-.post-body--content li::before {
+.post-content li::before {
   content: '–';
   position: absolute;
   /*change margin to move dash around*/
@@ -75,4 +74,18 @@
 
 .post-body img {
   max-width: 100%;
+}
+
+
+/** post comment **/
+.post-comment {
+  margin: auto;
+  max-width: 800px;
+}
+
+@media only screen and (max-width: 600px) {
+  .post-comment {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
