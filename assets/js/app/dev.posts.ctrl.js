@@ -1,4 +1,4 @@
-const baseUrl = '/api/posts/dev'
+const baseUrl = '/api/posts/dev/'
 const domSelector = {
 
   categoryFilter: '.category-filter',
