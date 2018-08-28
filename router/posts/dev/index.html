@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default/with-nav
 title: My page
 permalink: /posts/dev
 ---
@@ -58,6 +58,16 @@ permalink: /posts/dev
 </div>
 <script src="/assets/js/app/dev.posts.ctrl.js"></script>
 <style>
+/** Main Layout **/
+html {
+  height: 101%;
+}
+
+.filtered-posts-container {
+  max-width: 960px;
+  margin: auto;
+}
+
 .filtered-post {
   height: 150px;
   border: 1px solid #AAAAAA;
@@ -85,6 +95,12 @@ permalink: /posts/dev
   transform: translate(-50%, -50%);
 }
 
+@media (max-width: 960px) {
+  .filtered-post__title {
+    font-size: 24px;
+  }
+}
+
 .filtered-post__tags-container {
   position:absolute;
   left: 10px;
@@ -105,14 +121,10 @@ permalink: /posts/dev
   bottom: 10px;
 }
 
+
 /** From Code Pen 
 *** https://codepen.io/AngelaVelasquez/pen/Eypnq
 ***/
-
-html {
-  height: 101%;
-}
-
 .category-filter {
   margin: auto;
   color: #AAAAAA;
@@ -121,11 +133,19 @@ html {
 .category-filter ul{
   display: flex;
   justify-content: space-between;
-  width: 736px;
+  width:100%;
+  max-width: 736px;
+  overflow: hidden;
   list-style: none;
   margin: auto;
   padding: 0;
 }
+@media (max-width: 960px) {
+  .category-filter ul {
+    display: block;
+  }
+}
+
 
 ul li {
   color: #AAAAAA;
@@ -144,13 +164,19 @@ ul li label{
   display: block;
   position: relative;
   font-weight: 300;
-  font-size: 1.35em;
+  font-size: 22px;
   padding: 25px 25px 25px 80px;
   margin: 10px auto;
   height: 30px;
   z-index: 9;
   cursor: pointer;
   -webkit-transition: all 0.25s linear;
+}
+
+@media (max-width: 960px) {
+  ul li label {
+    font-size: 18px;
+  }
 }
 
 ul li:hover label{

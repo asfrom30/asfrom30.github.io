@@ -1,6 +1,6 @@
 ---
 title: Cover Letter
-layout: default
+layout: default/with-nav
 permalink: /resume
 ---
 
