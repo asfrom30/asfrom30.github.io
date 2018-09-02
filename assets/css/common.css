@@ -125,6 +125,7 @@ table {
 
 /** WIDTH AND HEIGHT **/
 /* Width percentage*/
+.w-auto { width: auto }
 .w-5-pct{ width:5%; }
 .w-10-pct{ width:10%; }
 .w-15-pct{ width:15%; }
@@ -194,13 +195,13 @@ table {
 .m-b-30{ margin-bottom:30px; }
 .m-b-40{ margin-bottom:40px; }
 /* margin left */
-.m-l-0{ margin-left:0px; }
-.m-l-2{ margin-left:2px; }
-.m-l-3{ margin-left:3px; }
-.m-l-4{ margin-left:4px; }
-.m-l-5{ margin-left:5px; }
-.m-l-10{ margin-left:10px; }
-.m-l-15{ margin-left:15px; }
+.m-l-0{ margin-left:0px !important;}
+.m-l-2{ margin-left:2px !important; }
+.m-l-3{ margin-left:3px !important; }
+.m-l-4{ margin-left:4px !important; }
+.m-l-5{ margin-left:5px !important; }
+.m-l-10{ margin-left:10px !important; }
+.m-l-15{ margin-left:15px !important; }
 /* margin right */
 .m-r-auto{ margin-right:auto}
 .m-r-0{ margin-right:0px; }
@@ -211,6 +212,8 @@ table {
 .m-r-10{ margin-right:10px; }
 .m-r-15{ margin-right:15px; }
 /* padding all */
+.p-a-15 {padding: 15px};
+.p-a-30 {padding: 30px};
 .p-l-3 {padding-left: 3px};
 .p-3{padding: 3px;}
 
@@ -244,10 +247,11 @@ table {
 
 
 /** COLOR **/
-.c-black{color:black}
-.c-red{color:red}
-.c-blue{color:blue}
-.c-green{color:chartreuse};
+.c-black{color:black !important}
+.c-white{color:white !important}
+.c-red{color:red !important}
+.c-blue{color:blue !important}
+.c-green{color:chartreuse !important};
 
 
 /** Table **/

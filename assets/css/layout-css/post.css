@@ -49,6 +49,21 @@
   color: #c5c5c5;
 }
 
+.post-content p {
+  word-break: break-all;
+  text-indent: 10px;
+}
+
+.post-content p > code {
+  letter-spacing: -0.05em;
+  word-spacing: -0.2em;
+  background-color: rgb(63, 63, 63);
+  border-radius: 3px;
+  font-family: courier, monospace;
+  color: #99e9ff;
+  padding: 0 3px;
+}
+
 @media only screen and (max-width: 600px) {
   .post-content p,
   .post-content li {

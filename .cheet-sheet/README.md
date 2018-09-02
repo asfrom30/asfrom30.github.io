@@ -35,3 +35,6 @@ $ bundle exec jekyll serve --livereload
 <pre class="command-line" data-user="" data-host="" data-src=""><code class="language-bash">
 </code></pre>
 ```
+
+
+# Folder Structure
