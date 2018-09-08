@@ -11,7 +11,6 @@
     - title: Assay Posts
       url: /router/about-me/book
     - title: Words
-      class: disable
 - title: Career
   className: career
   subs:
@@ -34,7 +33,6 @@
     - title: Camping Location
       url: https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=8
     - title: Playing Guitar 
-      class: disable
 - title: Gallery
   className: gallery
   subs:
@@ -45,11 +43,10 @@
     - title: Writing
       url: https://www.instagram.com/explore/tags/asfrom30_writing/
     - title: Camping
-      class: disable
     - title: Monologue Twitter 
       url: https://twitter.com/asfrom30_log 
 - title: Extras
-  calssName: extras
+  className: extras
   subs:
     - title: Dev Dojo
     - title: Personal Wiki

@@ -6,36 +6,7 @@
   {% include home/index.js %}
 </script>
 
-<div class="home-menu">
-  {% for mainRow in site.data.router.list %}
-  <div class="{{mainRow.className}}">
-    <div class="home-menu__collapse-title" onclick="toggleCollapseList('{{mainRow.className}}', event)">
-      <span>| {{mainRow.title}}</span>
-      <span>></span>
-      <div class="home-menu__collapse-list">
-        <ul>
-          {% for sub in mainRow.subs %}
-          <li class="{{sub.class}}">
-            {% if sub.title != 'dev-post' %}
-              <a href="{{sub.url}}">{{ sub.title }}</a>
-            {% elsif sub.title == 'dev-post' %}
-              <a href="{{sub.url}}">See all {{site.categories.dev.size}} posts</a>
-              {% for post in site.categories.dev limit:3 %}
-              <article class="archive-item">
-                <li class="m-l-5">
-                  <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
-                </li>
-              </article>
-              {% endfor %}
-            {% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </div>
-  {% endfor %}
-</div>
+
 
  <!-- Books
   <article>
@@ -56,151 +27,38 @@
       <div class="side-image">
       </div>
       <div class="home-menu">
-        <div class="about-me">
-          <div class="home-menu__collapse-title" onclick="toggleCollapseList('about-me', event)">
-            <span>| Index</span>
+        {% for mainRow in site.data.router.list %}
+        <div class="{{mainRow.className}}">
+          <div class="home-menu__collapse-title" onclick="toggleCollapseList('{{mainRow.className}}', event)">
+            <span>| {{mainRow.title}}</span>
             <span>></span>
           </div>
           <div class="home-menu__collapse-list">
             <ul>
-              <li>
-                <a href="/router/about-me/welcome">Welcome</a>
-              </li>
+              {% for sub in mainRow.subs %}
+                <li>
+                  {% if sub.title != 'dev-post' %}
+                    {% if sub.url == null %} 
+                      <a class="disable"> {{ sub.title }} </a>
+                    {% else %}
+                      <a href="{{sub.url}}">{{ sub.title }}</a>
+                    {% endif %}
+                  {% elsif sub.title == 'dev-post' %}
+                    <a href="{{sub.url}}">See all {{site.categories.dev.size}} posts</a>
+                    {% for post in site.categories.dev limit:3 %}
+                    <article class="archive-item">
+                      <li class="m-l-5">
+                        <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+                      </li>
+                    </article>
+                    {% endfor %}
+                  {% endif %}
+                </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
-
-        <div class="posts">
-          <div class="home-menu__collapse-title" onclick="toggleCollapseList('posts', event)">
-            <span>| About me</span>
-            <span>></span>
-          </div>
-          <div class="home-menu__collapse-list">
-            <ul>
-              <li>
-                <a href="/about-me/brief-history">Brief history</a>
-              </li>
-              <li>
-                <a>Assay posts</a>
-              </li>
-              <li>
-                <a href="/router/about-me/book">Book</a>
-               
-              </li>
-              <li class="disalbe">
-                <a>Words</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="portfolio">
-          <div class="home-menu__collapse-title" onclick="toggleCollapseList('portfolio', event)">
-            <span>| Career</span>
-            <span>></span>
-          </div>
-          <div class="home-menu__collapse-list">
-            <ul>
-              <li>
-                <a href="/cover-letter">Cover Letter</a>
-              </li>
-              <li>
-                <a href="/resume">Resume</a>
-              </li>
-              <li>
-                <a>Portfolio</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Devs -->
-        <div class="dev-posts">
-          <div class="home-menu__collapse-title" onclick="toggleCollapseList('dev-posts', event)">
-            <span>| Devs</span>
-            <span>></span>
-          </div>
-          <div class="home-menu__collapse-list">
-            <ul>
-              <li class="pos-relative">
-                <a href="/router/devs/dev-post">See all {{site.categories.dev.size}} posts</a>
-                {% for post in site.categories.dev limit:3 %}
-                <article class="archive-item">
-                  <li class="m-l-5">
-                    <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
-                  </li>
-                </article>
-                {% endfor %}
-              </li>
-              <li>
-                <a href="/router/devs/dev-book/">Dev Book</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="third-value">
-          <div class="home-menu__collapse-title" onclick="toggleCollapseList('third-value', event)">
-            <span>| Third Value</span>
-            <span>></span>
-          </div>
-          <div class="home-menu__collapse-list">
-            <ul>
-              <li>https
-                <a href="">Camping
-                  Location
-                </a>
-              </li>
-              <li class="disable">
-                <a>Playing Guitar</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="Gallery">
-          <div class="home-menu__collapse-title" onclick="toggleCollapseList('Gallery', event)">
-            <span>| Gallery</span>
-            <span>></span>
-          </div>
-          <div class="home-menu__collapse-list">
-            <ul>
-              <li>
-                <a href="https://www.instagram.com/explore/tags/asfrom30_bible/">Bible</a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/explore/tags/asfrom30_landscape/">Landscape</a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/explore/tags/asfrom30_writing/">Writing</a>
-              </li>
-              <li class="disable">
-                <a>Camping</a>
-              </li>
-              <li>
-                <a href="https://twitter.com/asfrom30_log">Monologue Twitter</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="etc" onclick="toggleCollapseList('etc', event)">
-          <div class="home-menu__collapse-title">
-            <span>| Extras</span>
-            <span>></span>
-          </div>
-          <div class="home-menu__collapse-list">
-            <ul>
-              <li class="disable">
-                <a>Dev Dojo</a>
-              </li>
-              <li class="disable">
-                <a>Personal Wiki</a>
-              </li>
-              <li class="disable">
-                <a>Join my project</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>

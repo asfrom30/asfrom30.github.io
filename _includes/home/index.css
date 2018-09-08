@@ -74,6 +74,12 @@ a:active {
 a:hover {
   color: rgba(255, 255, 255, 1);
 }
+a.disable {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+}
 
 .disable *,
 .disable a:hover,
