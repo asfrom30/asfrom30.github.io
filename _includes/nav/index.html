@@ -10,18 +10,32 @@
   </div>
   <nav id="nav" class="out">
     <ul>
-      <a href="/">
+      <li>
+        <a href="/">
+          <div class="flex flex--column f-w-center h-100-pct w-100-pct">
+            <div class="flex f-w-center row-main-title">Home</div>
+          </div>
+        </a>
+      </li>
+      {% for mainRow in site.data.router.list %}
         <li>
-          <span class="nav-label">Home</span>
+          <div class="flex flex--column f-w-center h-100-pct w-100-pct">
+            <div class="flex f-w-center row-main-title">{{mainRow.title}}</div>
+            <div class="flex flex-wrap f-w-center">
+              {% for sub in mainRow.subs %}
+                <div class="row-sub-title">
+                  <a href="{{sub.url}}">{{sub.title}} 
+                    {% if forloop.last == false %}
+                    |&nbsp;
+                    {% endif %}
+                  </a>
+                </div>
+                
+              {% endfor %}
+            </div>
+          </div>
         </li>
-      </a>
-      <li><span class="nav-label">About Me</span></li>
-      <li><span class="nav-label">Portfolio</span></li>
-      <li><span class="nav-label">Assay</span></li>
-      <li><span class="nav-label">Dev-posts</span></li>
-      <li><span class="nav-label">third value</span></li>
-      <li><span class="nav-label">books</span></li>
-      <li><span class="nav-label">gallery</span></li>
+      {% endfor %}
     </ul>
   </nav>
 </header>
@@ -29,5 +43,3 @@
 <script>
   {% include nav/index.js %}
 </script>
-
-

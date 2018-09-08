@@ -96,6 +96,7 @@ nav {
   width: 100%;
   height: 100%;
   position: fixed;
+  top: 0;
   z-index: 100;
 }
 
@@ -113,7 +114,7 @@ li {
   padding: 0;
   margin: 0;
   width: 100%;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 nav ul {
@@ -305,6 +306,32 @@ nav.out li {
   -o-transform: translateY(300%);
   transform: translateY(300%);
   opacity: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.row-main-title {
+  color: darkgoldenrod;
+  font-size: 46px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 600px) {
+  .row-main-title {
+    font-size: 32px;
+  }
+}
+.row-sub-title {
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 600px) {
+  .row-sub-title {
+    font-size: 18px;
+  }
 }
 
 nav.in li {

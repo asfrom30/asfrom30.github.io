@@ -22,11 +22,11 @@ function resize() {
   headingSize = windowWidth * 0.1;
   if (headingSize > windowHeight * 0.3) headingSize = windowHeight * 0.3;
 
-  for (var i = 0; i < labels.length; i++) {
-    labels[i].style.fontSize = fontSize + 'px';
-    labels[i].style.height = fontSize + 'px';
-    labels[i].style.marginTop = '-' + fontSize * 0.6 + 'px';
-  }
+  // for (var i = 0; i < labels.length; i++) {
+  //   labels[i].style.fontSize = fontSize + 'px';
+  //   labels[i].style.height = fontSize + 'px';
+  //   labels[i].style.marginTop = '-' + fontSize * 0.6 + 'px';
+  // }
 
   // FIXME: header, heading is not defined element by id
   // header.style.height = windowHeight+'px';
@@ -45,5 +45,7 @@ function navToggle(e) {
     nav.className = 'in';
   }
 }
-
-window.onload = resize;
+window.onload = function() {
+  resize();
+  // navToggle();
+};
