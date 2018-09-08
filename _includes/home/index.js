@@ -1,4 +1,5 @@
 function toggleCollapseList(containerClassName, event) {
+  console.log(containerClassName);
   const $_target = $(event.target);
   const flag = $_target.hasClass('highlight');
 

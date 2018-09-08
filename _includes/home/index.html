@@ -6,6 +6,50 @@
   {% include home/index.js %}
 </script>
 
+<div class="home-menu">
+  {% for mainRow in site.data.router.list %}
+  <div class="{{mainRow.className}}">
+    <div class="home-menu__collapse-title" onclick="toggleCollapseList('{{mainRow.className}}', event)">
+      <span>| {{mainRow.title}}</span>
+      <span>></span>
+      <div class="home-menu__collapse-list">
+        <ul>
+          {% for sub in mainRow.subs %}
+          <li class="{{sub.class}}">
+            {% if sub.title != 'dev-post' %}
+              <a href="{{sub.url}}">{{ sub.title }}</a>
+            {% elsif sub.title == 'dev-post' %}
+              <a href="{{sub.url}}">See all {{site.categories.dev.size}} posts</a>
+              {% for post in site.categories.dev limit:3 %}
+              <article class="archive-item">
+                <li class="m-l-5">
+                  <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+                </li>
+              </article>
+              {% endfor %}
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+ <!-- Books
+  <article>
+    <li class="m-l-5">
+      <a>My favorites</a>
+    </li>
+    <li class="m-l-5">
+      <a>Art Series</a>
+    </li>
+    <li class="m-l-5">
+      <a>Read books</a>
+    </li>
+  </article> -->
+
 <main aria-label="Content">
   <div class="home">
     <div class="home__center">
@@ -41,18 +85,7 @@
               </li>
               <li>
                 <a href="/router/about-me/book">Book</a>
-                <!-- Books
-                    <article>
-                      <li class="m-l-5">
-                        <a>My favorites</a>
-                      </li>
-                      <li class="m-l-5">
-                        <a>Art Series</a>
-                      </li>
-                      <li class="m-l-5">
-                        <a>Read books</a>
-                      </li>
-                    </article> -->
+               
               </li>
               <li class="disalbe">
                 <a>Words</a>
@@ -111,8 +144,8 @@
           </div>
           <div class="home-menu__collapse-list">
             <ul>
-              <li>
-                <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=8">Camping
+              <li>https
+                <a href="">Camping
                   Location
                 </a>
               </li>
@@ -125,7 +158,6 @@
 
         <div class="Gallery">
           <div class="home-menu__collapse-title" onclick="toggleCollapseList('Gallery', event)">
-            <!-- <div class="home-menu__collapse-title" onclick="toggleCollapseList(event)"> -->
             <span>| Gallery</span>
             <span>></span>
           </div>
