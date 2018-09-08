@@ -1,0 +1,86 @@
+.home {
+  background-color: black;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__center {
+  display: flex;
+}
+
+.side-image {
+  background-image: url('/assets/images/background-cover/astronomy-crater-dark.jpg');
+  width: 170px;
+  height: 300px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.home-menu {
+  height: 300px;
+  width: 170px;
+}
+
+/* .home-menu {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(10%, -50%);
+} */
+
+.home-menu__collapse-title {
+  background-color: rgba(255, 255, 255, 0);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  margin: 0px;
+  max-height: 40px;
+  overflow: hidden;
+  transition: all 0.4s;
+
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.home-menu__collapse-title:hover {
+  color: rgba(255, 255, 255, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.home-menu__collapse-list {
+  display: none;
+}
+
+.home-menu__collapse-list li {
+  padding: 5px;
+  margin-left: 20px;
+  white-space: nowrap;
+}
+
+a,
+a:focus,
+a:active {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.disable *,
+.disable a:hover,
+a:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.highlight {
+  color: rgba(255, 255, 255, 1);
+}
