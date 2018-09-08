@@ -1,11 +1,15 @@
 ---
 layout: default/with-nav
-permalink: /about-me/welcome
+permalink: /router/about-me/welcome
 ---
+<style>
+{% include_relative index.css %}
+</style>
 
 <div class="padding-for-header"></div>
 
-<div class="welcome">
+
+<div class="welcome border-green">
   <p class="title">
     반갑습니다.
   </p>
@@ -57,78 +61,3 @@ permalink: /about-me/welcome
   “타인보다 우수하다고 해서 고귀한 것은 아니다. 과거의 자신보다 우수한 것이야 말로 진정으로 고귀한 것이다.”
   </blockquote>
 </div>
-
-
-<style>
-
-  .title {
-    margin-top: 20px;
-    color: white;
-    font-size: 48px;
-  }
-  
-  @media (max-width: 960px) {
-    .title {
-      font-size: 20px;
-    }
-  }
-
-  .welcome {
-    font-family: 'Nanum Myeongjo', serif;
-    max-width: 620px;
-    margin: auto;
-    font-size: 18px;
-    line-height: 32px;
-    color: #ffffffe1;
-  }
-  
-  .welcome p {
-    line-height: 1.8em;
-  }
-  
-  @media (max-width: 960px) {
-    .welcome {
-      font-size: 14px;
-      line-height: 32px;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
-
-  .thank {
-    font-size: 14px;
-    line-height: 24px;
-    margin-top: 32px;
-    margin-left: 32px;
-    margin-right: 32px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-  }
-  
-  @media (max-width: 960px) {
-    .thank {
-      font-size: 14px;
-      line-height: 20px;
-    }
-  }
-
-  .welcome p {
-    margin-bottom: 20px;
-  }
-
-  @media (max-width: 960px) {
-    .welcome  {
-      margin-bottom: 12px;
-    }
-  }
-  
-  .welcome p:not(.title):not(.greeting):not(.thank) {
-    text-indent: 8px;
-  }
-
-  .welcome p.spacer {
-    margin-top: 30px;
-  }
-</style>

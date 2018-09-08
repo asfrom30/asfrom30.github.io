@@ -1,0 +1,58 @@
+<div class="padding-for-header"></div>
+<div class="category-and-tag-filter">
+  <div class="category-filter">
+    <ul>
+      <li>
+        <input type="radio" id="f-option" name="selector" checked="checked" value="all">
+        <label for="f-option">All</label>
+        <div class="check"></div>
+      </li>
+      <li>
+        <input type="radio" id="s-option" name="selector" value="mech">
+        <label for="s-option">Mechanical</label>
+        <div class="check">
+          <div class="inside"></div>
+        </div>
+      </li>
+      <li>
+        <input type="radio" id="t-option" name="selector" value="sw">
+        <label for="t-option">Software</label>
+        <div class="check">
+          <div class="inside"></div>
+        </div>
+      </li>
+      <li>
+        <input type="radio" id="k-option" name="selector" value="elec">
+        <label for="k-option">Electronic</label>
+        <div class="check">
+          <div class="inside"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- Tag filters -->
+  <div class="disabled">
+    <div class="tags-filter--sw">
+      {% for tag in site.data.dev-sorter.tags.sw %}
+      <input type="checkbox" value="{{tag.value}}">{{tag.title}}</input>
+      {% endfor %}
+    </div>
+    <div class="tags-filter--mech">
+      {% for tag in site.data.dev-sorter.tags.mech %}
+      <input type="checkbox">{{tag.title}}</input>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- For Text Search -->
+  <div class="disabled">
+    <h1> text search in title </h1>
+    <input type="textfield"></input>
+  </div>
+</div>
+<div>
+  <div class="disabled">
+    you have {{37}} result =
+  </div>
+  <div class="filtered-posts-container">
+  </div>
+</div>

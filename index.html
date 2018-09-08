@@ -102,7 +102,7 @@ layout: default/without-nav
         <div class="home-menu__collapse-list">
           <ul>
             <li>
-              <a href="/about-me/welcome">Welcome</a>
+              <a href="/router/about-me/welcome">Welcome</a>
             </li>
           </ul>
         </div>
@@ -110,7 +110,7 @@ layout: default/without-nav
      
       <div class="posts">
         <div class="home-menu__collapse-title" onclick="toggleCollapseList('posts', event)">
-          <span>| This is me</span>
+          <span>| About me</span>
           <span>></span>
         </div>
         <div class="home-menu__collapse-list">
@@ -122,7 +122,8 @@ layout: default/without-nav
               <a>Assay posts</a>
             </li>
             <li>
-              Books
+              <a href="/router/about-me/book">Book</a>
+              <!-- Books
               <article>
                 <li class="m-l-5">
                   <a>My favorites</a>
@@ -133,7 +134,7 @@ layout: default/without-nav
                 <li class="m-l-5">
                   <a>Read books</a>
                 </li>
-              </article>
+              </article> -->
             </li>
           </ul>
         </div>
@@ -166,7 +167,7 @@ layout: default/without-nav
         <div class="home-menu__collapse-list">
           <ul>
             <li class="pos-relative">
-              <a href="/posts/dev">See all {{site.categories.dev.size}} posts</a>
+              <a href="/router/devs/dev-post">See all {{site.categories.dev.size}} posts</a>
               {% for post in site.categories.dev limit:3 %}
               <article class="archive-item">
                 <li class="m-l-5">
@@ -176,7 +177,7 @@ layout: default/without-nav
               {% endfor %}
             </li>
             <li>
-              <a href="/router/dev-books/">Books</a>
+              <a href="/router/devs/dev-book/">Dev Book</a>
             </li>
             <li>
               <a>Join my team</a>
@@ -206,18 +207,6 @@ layout: default/without-nav
           </ul>
         </div>
       </div>
-      <div class="books">
-        <div class="home-menu__collapse-title" onclick="toggleCollapseList('books', event)">
-          <span>| Books</span>
-          <span>></span>
-        </div>
-        <div class="home-menu__collapse-list">
-          <ul>
-           
-            
-          </ul>
-        </div>
-      </div>
       <div class="Gallery">
         <div class="home-menu__collapse-title" onclick="toggleCollapseList('Gallery', event)">
           <!-- <div class="home-menu__collapse-title" onclick="toggleCollapseList(event)"> -->
@@ -226,6 +215,9 @@ layout: default/without-nav
         </div>
         <div class="home-menu__collapse-list">
           <ul>
+            <li>
+              <a href="https://www.instagram.com/explore/tags/asfrom30_bible/">Bible</a>
+            </li>
             <li>
               <a href="https://www.instagram.com/explore/tags/asfrom30_landscape/">Landscape</a>
             </li>
