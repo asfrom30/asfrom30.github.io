@@ -1,7 +1,11 @@
 ---
-title: Cover Letter
+title: Resume
 layout: default/with-nav
-permalink: /resume
+permalink: /router/career/resume
 ---
 
-# Resume
+<style>
+  {% include_relative index.css %}
+</style>
+
+{% include_relative index.html %}

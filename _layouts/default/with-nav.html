@@ -10,7 +10,9 @@
 
     <!-- core section -->
     <main class="main-outer">
-      {{ content }}
+      <div class="main-inner">
+        {{ content }}
+      </div>
     </main>
 
     <!-- footer -->
@@ -18,4 +20,12 @@
 
   </body>
 
-</main
+</html>
+
+<style>
+.main-inner {
+  max-width: 960px;
+  margin: auto;
+}
+</style>
+

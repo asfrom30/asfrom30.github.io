@@ -11,15 +11,16 @@
     - title: Assay Posts
       url: /router/about-me/book
     - title: Words
+      url: 
 - title: Career
   className: career
   subs:
     - title: Cover Letter 
       url:
     - title: Resume
-      url: 
+      url: /router/career/resume
     - title: Portfolio 
-      class: 
+      url: /router/career/portfolio
 - title: Devs
   className: devs
   subs:

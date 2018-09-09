@@ -1,0 +1,29 @@
+- category: LANGUAGE
+  stacks:
+    - stack: java.png
+    - stack: javascript.png
+- category: SERVER
+  stacks:
+    - stack: nodejs.png
+    - stack: php.png
+- category: CLIENT
+  stacks:
+    - stack: html.png 
+    - stack: css3.png 
+    - stack: jquery.png
+    - stack: angularjs.png
+    - stack: vuejs.png
+    - stack: android.png
+- category: DATABASE
+  stacks:
+    - stack: mongodb.png
+    - stack: mysql.png
+    - stack: firebase.png
+- category: UTILITY 
+  stacks:
+    - stack: git.png
+    - stack: github.png
+    - stack: webpack.png
+    - stack: gulp.png
+    - stack: bootstrap.png
+    - stack: postman.png

@@ -1,0 +1,160 @@
+<div class="padding-for-content"></div>
+
+<div class="resume-container">
+  <div class="resume__h1">학력 및 경력</div>
+  <div class="resume-row">
+    <div class="resume__h3 flex f-w-between">
+      <div class="flex">
+        <div>충남대학교</div>
+      </div>
+      <div>2005 ~ 2011</div>
+    </div>
+    <div class="resume-row__content">
+      <div>
+        <div class="resume__h5">메카트로닉스 공학</div>
+        <div class="resume__h5">성적</div>
+        <div class="resume__p">
+          <table class="w-100-pct border-w">
+            <tr>
+              <th>신청/취득학점</th>
+              <th>평점</th>
+              <th>백분위</th>
+              <th>석차서열</th>
+            </tr>
+            <tr>
+              <td>139/139</td>
+              <td>3.9/4.5</td>
+              <td>91.5/100</td>
+              <td>8/61</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div>
+        <div class="resume__h5">주요교과목</div>
+        <div class="resume__p">디지털 회로 설계, 컴퓨터 계측제어, 마이크로 프로세서, 프로그래밍 응용, 컴퓨터 구조설계, 고체역학 제어공학, 기계공작법</div>
+      </div>
+      <div>
+        <div class="resume__h5">프로젝트</div>
+        <div class="resume__p">Pro-E로 우주왕복선 모델링, 카운터 무드등 회로 설계 및 제작, FPGA를 사용한 라인트레이서, 마이크로프로세서를 사용한 태양광 추적 전지판, PID 모터제어, FPGA 계산기, Web 기반의
+          Home Network System </div>
+        <div class="resume__p">자세히 보기 > </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="resume-row">
+    <div class="resume__h3 flex f-w-between">
+      <div class="flex">
+        <div>삼성전기</div>
+      </div>
+      <div>2012 ~ 2016</div>
+    </div>
+    <div class="resume-row__content">
+      <div>
+        <div class="resume__h5">공채 51기</div>
+        <div class="resume__h5">근무이력</div>
+        <div class="resume__p">
+          <div>2011.01 ~ 2012.01 | 기판사업부 가공기술 엔지니어</div>
+          <div>2012.01 ~ 2016.05 | 생산기술 연구소 연구원 및 기판사업부 설비개발그룹 엔지니어</div>
+        </div>
+      </div>
+      <div>
+        <div class="resume__h5">최종직급</div>
+        <div class="resume__p">선임 엔지니어</div>
+      </div>
+      <div>
+        <div class="resume__h5">프로젝트</div>
+        <div class="resume__p">자세히 보기 > </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="resume-row">
+    <div class="resume__h3 flex f-w-between">
+      <div class="flex">
+        <div>비주얼 캠프</div>
+      </div>
+      <div>2018 ~ 재직중</div>
+    </div>
+    <div class="resume-row__content">
+      <div>
+        <div class="resume__h5">근무이력</div>
+        <div>
+          <div class="resume__p">2018.06 ~ 분석 어플리케이션 개발팀</div>
+        </div>
+      </div>
+      <div>
+        <div class="resume__h5">직급</div>
+        <div class="resume__p">Software Engineer</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="padding-for-content"></div>
+
+  <div class="resume__h1">기술스택</div>
+  <div class="resume__p">
+    하기 기술 스택은 시기와 흐름에 따라 더 익숙하거나, 잊혀진 것이 있을 수 있습니다. 하지만 모두 직접 사용하여 프로젝트를 수행하였고, 주어졌을 때 무리 없이 사용 가능합니다
+  </div>
+  <div class="resume-row">
+    <div class="resume__h3"> 소프트웨어 </div>
+    <div class="resume-row__content">
+      {% for sw-stack in site.data.resume.sw-stacks %}
+      <div class="m-l-10">
+        <div class="resume__h5"> {{sw-stack.category}} </div>
+        <div class="resume__p flex flex-wrap" style="opacity: 0.7;">
+          {% for obj in sw-stack.stacks %}
+           <img class="stack-img" src="/assets/images/tech-stack/{{obj.stack}}"> 
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="resume-row">
+    <div class="resume__h3"> 하드웨어 </div>
+    <div class="resume-row__content">
+      <div>
+        <div class="resume__h5 flex flex-wrap" style="opacity: 0.7;">
+          {% for hw-stack in site.data.resume.hw-stacks %}
+            <img class="stack-img" src="/assets/images/tech-stack/{{hw-stack}}">
+          {% endfor %}
+        </div>
+        <div class="resume__h5">자동화 설비 설계</div>
+        <div class="resume__p">
+          <ul>
+            <li>특별한 목적과 기능을 수행하는 자동화 설비 컨셉 구상, 검토</li>
+            <li>위 항목의 결과를 설계(기계설계, 공압설계, 센서선정, 유지 보수가 편한 설계)</li>
+            <li>액츄에이터 선정(로봇, 모터 및 실린더 선정)</li>
+            <li>액츄에이터 설계(LM, 볼부쉬 등)</li>
+            <li>가공부품 설계(절삭가공, 판금가공, 재료선정, 후처리)</li>
+            <li>조립 및 셋업</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="resume__h5">3D CAD 및 도면 Drafting</div>
+        <div class="resume__p">
+          <ul>
+            <li>설비 구조 동작 구현 및 유한해석, 시뮬레이션</li>
+            <li>설비 조립도 구성</li>
+            <li>파트 도면 작성</li>
+            <li>조립에 맞는 공차 기입(기하, 치수, IT공차)</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="resume__h5">제어</div>
+        <div class="resume__p">
+          <ul>
+            <li>센서 및 계측기 선정</li>
+            <li>PLC 래더 프로그래밍 (Mithubishi, Omron)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
