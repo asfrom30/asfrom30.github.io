@@ -1,7 +1,10 @@
----
-layout:  default/with-nav 
-title:  Books
-category: book 
-permalink: /router/about-me/book
-years : ['2018', '2017', '2016']
----
+<div>
+  {% for book in site.categories.book %}
+  
+  <a href="{{book.url}}">
+    <div>{{ book.title }}</div>
+    <img src="{{book.coverUrl}}">
+  </a>
+  
+  {% endfor %}
+</div>

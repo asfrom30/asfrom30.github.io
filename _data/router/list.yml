@@ -6,9 +6,9 @@
 - title: About me
   className: about-me
   subs:
-    - title: Brief History
-      url: /about-me/brief-history
-    - title: Assay Posts
+    - title: 기억의 습작
+      url:
+    - title: Book
       url: /router/about-me/book
     - title: Words
       url: 
