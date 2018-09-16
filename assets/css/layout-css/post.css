@@ -1,16 +1,41 @@
+.body-main__out-shell {
+  background-color: #00171F;
+}
+
+:root {
+  --header-height: 180px;
+  --header-padding: 60px;
+}
+
 /** POST HEADER **/
 .post-header {
   background-color: black;
   color: white;
-  margin-top: 100px;
-  margin-bottom: 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height) ;
+}
+
+.post-header__layout {
+  max-width: 80%;
+}
+
+.post-header__title {
   font-size: 42px;
-  line-height: 2em;
+  line-height: 1.1em;
   font-family: 'Black Han Sans', sans-serif;
-  white-space: nowrap;
+}
+@media only screen and (max-width: 600px) {
+  .post-header__title {
+    font-size: 32px;
+  }
 }
 
 .post-header__meta {
@@ -18,40 +43,22 @@
   font-size: 18px;
 }
 
-.post-content__outer {
-  width: 100%;
-  background-color: #00171F;
+/** Post Content **/
+.post-content {
+  /* margin-top: var(--header-height); */
+  margin-top: calc(var(--header-height) + var(--header-padding)*2);
+  padding-top: 40px;
 }
 
-.post-content__inner {
-  margin: auto;
-  max-width: 960px;
-}
-
-@media only screen and (max-width: 600px) {
-  .post-content__inner {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
+/* TABLE OF CONTENT Style */
 
 /** POST STYLE **/
-.post-content h1 {
-  font-size: 36px;
-  line-height: 3em;
-}
-
-.post-content p,
-.post-content li {
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 18px;
-  line-height: 2em;
-  color: #c5c5c5;
-}
 
 .post-content p {
   word-break: break-all;
-  text-indent: 10px;
+  text-indent: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .post-content p > code {
@@ -62,26 +69,6 @@
   font-family: courier, monospace;
   color: #99e9ff;
   padding: 0 3px;
-}
-
-@media only screen and (max-width: 600px) {
-  .post-content p,
-  .post-content li {
-    font-size: 14px;
-    line-height: 22px;
-  }
-}
-
-.post-content li {
-  padding-left: 1.5em;
-}
-
-.post-content li::before {
-  content: '–';
-  position: absolute;
-  /*change margin to move dash around*/
-  color: #676767;
-  margin-left: -1em;
 }
 
 .post-content .separator {
@@ -96,6 +83,11 @@
   border-bottom: 3px solid rgba(0, 255, 0, 0.568);
 }
 
+li::before {
+  color: white;
+  content: '- ';
+}
+
 /** post comment **/
 .post-comment {
   margin: auto;
@@ -108,3 +100,4 @@
     padding-right: 12px;
   }
 }
+

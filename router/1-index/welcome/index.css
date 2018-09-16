@@ -3,7 +3,6 @@
   color: white;
   font-size: 48px;
 }
-
 @media (max-width: 960px) {
   .title {
     font-size: 20px;
@@ -22,7 +21,6 @@
 .welcome p {
   line-height: 1.8em;
 }
-
 @media (max-width: 960px) {
   .welcome {
     font-size: 14px;
@@ -43,7 +41,6 @@
   border-top: 1px solid white;
   border-bottom: 1px solid white;
 }
-
 @media (max-width: 960px) {
   .thank {
     font-size: 14px;
@@ -54,7 +51,6 @@
 .welcome p {
   margin-bottom: 20px;
 }
-
 @media (max-width: 960px) {
   .welcome {
     margin-bottom: 12px;

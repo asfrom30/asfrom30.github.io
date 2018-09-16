@@ -5,12 +5,10 @@ author: asfrom30
 <!-- sytle sheet for post layout -->
 <link rel="stylesheet" href="/assets/css/layout-css/post.css">
 
-<div class="padding-for-nav"></div>
-
 <article class="post">
   <!-- Post Title -->
   <header class="post-header">
-    <div>
+    <div class="post-header__layout">
       <div class="post-header__title"> {{ page.title | escape }}</div>
       <div class="post-header__meta">
         <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -41,9 +39,7 @@ author: asfrom30
 
   <!-- Post Content -->
   <div class="post-content post-content__outer" itemprop="articleBody">
-    <div class="post-content__inner">
-      {{ content }}
-    </div>
+    {{ content }}
   </div>
 
   <!-- Load disqus comments -->

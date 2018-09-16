@@ -5,7 +5,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-p {
+nav p {
   line-height: 1.5;
 }
 
@@ -108,8 +108,12 @@ nav.in {
   pointer-events: auto;
 }
 
+nav li::before {
+  content: none;
+}
+
 nav ul,
-li {
+nav li {
   display: block;
   padding: 0;
   margin: 0;

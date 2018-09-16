@@ -101,3 +101,89 @@ strong {
   font-family: courier, monospace;
 }
 
+
+/* Default Style */
+h1 {
+  color: white;
+  font-size: 36px;
+  line-height: 3em;
+}
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+h2 {
+  color:white;
+  font-size: 32px;
+  line-height: 3em;
+}
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 26px;
+  }
+}
+
+h3 {
+  color: white;
+  font-size: 28px;
+  line-height: 3em;
+}
+@media only screen and (max-width: 600px) {
+  h3 {
+    font-size: 24px;
+  }
+}
+
+h4 {
+  color: white;
+  font-size: 24px;
+  line-height: 3em;
+}
+@media only screen and (max-width: 600px) {
+  h4 {
+    font-size: 22px;
+  }
+}
+
+h5 {
+  color: white;
+  font-size: 20px;
+  line-height: 3em;
+}
+@media only screen and (max-width: 600px) {
+  h5 {
+    font-size: 20px;
+  }
+}
+
+p {
+  color: #c5c5c5;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 18px;
+  line-height: 1.8em;
+}
+@media only screen and (max-width: 600px) {
+  p {
+    line-height: 2em;
+  }
+}
+
+li {
+  color: #c5c5c5;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 18px;
+  padding-left: 0.5em;
+  line-height: 1.8em;
+  white-space: normal;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 600px) {
+  li {
+    line-height: 2em;
+  }
+}
+
+
+/* Separator */

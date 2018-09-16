@@ -1,0 +1,7 @@
+- [6장 함수](#6%EC%9E%A5-%ED%95%A8%EC%88%98)
+  - [호출과 참조](#%ED%98%B8%EC%B6%9C%EA%B3%BC-%EC%B0%B8%EC%A1%B0)
+  - [매개변수가 함수를 결정하는가?](#%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98%EA%B0%80-%ED%95%A8%EC%88%98%EB%A5%BC-%EA%B2%B0%EC%A0%95%ED%95%98%EB%8A%94%EA%B0%80)
+  - [매개변수 해체](#%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98-%ED%95%B4%EC%B2%B4)
+  - [매개변수 기본값](#%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98-%EA%B8%B0%EB%B3%B8%EA%B0%92)
+  - [객체의 프로퍼티인 함수](#%EA%B0%9D%EC%B2%B4%EC%9D%98-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0%EC%9D%B8-%ED%95%A8%EC%88%98)
+  - [this 키워드](#this-%ED%82%A4%EC%9B%8C%EB%93%9C)
