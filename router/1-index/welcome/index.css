@@ -1,66 +1,84 @@
 .title {
-  margin-top: 20px;
-  color: white;
-  font-size: 48px;
+  font-family: 'Nanum Myeongjo', serif !important;
+  margin-top: 20px !important;
+  color: white !important;
+  font-size: 48px !important;
 }
 @media (max-width: 960px) {
   .title {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 }
 
-.welcome {
-  font-family: 'Nanum Myeongjo', serif;
-  max-width: 620px;
-  margin: auto;
-  font-size: 18px;
-  line-height: 32px;
-  color: #ffffffe1;
+.layout {
+  margin: auto !important;
+  max-width: 620px !important;
 }
 
 .welcome p {
-  line-height: 1.8em;
+  font-family: 'Nanum Myeongjo', serif !important;
+  font-size: 18px !important;
+  line-height: 1.8em !important;
+  line-height: 32px !important;
+  color: #ffffffe1 !important;
 }
 @media (max-width: 960px) {
-  .welcome {
-    font-size: 14px;
-    line-height: 32px;
-    padding-left: 10px;
-    padding-right: 10px;
+  .welcome p {
+    font-size: 14px !important;
+    line-height: 32px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 }
 
 .thank {
-  font-size: 14px;
-  line-height: 24px;
-  margin-top: 32px;
-  margin-left: 32px;
-  margin-right: 32px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  font-family: 'Nanum Myeongjo', serif !important;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  margin-top: 32px !important;
+  margin-left: 32px !important;
+  margin-right: 32px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  border-top: 1px solid white !important;
+  border-bottom: 1px solid white !important;
 }
 @media (max-width: 960px) {
   .thank {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 14px !important;
+    line-height: 20px !important;
   }
 }
 
 .welcome p {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 }
 @media (max-width: 960px) {
   .welcome {
-    margin-bottom: 12px;
+    margin-bottom: 12px !important
   }
 }
 
 .welcome p:not(.title):not(.greeting):not(.thank) {
-  text-indent: 8px;
+  text-indent: 8px !important;
 }
 
 .welcome p.spacer {
-  margin-top: 30px;
+  margin-top: 30px !important;
+}
+
+blockquote {
+  font-size: 18px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: 'Nanum Myeongjo', serif !important;
+  line-height: 1.6em;
+  font-weight: 500;
+}
+
+@media (max-width: 960px) {
+  blockquote {
+    color: #ffffffe1 !important;
+    font-size:14px;
+  }
 }
