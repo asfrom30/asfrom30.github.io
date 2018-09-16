@@ -6,6 +6,17 @@
   padding-top: 0px;
 }
 
+.padding-for-content {
+  width: 100%;
+  height: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .padding-for-content {
+    height: 30px;
+  }
+}
+
 /** default style **/
 body {
   color: white;

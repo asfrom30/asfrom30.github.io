@@ -50,6 +50,7 @@ html {
 }
 
 .filtered-post__tags {
+  width: auto;
   height: 32px;
   margin-right: 2px;
 }

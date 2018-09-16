@@ -1,13 +1,4 @@
-.padding-for-content {
-  width: 100%;
-  height: 100px;
-}
 
-@media only screen and (max-width: 600px) {
-  .padding-for-content {
-    height: 30px;
-  }
-}
 
 .resume-container {
   font-family: 'Nanum Myeongjo', serif;

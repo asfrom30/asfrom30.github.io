@@ -1,0 +1,57 @@
+---
+layout: default/with-nav
+---
+<style>
+.content {
+  min-height: 100vh;
+  margin: auto;
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+pre{
+  display: flex;
+  justify-content: center;
+}
+
+p, code, .author {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
+  font-weight: 100;
+  font-style: italic;
+  letter-spacing: -0.1em;
+  word-break: keep-all;
+  color: #ffffffe1;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.content p:first-child::before {
+  font-size: 2em;
+  line-height: 0.1em;
+  color: #ccc;
+  content: open-quote; 
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+.content p:first-child::after {
+  font-size: 2em;
+  color: #ccc;
+  content: close-quote;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+</style>
+
+<div class="content">
+    {{content}}
+
+    <div class="author">{{page.author}}</div>
+</div>

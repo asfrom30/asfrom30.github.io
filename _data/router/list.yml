@@ -10,8 +10,8 @@
       url:
     - title: Book
       url: /router/about-me/book
-    - title: Words
-      url: 
+    - title: 言
+      url: /router/about-me/words
 - title: Career
   className: career
   subs:
