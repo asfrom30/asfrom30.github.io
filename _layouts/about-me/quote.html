@@ -2,35 +2,53 @@
 layout: default/with-nav
 ---
 <style>
-.content {
+
+.quote {
+  color: #ffffffe1;
+  font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
+  font-weight: 100;
+  font-style: italic;
+  letter-spacing: -0.08em;
+}
+
+.quote__layout {
   min-height: 100vh;
   margin: auto;
-  font-size: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-pre{
-  display: flex;
-  justify-content: center;
+.quote__content pre {
+  text-align: center;
 }
 
-p, code, .author {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.quote__author {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
   font-size: 32px;
-  font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
-  font-weight: 100;
-  font-style: italic;
-  letter-spacing: -0.1em;
-  word-break: keep-all;
-  color: #ffffffe1;
+}
+@media only screen and (max-width: 600px) {
+  .quote__author {
+    font-size: 20px;
+  }
+}
+
+.quote__content p, .quote__content code {
+  font-size: 32px;
   text-align: center;
   line-height: 1.5;
+  word-break: keep-all;
+  white-space: pre-wrap;
+}
+@media only screen and (max-width: 600px) {
+  .quote__content p, .quote__content code {
+    font-size: 20px;
+  }
 }
 
-.content p:first-child::before {
+.quote__content p:first-child::before {
   font-size: 2em;
   line-height: 0.1em;
   color: #ccc;
@@ -39,7 +57,7 @@ p, code, .author {
   vertical-align: -0.4em;
 }
 
-.content p:first-child::after {
+.quote__content p:first-child::after {
   font-size: 2em;
   color: #ccc;
   content: close-quote;
@@ -50,8 +68,14 @@ p, code, .author {
 
 </style>
 
-<div class="content">
-    {{content}}
+<div class="quote quote__layout">
+  {% if page.categories contains 'words-poets' %}
+    <div class="quote__author">{{page.title}} / {{ page.author }}</div>
+  {% endif %}
 
-    <div class="author">{{page.author}}</div>
+  <div class="quote__content">{{content}}</div>
+
+  {% unless page.categories contains 'words-poets' %}
+    <div class="quote__author">{{page.author}}</div>
+  {% endunless %}
 </div>

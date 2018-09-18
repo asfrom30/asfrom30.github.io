@@ -1,16 +1,12 @@
 ---
 layout: post
-title:  "러닝 자바스크립트"
-slug: javascript-enlightenment
-author: 이선 브라운
+title:  헤드퍼스트 디자인패턴
+slug: head-first-design-pattern 
+author: 에릭 프리먼
 category: dev-book
-bookCoverUrl : http://image.kyobobook.co.kr/images/book/large/387/l9788968483387.jpg
-chapters: [3, 6]
+bookCoverUrl : http://image.kyobobook.co.kr/images/book/large/409/l9788979143409.jpg
+chapters: []
 ---
-
-
-
-
 
 {% for index in page.chapters%}
 {% include_relative contents/{{index}}-toc.md %}

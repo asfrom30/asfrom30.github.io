@@ -1,6 +1,7 @@
 <div class="dev-books-router-header flex f-wh-center" >
   <div class="dev-books-router-header__title">
     "정리되지 않은 지식은 모두 가짜다."
+    "배우고 때때로 익히면 또한 즐겁지 아니한가?"
   </div>
 </div>
 
@@ -11,7 +12,13 @@
   <div>
     {% for year in page.years %}
     <!-- year title -->
+    {% if year == '2000' %}
+    <div class="dev-books__year-title">Queue</div>
+    {% elsif year == '1000' %}
+    <div class="dev-books__year-title">On</div>
+    {% else %} 
     <div class="dev-books__year-title">{{year}}</div>
+    {% endif %}
     <!-- book list -->
     <ul class="flex-wrap no-margin no-padding">
       {% for post in site.categories[page.category] %}
