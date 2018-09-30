@@ -269,3 +269,12 @@ a.remove-default, a.remove-default:hover, a.remove-default:focus, a.remove-defau
 	color: inherit;
 }
 
+
+/** CENTER FOCUSED LAYOUT **/
+.center-focused-960 {
+	max-width: 960px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: auto;
+}
+
