@@ -1,0 +1,51 @@
+.stack-image-holder {
+  width: 70px;
+  margin: 3px;
+}
+
+.stack-image-holder img { 
+  width: 100%;
+}
+
+.image-holder {
+  width: 200px;
+  height: auto;
+  margin: 5px;
+}
+.image-holder img {
+  width: 100%;
+}
+
+.image-holder-double {
+  width: 400px;
+  height: auto;
+  margin: 5px;
+}
+.image-holder-double img {
+  width: 100%;
+}
+
+.achievement-img-holder {
+  width: 80%;
+}
+.achievement-img-holder img{
+  width: 100%;
+}
+
+/* table */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #797979;
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #404040;
+}

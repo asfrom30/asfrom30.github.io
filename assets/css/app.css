@@ -30,8 +30,8 @@ body {
 
 /** **/
 img {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
 }
 
 strong {
@@ -185,5 +185,18 @@ li {
   }
 }
 
+/* app global link */
+a {
+  color: #404040;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
 
-/* Separator */
+/* app global separator */
+.separator {
+  border-bottom: 1px solid gray;
+}
+
+/* app global blockquote */

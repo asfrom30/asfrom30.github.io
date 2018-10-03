@@ -4,4 +4,8 @@ layout: default/with-nav
 permalink: /router/career/portfolio
 ---
 
-portfolio
+<style>
+  {% include_relative index.css %}
+</style>
+
+{% include_relative index.html %}

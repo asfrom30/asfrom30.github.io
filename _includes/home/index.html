@@ -7,7 +7,7 @@
 </script>
 
 <main aria-label="Content">
-  <div class="home">
+  <div class="home home__container">
     <div class="home__center">
       <div class="side-image">
       </div>
@@ -26,7 +26,14 @@
                     {% if sub.url == null %} 
                       <a class="disable"> {{ sub.title }} </a>
                     {% else %}
-                      <a href="{{sub.url}}">{{ sub.title }}</a>
+                      <a href="{{sub.url}}">
+                        <span>{{ sub.title }}</span>
+                        <span class="home__external-icon">
+                          {% if sub.external == true %}
+                            <i class="fas fa-external-link-alt"></i>
+                          {% endif %}
+                        </span>
+                      </a>
                     {% endif %}
                   {% elsif sub.title == 'dev-post' %}
                     <a href="{{sub.url}}">See all {{site.categories.dev.size}} posts</a>

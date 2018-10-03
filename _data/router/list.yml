@@ -7,7 +7,7 @@
   className: about-me
   subs:
     - title: 기억의 습작
-      url:
+      url: /router/about-me/essay
     - title: Book
       url: /router/about-me/book
     - title: 言
@@ -33,22 +33,28 @@
   subs: 
     - title: Camping Location
       url: https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=8
+      external: true
     - title: Playing Guitar 
 - title: Gallery
   className: gallery
   subs:
     - title: Bible
       url: https://www.instagram.com/explore/tags/asfrom30_bible/
+      external: true
     - title: Landscape
       url: https://www.instagram.com/explore/tags/asfrom30_landscape/
+      external: true
     - title: Writing
       url: https://www.instagram.com/explore/tags/asfrom30_writing/
+      external: true
     - title: Camping
     - title: Monologue Twitter 
       url: https://twitter.com/asfrom30_log 
+      external: true
 - title: Extras
   className: extras
   subs:
     - title: Dev Dojo
     - title: Personal Wiki
+      external: true
     - title: Join my project
