@@ -8,7 +8,7 @@ function init() {
   clickWordsAllSelector();
 }
 
-function initForDev(falg) {
+function initForDev(flag) {
   if(!flag) return; 
   $('.category-selector input')[1].click();
 }

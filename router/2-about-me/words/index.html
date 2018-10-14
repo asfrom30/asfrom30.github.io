@@ -1,26 +1,41 @@
 <div class="padding-for-content"></div>
 <div class="category-selector">
-  <label>
-    <input type="radio" name="sorter" id="all">
-    All
-  </label>
-  <label class="m-l-10">
-    <input type="radio" name="sorter" id="bibles">
-    Bible
-  </label>
-  <label class="m-l-10">
-    <input type="radio" name="sorter" id="poets">
-    Poet
-  </label>
-  <label class="m-l-10">
-    <input type="radio" name="sorter" id="articles">
-    Article
-  </label>
-  <label class="m-l-10">
-    <input type="radio" name="sorter" id="quotes">
-    Quote
-  </label>
-</div>
-
-<div class="post-container flex">
-</div>
+  <div class="custom-radio-select">
+    <ul>
+      <li>
+        <input type="radio" name="sorter" checked="checked" value="all" id="all">
+        <label for="all">All</label>
+        <div class="check"></div>
+      </li>
+      <li>
+        <input type="radio" name="sorter" value="all" id="bibles">
+        <label for="bibles">Bible</label>
+        <div class="check">
+          <div class="inside"></div>
+        </div>
+      </li>
+      <li>
+        <input type="radio" name="sorter" value="all" id="poets">
+        <label for="poets">Poet</label>
+        <div class="check">
+          <div class="inside"></div>
+        </div>
+      </li>
+      <li>
+        <input type="radio" name="sorter" value="all" id="articles">
+        <label for="articles">Article</label>
+        <div class="check">
+          <div class="inside"></div>
+        </div>
+      </li>
+      <li>
+        <input type="radio" name="sorter" value="all" id="quotes">
+        <label for="quotes">Quote</label>
+        <div class="check">
+          <div class="inside"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="post-container flex center-focused-960">
+  </div>
