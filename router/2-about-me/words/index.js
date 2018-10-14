@@ -36,13 +36,16 @@ function inflatePostElements(posts) {
 
 function inflateOnePostHtml(post) {
   const title = post.title;
-  const author = post.author || '-';
+  const author = post.author;
   const url = post.url;
   const html =
   `
   <a class="card-item" href="${url}">
-    <div class="card-item__title">${title}</div>
-    <div class="card-item__author">${author}</div>
+    <div class="card-item__separator"></div>
+    <div class="card-item__layout flex flex--column">
+      <div class="card-item__title text-ellipsis">${title}</div>
+      <div class="card-item__author">${author}</div>
+    </div>
   </a>
   `;
   return html;
