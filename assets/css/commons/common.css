@@ -115,6 +115,10 @@ table {
 .f-h-start-self {-ms-flex-item-align:start;align-self:flex-start; }
 .f-h-end-self {-ms-flex-item-align:end;align-self:flex-end; }
 
+/* FLEX GROW AND SHRINK */
+.flex-no-shrink {
+	flex-shrink: 0;
+}
 /* flew order */
 .order-1 { order : -1; }
 .order-2 { order : -2; }
@@ -228,7 +232,7 @@ table {
 
 /* text handling */
 .overflow-hidden{overflow:hidden}
-.overflow-text-ellipsis{ overflow: hidden; text-overflow: ellipsis}
+.text-ellipsis{ overflow: hidden; white-space: nowrap; text-overflow: ellipsis}
 
 .ws-pre {white-space:pre}
 .ws-nowrap {white-space:nowrap}
@@ -270,11 +274,4 @@ a.remove-default, a.remove-default:hover, a.remove-default:focus, a.remove-defau
 }
 
 
-/** CENTER FOCUSED LAYOUT **/
-.center-focused-960 {
-	max-width: 960px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin: auto;
-}
 

@@ -24,7 +24,10 @@
             <div class="flex flex-wrap f-w-center">
               {% for sub in mainRow.subs %}
                 <div class="row-sub-title">
-                  <a href="{{sub.url}}">{{sub.title}} 
+                  <a href="{{sub.url}}">{{sub.title}}
+                    {% if sub.external == true %}
+                      <i class="fas fa-external-link-alt"></i>
+                    {% endif %}
                     {% if forloop.last == false %}
                     |&nbsp;
                     {% endif %}

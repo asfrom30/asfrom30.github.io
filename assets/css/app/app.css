@@ -29,9 +29,9 @@ body {
 }
 
 /** **/
-img {
-  /* width: 100%;
-  height: 100%; */
+.img-holder img {
+  width: 100%;
+  /* height: 100%; */
 }
 
 strong {
@@ -101,12 +101,23 @@ strong {
   font-family: courier, monospace;
 }
 
+/* COLOR DECLARATION */
+.Cf2f2f2 {
+  color: #f2f2f2;
+}
+.Cbbb {
+  color: #bbb;
+}
+.C404040 {
+  color: #404040;
+}
+
 
 /* Default Style */
 h1 {
   color: white;
   font-size: 36px;
-  line-height: 3em;
+  line-height: 1.5em;
 }
 @media only screen and (max-width: 600px) {
   h1 {
@@ -117,7 +128,7 @@ h1 {
 h2 {
   color:white;
   font-size: 32px;
-  line-height: 3em;
+  line-height: 1.5em;
 }
 @media only screen and (max-width: 600px) {
   h2 {
@@ -128,7 +139,7 @@ h2 {
 h3 {
   color: white;
   font-size: 28px;
-  line-height: 3em;
+  line-height: 1.5em;
 }
 @media only screen and (max-width: 600px) {
   h3 {
@@ -139,7 +150,7 @@ h3 {
 h4 {
   color: white;
   font-size: 24px;
-  line-height: 3em;
+  line-height: 1.5em;
 }
 @media only screen and (max-width: 600px) {
   h4 {
@@ -150,7 +161,7 @@ h4 {
 h5 {
   color: white;
   font-size: 20px;
-  line-height: 3em;
+  line-height: 1.5em;
 }
 @media only screen and (max-width: 600px) {
   h5 {
@@ -166,7 +177,7 @@ p {
 }
 @media only screen and (max-width: 600px) {
   p {
-    line-height: 2em;
+    font-size: 16px;
   }
 }
 
@@ -199,4 +210,34 @@ a:hover {
   border-bottom: 1px solid gray;
 }
 
+
+
 /* app global blockquote */
+blockquote {
+
+}
+
+/* text indent */
+
+
+
+/** code style **/
+pre.quote {
+  text-align: center;
+}
+pre.quote code {
+  font-size:32px;
+  line-height: 1.8em;
+  word-break: keep-all;
+  white-space: pre-wrap;
+  color: #ffffffe1;
+  font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
+  font-weight: 100;
+  letter-spacing: -0.08em;
+}
+
+@media only screen and (max-width: 600px) {
+  pre.quote code {
+    font-size: 16px;
+  }
+}

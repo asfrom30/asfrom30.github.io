@@ -98,7 +98,7 @@ function makePostHtml(post) {
   `<a href="${post.url}">`
     + `<div class="filtered-post">`
     // + `<div class="filtered-post__child-post-count">${post.childPost}</div>`
-    + `<div class="filtered-post__title">${post.title}</div>`
+    + `<div class="filtered-post__title text-ellipsis">${post.title}</div>`
     + `<div class="filtered-post__date">${date.getFullYear()}/${date.getMonth()}/${date.getDay()}</div>`
     + `<div class="filtered-post__tags-container">`;
 

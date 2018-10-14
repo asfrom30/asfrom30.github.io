@@ -24,10 +24,14 @@
 - title: Devs
   className: devs
   subs:
-    - title: dev-post
+    - title: Wiki
+      url: https://asfrom30-wiki.herokuapp.com/
+      external: true
+    - title: Post
       url: /router/devs/dev-post
-    - title: Dev books
+    - title: Books
       url: /router/devs/dev-book
+    - title: Dojo
 - title: Third Value
   className: third-value
   subs: 
@@ -47,14 +51,10 @@
     - title: Writing
       url: https://www.instagram.com/explore/tags/asfrom30_writing/
       external: true
-    - title: Camping
     - title: Monologue Twitter 
       url: https://twitter.com/asfrom30_log 
       external: true
 - title: Extras
   className: extras
   subs:
-    - title: Dev Dojo
-    - title: Personal Wiki
-      external: true
     - title: Join my project

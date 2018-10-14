@@ -1,13 +1,26 @@
-
 {%- include /slide-show/index.html -%}
 
-<div class="router-book center-focused-960">
-  {% for book in site.categories.book %}
-  
-  <a href="{{book.url}}">
-    <div>{{ book.title }}</div>
-    <img src="{{book.coverUrl}}">
-  </a>
-  
-  {% endfor %}
+<div class="center-focused-960">
+
+  <div class="flex flex-wrap book-card__container">
+    {% for book in site.categories.book %}
+    <div class="book-card__item">
+      {% if book.hasSummary == true %} <a class="flex" href="{{book.url}}">
+        {% else %} <div class="flex">
+          {% endif %}
+          <div class="book-card__border"></div>
+          <div class="flex-no-shrink img-holder book-card__cover-img"> <img src="{{book.coverUrl}}"> </div>
+          <div class="flex flex--column f-w-end overflow-hidden book-card__meta">
+            <div><h4 class="text-ellipsis">{{ book.title }}</h4></div>
+            <div><h5 class="text-ellipsis">{{ book.author }}</h5></div>
+            <div><h5 class="text-ellipsis">{{ book.readCount }}</h5></div>
+            <div><h5 class="text-ellipsis">{{ book.readDate }}</h5></div>
+          </div>
+
+          {% if book.hasSummary == true %} </a>
+      {% else %} </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
 </div>

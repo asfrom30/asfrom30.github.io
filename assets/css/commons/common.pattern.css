@@ -1,0 +1,12 @@
+/** CENTER FOCUSED LAYOUT **/
+.center-focused-960 {
+	max-width: 960px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: auto;
+}
+
+/** Image container for aspect ratio **/
+.img-container img {
+  width: 100%;
+}
