@@ -15,6 +15,36 @@ $ bundle
 $ bundle exec jekyll serve --livereload
 ```
 
+# Syntax
+
+### Add New Page without api
+
+```
+---
+layout: default/with-nav
+title: My page
+permalink: /router/devs/dev-til
+---
+
+// direct render with jekyll syntaxk
+{ { site.categories.{cateogory name}.size } }
+
+// or inclues html file
+{% include_relative index.html %}
+```
+
+above `index.md` file will create `new link address`
+
+```
+// post.md
+---
+category: {category name}
+---
+
+```
+
+### Add New Page with api
+
 # 고찰
 
 - site.pages
