@@ -7,6 +7,6 @@
 <h3>List</h3>
 {% for post in posts %}
 <li>
-  <a href="{{ post.url }}"> {{ post.date | date: '%B %d, %Y' }}, {{ post.title }}</a>
+  <a href="{{ post.url }}"> date: [{{ post.date | date: '%B %d, %Y' }}], title: [{{ post.title }}]</a>
 </li>
 {% endfor %}

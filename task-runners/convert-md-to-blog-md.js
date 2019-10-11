@@ -5,50 +5,79 @@ const glob = require('glob');
 const moment = require('moment');
 
 const path = require('path');
+const { rename } = require('./utils/fs-helper');
 
 // can apply yield function for console.log
-function convertMdToBlogMdByDate(rootDir, destDir) {
+function convertMdToBlogMdByDate(projectRootDir) {
   // throw new Error('');
 
   // fsExtra.copySync(rootDir, destDir); //TODO: warning... no copy... make one task using yeild.
 
+  const srcDir = path.join(projectRootDir, '.staging/til/by-date');
+  const destDir = path.join(projectRootDir, '_posts/devs/til/by-date');
+  const archiveDir = path.join(projectRootDir, `.archives/til/by-date`);
+
   return Promise.resolve()
-    .then(() => fetchTargetFilePaths(destDir))
+    .then(() => fetchTargetFilePaths(srcDir))
     .then((paths) => {
       let promises = [];
 
-      paths.forEach((path) => {
-        const buffer = fs.readFileSync(path);
-        const str = buffer.toString().slice(0, 10);
-        if (str.indexOf('---') === -1) {
-          const ms = fs.statSync(path).birthtimeMs;
-          const title = `${moment(ms).format('YYYY/MM/DD')} TIL`;
-          const category = 'til';
-          const layout = 'post';
-          const tag = 'by-date';
+      console.log(`# target file count is ${paths.length}`);
 
-          const filePrefix = moment(ms).format('YYYY-MM-DD');
-          const fileName = `${filePrefix}-TIL`;
+      paths.forEach((_path) => {
+        console.log(_path);
+        try {
+          const context = new Context(_path, destDir);
 
-          // make title
-          // rename file...
-
-          const header = _buildMdHeader({ title, category, layout });
-          console.log(header);
-
-          const promise = new Promise((resolve, reject) => {
-            prepend(path, header, (err) => {
-              if (err) return reject(err);
-              resolve();
+          const header = _buildMdHeader({ title: `${context.title}`, category: 'til', layout: 'post', tag: 'by-date' });
+          const promise = Promise.resolve()
+            .then(() => {
+              if (fs.existsSync(context.destPath)) return Promise.reject(Error(`[NOT CONVERT]  ${context.destPath}`));
+            })
+            .then(() => rename(_path, archiveDir, context.srcFileName, { copy: true }))
+            .then(() => _asyncHasHeaderIfNotAppend(_path, header))
+            .then(() => {
+              const { destFileName, destDir, destPath } = context;
+              rename(_path, destDir, destFileName, { copy: false });
+              //TODO: clean all...
+              console.log(`[CONVERT]  ${destPath}`);
             });
-          });
           promises.push(promise);
-        } else {
-          // throw new Error('It is already Blog Md file');
+        } catch (error) {
+          // console.log(error);
         }
       });
       return Promise.all(promises);
     });
+}
+
+class Context {
+  constructor(srcPath, destDir) {
+    // validate check
+    const baseNameWithOutExt = path.basename(srcPath, '.md');
+    if (this._isInvalidBaseName(baseNameWithOutExt)) throw new Error(`Context Valid Error, Invalid File Name ${baseNameWithOutExt}`);
+
+    const prefix = moment(baseNameWithOutExt).format('YYYY-MM-DD');
+
+    this.srcPath = srcPath;
+    this.srcFileName = path.basename(srcPath);
+
+    this.destDir = destDir;
+    this.destFileName = `${prefix}-TIL.md`;
+    this.destPath = path.join(destDir, this.destFileName);
+
+    this.title = `${moment(baseNameWithOutExt).format('YYYY/MM/DD')} TIL`;
+  }
+
+  _isInvalidBaseName(name) {
+    console.log(name);
+    if (name.length < 8) return true;
+
+    const date = moment(name);
+    if (!date.isValid()) return true;
+
+    return false;
+  }
 }
 
 function convertBlogMdToMd() {
@@ -79,6 +108,23 @@ function _buildMdHeader(map) {
 
   header += '---';
   return header;
+}
+
+function _asyncHasHeaderIfNotAppend(_path, header) {
+  const buffer = fs.readFileSync(_path);
+  const str = buffer.toString().slice(0, 10);
+
+  if (str.indexOf('---') !== -1) {
+    console.log(_path, ' has already header');
+    return Promise.resolve();
+  }
+
+  return new Promise((resolve, reject) => {
+    prepend(_path, header, (err) => {
+      if (err) return reject(err);
+      resolve();
+    });
+  });
 }
 
 module.exports = { convertBlogMdToMd, convertMdToBlogMd: convertMdToBlogMdByDate, _prependJekyllHeader: _buildMdHeader };

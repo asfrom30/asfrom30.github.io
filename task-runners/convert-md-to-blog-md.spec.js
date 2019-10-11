@@ -7,11 +7,7 @@ const glob = require('glob');
 
 const path = require('path');
 
-const targetRootDir = path.join(__dirname, '../.staging/til/by-date');
-const destRootDir = path.join(__dirname, '../_posts/til/dev-til/by-date');
-
-console.log(targetRootDir);
-console.log(destRootDir);
+const projectRootDir = path.join(__dirname, '../');
 
 describe('# Private Function : Prepend Header', () => {
   it('should make prepend header', () => {
@@ -26,17 +22,17 @@ describe('# Private Function : Prepend Header', () => {
 });
 
 describe('# Convert Md to BlogMd', () => {
-  // it('should not throw error when all file is match md', (cb) => {
-  //   convertMdToBlogMdByDate(targetRootDir, destRootDir)
-  //     .then((res) => {
-  //       expect(Array.isArray(res)).to.be.equal(true);
-  //       expect(res.length).to.be.above(0);
-  //       cb();
-  //     })
-  //     .catch((err) => {
-  //       cb(err);
-  //     });
-  // });
+  it('should not throw error when all file is match md', (cb) => {
+    convertMdToBlogMdByDate(projectRootDir)
+      .then((res) => {
+        expect(Array.isArray(res)).to.be.equal(true);
+        expect(res.length).to.be.above(0);
+        cb();
+      })
+      .catch((err) => {
+        cb(err);
+      });
+  });
   // it('should transfer file and append text', (cb) => {
   //   fetchTargetFilePaths().then((paths) => {
   //     const dest = 'after-convert/';
