@@ -1,22 +1,17 @@
-# Installation
+# Introduction 
+## Setup 
 
-- install ruby or rvm ()
+1. install ruby or rvm
+* rvm : see confluence
+* ruby : install bundle
 
-* install bundle
-
-```
-$ bundle
-```
-
-- run
-
+## Run
 ```
 // develop
 $ bundle exec jekyll serve --livereload
 ```
 
 # Syntax
-
 ### Add New Page without api
 
 ```
