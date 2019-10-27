@@ -1,28 +1,17 @@
-# Gloabal Variables
+---
+layout: default/with-nav
+title: My page
+permalink: /router/devs/flow-of-thoughts
+---
 
-```
-site
-page
-layout
-content
-paginator
-```
-
-```
-{{}}
-{% %}
-```
+Router Flow Of Thoughts
 
 
-# Category Loop
-
-```md
 {% for post in site.categories.flow-of-thoughts %}
 <div class="assay__container">
-    <a href="{{essay.url}}">
+    <a href="{{post.url}}">
     <div class="assay__title">{{post.title}}</div>
     <div class="assay__date">{{post.date | date_to_long_string}}</div>
     </a>
 </div>
 {% endfor %}
-```

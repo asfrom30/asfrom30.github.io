@@ -28,6 +28,8 @@
       url: /router/devs/til
     - title: Cheet Sheet
       url: /router/devs/cheet-sheet
+    - title: Flow of Thoughts
+      url: /router/devs/flow-of-thoughts
     - title: Wiki
       url: https://asfrom30-wiki.herokuapp.com/
       external: true
