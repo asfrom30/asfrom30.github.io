@@ -1,9 +1,16 @@
 /** CENTER FOCUSED LAYOUT **/
 .center-focused-960 {
-	max-width: 960px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin: auto;
+  max-width: 960px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+}
+
+.center-focused-1080 {
+  max-width: 1080px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
 }
 
 /** Image container for aspect ratio **/

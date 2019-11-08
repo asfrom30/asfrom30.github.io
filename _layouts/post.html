@@ -1,15 +1,16 @@
---- 
-layout: default/with-nav 
-author: asfrom30 
 ---
+layout: default/with-nav
+author: asfrom30
+---
+
 <!-- sytle sheet for post layout -->
-<link rel="stylesheet" href="/assets/css/layout-css/post.css">
+<link rel="stylesheet" href="/assets/css/layout-css/post.css" />
 
 <article class="post">
   <!-- Post Title -->
   <header class="post-header">
     <div class="post-header__layout">
-      <div class="post-header__title"> {{ page.title | escape }}</div>
+      <div class="post-header__title">{{ page.title | escape }}</div>
       <div class="post-header__meta">
         <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%} {{ page.date | date: date_format }}
@@ -38,7 +39,7 @@ author: asfrom30
   </header>
 
   <!-- Post Content -->
-  <div class="post-content post-content__outer center-focused-960" itemprop="articleBody">
+  <div class="post-content post-content__outer center-focused-1080" itemprop="articleBody">
     {{ content }}
   </div>
 
