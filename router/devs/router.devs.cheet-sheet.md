@@ -9,7 +9,7 @@ permalink: /router/devs/cheet-sheet
 <h3>All Posts ({{ posts.size }})</h3>
 {% for post in posts %}
 <li>
-  <a href="{{ post.url }}"> <b>{{post.title}}</b>, {{ post.date | date: '%B %d, %Y' }}</a>
+  <a href="{{ post.url }}"> <b>{{post.title}}</b></a>
 </li>
 {% endfor %}
 

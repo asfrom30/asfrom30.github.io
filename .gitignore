@@ -8,3 +8,4 @@ _drafts
 docs
 
 .staging
+node_modules
