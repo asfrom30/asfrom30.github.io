@@ -1,0 +1,105 @@
+### Multiple action with v-on:click
+
+```js
+<div v-on:click="firstFunction(); secondFunction();"></div>
+```
+
+
+### call child component method
+* [ref](https://stackoverflow.com/questions/42632711/how-to-call-function-on-child-component-on-parent-events)
+
+```html
+<div id="app">
+  <child-component ref="childComponent"></child-component>
+  <button @click="click">Click</button>  
+</div>
+```
+
+```js
+var ChildComponent = {
+  template: '<div>{{value}}</div>',
+  data: function () {
+    return {
+      value: 0
+    };
+  },
+  methods: {
+    setValue: function(value) {
+        this.value = value;
+    }
+  }
+}
+
+new Vue({
+  el: '#app',
+  components: {
+    'child-component': ChildComponent
+  },
+  methods: {
+    click: function() {
+        this.$refs.childComponent.setValue(2.0);
+    }
+  }
+})
+```
+
+### multiple function
+
+* [ref](https://stackoverflow.com/questions/38744932/how-to-call-multiple-function-with-v-onclick)
+```html
+<div v-on:click="firstFunction(); secondFunction();"></div>
+```
+
+# `v-bind:is`
+```html
+// test A
+<template>
+  <v-text-field></v-text-field>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+
+</style>
+
+// test B
+<template>
+  <v-text-field></v-text-field>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+
+</style>
+
+// index.vue
+<template>
+  <h1>test</h1>
+  <v-btn @click="callTestA">testa</v-btn>
+  <v-btn @click="callTestB">testb</v-btn>
+  <keep-alive>
+    <div :is="testBind"></div>
+  </keep-alive>
+</template>
+
+<script>
+ methods: {
+  callTestA: function() {
+    this.testBind = TestA;
+  },
+  callTestB: function() {
+    this.testBind = TestB;
+  }
+},
+</script>
+```

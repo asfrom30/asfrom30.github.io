@@ -1,0 +1,15 @@
+# Dynamic Bundling
+
+```js
+// client.router.dev
+console.log('this will print when bundling');
+export default [];
+
+// main.js
+const clientRouter = () => import(/* webpackChunkName */ './router/client.router.dev');
+
+clientRouter().then((module) => {
+  // 'this will print when bundling'
+  console.log(module.default); // will print []
+});
+```
