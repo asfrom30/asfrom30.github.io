@@ -4,7 +4,7 @@ permalink: /router/about-me/essay
 ---
 
 <style>
-  {% include_relative index.css %}
+  {% include_relative essay.router.css %}
 </style>
 
-{% include_relative index.html %}
+{% include_relative essay.router.html %}

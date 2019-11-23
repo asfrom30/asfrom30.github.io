@@ -19,7 +19,7 @@ slideQuotes:
 ---
 
 <style>
-  {% include_relative index.css %}
+  {% include_relative book.router.css %}
 </style>
 
-{% include_relative index.html %}
+{% include_relative book.router.html %}

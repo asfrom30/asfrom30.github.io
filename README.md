@@ -1,16 +1,33 @@
-# Introduction 
-## Setup 
+# Introduction
+
+## Setup
 
 1. install ruby or rvm
-* rvm : see confluence
-* ruby : install bundle
+
+- rvm : see confluence
+- ruby : install bundle
 
 ## Run
+
 ```
 // develop
 $ bundle exec jekyll serve --livereload
 ```
+
+# Structure
+
+### Type of Navigation
+
+- post
+  - cf) welcome(welcome.page.html), portfolio, resume...
+- router
+  - cf) book (book.router.md)
+  - see `router-provider` folder
+- external link
+  - cf) camping location
+
 # Todo
+
 - [x] make footer
 - [ ] router 정리하기...
 - [ ] flow of thought는 가벼운 포스트로 변경하기
@@ -22,9 +39,11 @@ $ bundle exec jekyll serve --livereload
   - sorting algorithm practice
 - [ ] Replace `/api/posts` to serve Json feature
   - https://arcath.net/2016/02/ajax-page-loading-in-jekyll-or-any-static-site/
-
+- [ ] 폰트 템플릿 하일라이트 수정
+  - 특히 \*뒤에 `` 안먹히는 것.
 
 # Next Task
+
 - password organize
 - wordlist from iphone anylist app
 - dev-posts sorter

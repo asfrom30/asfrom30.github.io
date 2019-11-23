@@ -1,6 +1,6 @@
 .dev-books-router-header {
   height: 300px;
-  background-image: url('/assets/images/header-cover/adult-indoors-man-970084.jpg');
+  background-image: url("/assets/images/header-cover/adult-indoors-man-970084.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@
 
 .dev-books-router-header__title {
   font-size: 36px;
-  font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
+  font-family: "Josefin Sans", "Noto Sans KR", sans-serif;
   font-weight: 100;
   font-style: italic;
   letter-spacing: -0.1em;
@@ -41,7 +41,7 @@
 }
 
 .dev-books-router-container * {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   color: gray;
   line-height: 1.4em;
 }
@@ -61,7 +61,7 @@
 .dev-books__year-title {
   margin-top: 30px;
   font-size: 42px;
-  font-family: 'Black Han Sans', sans-serif;
+  font-family: "Black Han Sans", sans-serif;
   color: white;
 }
 @media only screen and (max-width: 600px) {

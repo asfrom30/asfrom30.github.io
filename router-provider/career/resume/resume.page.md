@@ -5,7 +5,7 @@ permalink: /router/career/resume
 ---
 
 <style>
-  {% include_relative index.css %}
+  {% include_relative resume.page.css %}
 </style>
 
-{% include_relative index.html %}
+{% include_relative resume.page.html %}
