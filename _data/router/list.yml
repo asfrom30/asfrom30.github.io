@@ -21,7 +21,8 @@
       url: /router/career/resume
     - title: Portfolio
       url: /router/career/portfolio
-- title: Devs
+- title: Hardware
+- title: Software
   className: devs
   subs:
     - title: TIL
