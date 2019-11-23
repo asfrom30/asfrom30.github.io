@@ -1,11 +1,8 @@
-- title: Index
-  className: index
-  subs:
-    - title: Welcome
-      url: /router/about-me/welcome
 - title: About me
   className: about-me
   subs:
+    - title: Welcome
+      url: /router/about-me/welcome
     - title: 기억의 습작
       url: /router/about-me/essay
     - title: Book
