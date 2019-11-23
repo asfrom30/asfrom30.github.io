@@ -1,0 +1,60 @@
+<style>
+  {% include home/home.css %}
+</style>
+
+<script>
+  {% include home/home.js %}
+</script>
+
+<main aria-label="Content">
+  <div class="home home__container">
+    <div class="home__center">
+      <div class="side-image"></div>
+      <div class="home-menu">
+        {% for mainRow in site.data.router.list %}
+        <div class="{{mainRow.className}}">
+          <div
+            class="home-menu__collapse-title"
+            onclick="toggleCollapseList('{{mainRow.className}}', event)"
+          >
+            <span>| {{mainRow.title}}</span>
+            <span>></span>
+          </div>
+          <div class="home-menu__collapse-list">
+            <ul>
+              {% for sub in mainRow.subs %}
+              <li>
+                {% if sub.title != 'dev-post' %} {% if sub.url == null %}
+                <a class="disable"> {{ sub.title }} </a>
+                {% else %}
+                <a href="{{sub.url}}">
+                  <span>{{ sub.title }}</span>
+                  <span class="home__external-icon">
+                    {% if sub.external == true %}
+                    <i class="fas fa-external-link-alt"></i>
+                    {% endif %}
+                  </span>
+                </a>
+                {% endif %} {% elsif sub.title == 'dev-post' %}
+                <a href="{{sub.url}}"
+                  >See all {{site.categories.dev.size}} posts</a
+                >
+                {% for post in site.categories.dev limit:3 %}
+                <article class="archive-item">
+                  <li class="m-l-5">
+                    <a href="{{ site.baseurl }}{{ post.url }}"
+                      >{{post.title}}</a
+                    >
+                  </li>
+                </article>
+                {% endfor %} {% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</main>
