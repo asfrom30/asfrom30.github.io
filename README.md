@@ -7,6 +7,12 @@
 - rvm : see confluence
 - ruby : install bundle
 
+## Update Pacakge
+
+```bash
+$ bundle install
+```
+
 ## Run
 
 ```
