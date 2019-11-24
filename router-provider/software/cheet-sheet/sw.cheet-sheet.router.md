@@ -1,10 +1,13 @@
 ---
-layout: default/with-nav
+layout: router
 title: My page
 permalink: /router/devs/cheet-sheet
+needFooter: false
 ---
 
 {% assign posts = site.posts | where_exp: "item", "item.category == 'cheet-sheet'" %}
+
+<div class="layout--center-focused">
 
 <h3>All Posts ({{ posts.size }})</h3>
 {% for post in posts %}
@@ -29,3 +32,5 @@ permalink: /router/devs/cheet-sheet
   <a href="{{ post.url }}"> <b>{{post.title}}</b>, {{ post.date | date: '%B %d, %Y' }}</a>
 </li>
 {% endfor %}
+
+</div>

@@ -6,17 +6,17 @@ author: asfrom30
 <html lang="{{ page.lang | default: site.lang | default: "kr" }}">
 
   <!-- HEAD META TAG -->
-  {%- include /head/index.html -%}
+  {%- include head-tag.html -%}
 
   <body>
     <!-- NAVIGATION BAR -->
     {% if page.needNav == true %}
-      {%- include /navigator/index.html -%}
+      {%- include /global/navigator/index.html -%}
     {% elsif page.needNav == false %}
         <!-- No need to render -->
     {% else %}
       {% if layout.needNav == true %}
-        {%- include /navigator/index.html -%}
+        {%- include /global/navigator/index.html -%}
       {% endif %}
     {% endif%}
     
@@ -38,12 +38,12 @@ author: asfrom30
     
     <!-- FOOTER -->
     {% if page.needFooter == true %}
-      {%- include /footer/index.html -%}
+      {%- include /global/footer/index.html -%}
     {% elsif page.needFooter == false %}
       <!-- No need to render -->
     {% else %}
       {% if layout.needFooter == true %}
-        {%- include /footer/index.html -%}
+        {%- include /global/footer/index.html -%}
       {% endif %}
     {% endif%}
   </body>

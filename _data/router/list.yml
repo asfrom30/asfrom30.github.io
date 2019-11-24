@@ -39,13 +39,14 @@
     - title: Flow of Thoughts
       url: /router/devs/flow-of-thoughts
     - title: Wiki
-      url: https://asfrom30-wiki.herokuapp.com/
+      url: https://asfrom30.atlassian.net/wiki/
       external: true
     - title: Post
       url: /router/devs/dev-post
     - title: Books
       url: /router/devs/dev-book
     - title: Dojo
+      url: /router/sw/dojo
 - title: Third Value
   className: third-value
   subs:
