@@ -1,5 +1,7 @@
 ---
-layout: default/with-nav
+layout: atomics/scaffold
+needNav: true
+needFooter: true
 title: Books
 category: book
 permalink: /router/about-me/book

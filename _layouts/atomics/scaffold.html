@@ -5,28 +5,47 @@ author: asfrom30
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "kr" }}">
 
+  <!-- HEAD META TAG -->
   {%- include /head/index.html -%}
 
   <body>
-
+    <!-- NAVIGATION BAR -->
+    {% if page.needNav == true %}
+      {%- include /navigator/index.html -%}
+    {% elsif page.needNav == false %}
+        <!-- No need to render -->
+    {% else %}
+      {% if layout.needNav == true %}
+        {%- include /navigator/index.html -%}
+      {% endif %}
+    {% endif%}
+    
+    <!-- Content -->
     {{ content }}
     
-    <!-- disqus comment -->
+    <!-- DISQUS COMMENT -->
     <div class="post-body post-comment">
       {% if page.needComments == true %}
         {% include /utils/disqus-comments/index.html %}
+      {% elsif page.needComments == false %}
+        <!-- No need to render -->
+      {% else %}
+        {% if layout.needComments == true %}
+          {% include /utils/disqus-comments/index.html %}
+        {% endif %}
       {% endif%}
     </div>
     
-    <!-- footer -->
+    <!-- FOOTER -->
     {% if page.needFooter == true %}
       {%- include /footer/index.html -%}
+    {% elsif page.needFooter == false %}
+      <!-- No need to render -->
+    {% else %}
+      {% if layout.needFooter == true %}
+        {%- include /footer/index.html -%}
+      {% endif %}
     {% endif%}
-
-    
-
-    
-
   </body>
 
 </html>

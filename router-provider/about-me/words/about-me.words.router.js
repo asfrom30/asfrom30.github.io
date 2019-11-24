@@ -9,12 +9,12 @@ function init() {
 }
 
 function initForDev(flag) {
-  if(!flag) return; 
-  $('.category-selector input')[1].click();
+  if (!flag) return;
+  $(".category-selector input")[1].click();
 }
 
 function addListenerToSelector() {
-  $('.category-selector input').click(function(event) {
+  $(".category-selector input").click(function(event) {
     const key = event.target.id;
     const posts = getSelectedPosts(key);
     inflatePostElements(posts);
@@ -22,7 +22,7 @@ function addListenerToSelector() {
 }
 
 function clickWordsAllSelector() {
-  $('.category-selector input')[0].click();
+  $(".category-selector input")[0].click();
 }
 
 function inflatePostElements(posts) {
@@ -38,8 +38,7 @@ function inflateOnePostHtml(post) {
   const title = post.title;
   const author = post.author;
   const url = post.url;
-  const html =
-  `
+  const html = `
   <a class="card-item" href="${url}">
     <div class="card-item__separator"></div>
     <div class="card-item__layout flex flex--column">
@@ -56,7 +55,7 @@ function getSelectedPosts(key) {
 }
 
 function getPostContainer_$() {
-  return $('.post-container');
+  return $(".post-container");
 }
 
 function cleanJqueryElem($) {
