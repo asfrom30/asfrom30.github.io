@@ -14,6 +14,6 @@ slideQuotes: ["Read Everyday, Lead a Better Life", "배우고 때때로 익히�
   {% include_relative book.router.css %}
 </style>
 
-{%- include /slide-show/index.html -%}
+{%- include atomic/slide-show/index.html -%}
 
 {% include_relative book.router.html %}
