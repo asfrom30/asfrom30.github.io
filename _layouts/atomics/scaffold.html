@@ -1,0 +1,33 @@
+---
+author: asfrom30
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "kr" }}">
+
+  {%- include /head/index.html -%}
+
+  <body>
+
+    {{ content }}
+    
+    <!-- disqus comment -->
+    <div class="post-body post-comment">
+      {% if page.needComments == true %}
+        {% include /utils/disqus-comments/index.html %}
+      {% endif%}
+    </div>
+    
+    <!-- footer -->
+    {% if page.needFooter == true %}
+      {%- include /footer/index.html -%}
+    {% endif%}
+
+    
+
+    
+
+  </body>
+
+</html>
+

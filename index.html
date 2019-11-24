@@ -1,6 +1,8 @@
 ---
-layout: default/without-nav
+layout: atomics/scaffold
+needFooter: true
+needComments: true
 ---
 
-<!-- Directory is _includes/home -->
-{% include home/home.html %}
+{% include atomics/footer.html content="This is my sample note." %}
+<div>use: {{site.use_google_analytics}}</div>

@@ -14,6 +14,10 @@
 $ bundle exec jekyll serve --livereload
 ```
 
+# DashBoard
+
+- `/dashboard`
+
 # Structure
 
 ### Type of Navigation
