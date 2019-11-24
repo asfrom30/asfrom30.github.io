@@ -1,5 +1,5 @@
 ---
-layout: default/with-nav
+layout: router
 permalink: /router/devs/til/by-subject
 ---
 

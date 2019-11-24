@@ -19,6 +19,16 @@
     - title: Portfolio
       url: /router/career/portfolio
 - title: Hardware
+  className: hardware
+  subs:
+    - title: All Posts
+      url: /router/posts
+    - title: By Tag
+      url: /router/tags
+    - title: By Category
+      url: /router/categories
+    - title: Tests
+      url: /router/tests
 - title: Software
   className: devs
   subs:

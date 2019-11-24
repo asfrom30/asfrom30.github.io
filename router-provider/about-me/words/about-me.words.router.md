@@ -2,8 +2,6 @@
 layout: router
 title: Quotes
 permalink: /router/about-me/words
-needFooter: false
-needNav: false
 ---
 
 <!-- liquid syntax for javascript -->

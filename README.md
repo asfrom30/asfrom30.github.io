@@ -58,6 +58,11 @@ $ bundle exec jekyll serve --livereload
 - timelinejs를 resume에 반영하기.
   - 구글 스프레드시트로 실시간 반영하기
 - 크로스브라우징 대응 css vendor prefix
+- All posts, By Tags, By Categories
+  - 지금은 하드웨어 밑에 있음
+  - 모든 포스트는 그냥 다 보여주기식으로 나열해야됨.
+- Impl Style And Feature Testing (url : /router/tests) (\_posts/tests) (router_provider/tests)
+- 404 수정하기
 
 # Next Task
 
