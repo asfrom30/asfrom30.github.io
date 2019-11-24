@@ -1,4 +1,4 @@
 ---
-layout: extras/suc
+layout: router
 permalink: /router/sw/dojo
 ---
