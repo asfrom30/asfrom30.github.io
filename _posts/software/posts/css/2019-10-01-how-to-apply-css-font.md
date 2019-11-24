@@ -15,7 +15,11 @@ updatedAt:
 <html>
   <head>
     ...
-    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Monoton"
+      rel="stylesheet"
+      type="text/css"
+    />
     ...
   </head>
 
@@ -51,8 +55,8 @@ rules: [
 ```css
 /* app.css */
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   /* app.css에서 상대경로인 font를 지정해야 한다 */
-  src: url('../fonts/OpenSans-Regular.ttf');
+  src: url("../fonts/OpenSans-Regular.ttf");
 }
 ```

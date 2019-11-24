@@ -41,6 +41,13 @@ $ bundle exec jekyll serve --livereload
   - https://arcath.net/2016/02/ajax-page-loading-in-jekyll-or-any-static-site/
 - [ ] 폰트 템플릿 하일라이트 수정
   - 특히 \*뒤에 `` 안먹히는 것.
+- [ ] Passing parameters to includes Quotes 만들기
+  - https://jekyllrb.com/docs/includes/#passing-parameters-to-includes
+  - Atomic 스타일임
+  - 이걸 사용하게 되면 md 내에서 자유롭게 include quote해서 스타일을 수정할 수 있겠다.
+- timelinejs를 resume에 반영하기.
+  - 구글 스프레드시트로 실시간 반영하기
+- 크로스브라우징 대응 css vendor prefix
 
 # Next Task
 

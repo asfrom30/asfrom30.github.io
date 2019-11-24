@@ -1,8 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Patua+One);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 body {
-  height: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 nav p {
@@ -132,7 +131,7 @@ nav li {
   position: relative;
   background: #222;
   color: #fff;
-  font-family: 'Patua One', cursive;
+  font-family: "Patua One", cursive;
 }
 
 nav li:hover {
@@ -376,7 +375,7 @@ nav.in li {
   color: #fff;
   position: absolute;
   margin: 0;
-  font-family: 'Patua One', cursive;
+  font-family: "Patua One", cursive;
   text-align: center;
   display: block;
   top: 50%;
