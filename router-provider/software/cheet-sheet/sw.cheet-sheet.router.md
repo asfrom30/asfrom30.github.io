@@ -7,7 +7,7 @@ needFooter: false
 
 {% assign posts = site.posts | where_exp: "item", "item.category == 'cheet-sheet'" %}
 
-<div class="center-focused-960">
+<div class="layout--center-focused">
 
 <h3>All Posts ({{ posts.size }})</h3>
 {% for post in posts %}

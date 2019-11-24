@@ -17,6 +17,9 @@
   --text-color: #dddddd;
   --link-color: #dddddd;
   --link-hover-color: rgba(255, 0, 0, 0.646);
+
+  /* Identity Font Family */
+  font-family: "Open Sans", sans-serif;
 }
 
 .layout--center-focused {
@@ -135,11 +138,19 @@ strong {
   color: #404040;
 }
 
-/* Default Style */
+/* INDENT DECLARATION */
+
+p,
+.code-toolbar {
+  padding-left: 20px !important;
+}
+
+/* Text Style */
 h1 {
   color: white;
   font-size: 36px;
   line-height: 1.5em;
+  padding-top: 20px;
 }
 @media only screen and (max-width: 600px) {
   h1 {
@@ -151,6 +162,8 @@ h2 {
   color: white;
   font-size: 32px;
   line-height: 1.5em;
+  text-indent: 4px;
+  padding-top: 8px;
 }
 @media only screen and (max-width: 600px) {
   h2 {
@@ -162,6 +175,8 @@ h3 {
   color: white;
   font-size: 28px;
   line-height: 1.5em;
+  text-indent: 8px;
+  padding-top: 6px;
 }
 @media only screen and (max-width: 600px) {
   h3 {
@@ -173,6 +188,8 @@ h4 {
   color: white;
   font-size: 24px;
   line-height: 1.5em;
+  text-indent: 12px;
+  padding-top: 4px;
 }
 @media only screen and (max-width: 600px) {
   h4 {
@@ -184,6 +201,8 @@ h5 {
   color: white;
   font-size: 20px;
   line-height: 1.5em;
+  text-indent: 16px;
+  padding-top: 2px;
 }
 @media only screen and (max-width: 600px) {
   h5 {
@@ -196,6 +215,7 @@ p {
   font-family: "Nanum Gothic", sans-serif;
   font-size: 18px;
   line-height: 1.8em;
+  padding-top: 2px;
 }
 @media only screen and (max-width: 600px) {
   p {
@@ -203,19 +223,52 @@ p {
   }
 }
 
+/* OL and UL */
+/* ul li {
+  list-style-type: disc;
+  margin-left: 24px;
+} */
+
+ul:not(.li--prevent-before) li:before {
+  content: "▶︎";
+  display: inline-block;
+  width: 1.2rem;
+  font-size: 12px;
+  height: 21px;
+  line-height: 21px;
+  color: #18ffd6;
+  transform: translate(0px, -2px);
+}
+
+ol li {
+  list-style-type: decimal;
+  margin-left: 24px;
+}
+
 li {
   color: #c5c5c5;
   font-family: "Nanum Gothic", sans-serif;
   font-size: 18px;
-  padding-left: 0.5em;
+  padding-left: 0.8em; /* indent */
   line-height: 1.8em;
   white-space: normal;
   box-sizing: border-box;
 }
 @media only screen and (max-width: 600px) {
   li {
-    line-height: 2em;
+    line-height: 1.6em;
+    padding-left: 0.6em; /* indent */
   }
+}
+
+code {
+  letter-spacing: -0.05em;
+  word-spacing: -0.2em;
+  background-color: rgb(63, 63, 63);
+  border-radius: 3px;
+  font-family: courier, monospace;
+  color: #99e9ff;
+  padding: 0 3px;
 }
 
 /* app global link */
