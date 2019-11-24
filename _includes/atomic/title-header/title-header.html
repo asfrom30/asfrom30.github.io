@@ -1,0 +1,23 @@
+<header class="include-title-header__container">
+  <div class="post-header__layout">
+    <div class="post-header__title">{{ page.title | escape }}</div>
+    <div class="post-header__meta">
+      <!-- Date -->
+      {% if include.needDate == false %}
+      <!-- Default option is true -->
+      {% else %}
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <!--  -->
+        {{ page.date | date: date_format }}
+      </time>
+      {% endif %}
+      <!-- Author -->
+      {%- if page.author -%} •
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-author h-card" itemprop="name">by {{ page.author }}</span>
+      </span>
+      {%- endif -%}
+    </div>
+  </div>
+</header>

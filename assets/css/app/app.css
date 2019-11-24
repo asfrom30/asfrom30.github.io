@@ -1,14 +1,32 @@
 /* MEDIA QUERY */
 /* @media only screen and (max-width: 600px) {
 } */
-
-/* CSS VAR */
-/*
-:root {
-  --header-height: 180px;
-  height: var(--header-height) ;
+.black-color-set {
+  /* --background-color: #333333; */
+  /* --background-color: #16162e; */
+  /* --background-color: #1d1e1e; */
 }
-*/
+
+.white-color-set {
+}
+
+:root {
+  /* Identity Color Set */
+  --background-color: #1d1e1e;
+  --header-color: #16162e;
+  --text-color: #dddddd;
+  --link-color: #dddddd;
+  --link-hover-color: rgba(255, 0, 0, 0.646);
+}
+
+.layout--center-focused {
+  max-width: 960px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+}
 
 /** padding-for-header **/
 .padding-for-header {
@@ -28,9 +46,8 @@
 
 /** default style **/
 body {
-  color: white;
-
-  background-color: black;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 /** **/
@@ -203,11 +220,12 @@ li {
 
 /* app global link */
 a {
-  color: #404040;
+  /* color: #404040; */
+  color: var(--link-color);
   text-decoration: none;
 }
 a:hover {
-  color: white;
+  color: var(--link-hover-color);
 }
 
 /* app global separator */

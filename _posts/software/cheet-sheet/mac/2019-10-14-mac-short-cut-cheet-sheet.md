@@ -1,7 +1,7 @@
 ---
-layout: post
-title: Mac Short Cut
+layout: cheet-sheet
 category: cheet-sheet
+title: Mac Short Cut
 tag: mac
 ---
 

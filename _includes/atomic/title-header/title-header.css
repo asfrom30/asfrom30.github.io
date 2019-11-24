@@ -1,0 +1,44 @@
+/** Variable **/
+:root {
+  --header-height: 180px;
+  --header-padding: 60px;
+}
+@media only screen and (max-width: 600px) {
+  :root {
+    --header-height: 80px;
+    --header-padding: 50px;
+  }
+}
+
+/** POST HEADER **/
+.include-title-header__container {
+  background-color: black;
+  color: white;
+  padding-top: var(--header-padding);
+  padding-bottom: var(--header-padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: var(--header-height);
+}
+
+.post-header__layout {
+  max-width: 80%;
+}
+
+.post-header__title {
+  font-size: 42px;
+  line-height: 1.1em;
+  font-family: "Black Han Sans", sans-serif;
+}
+@media only screen and (max-width: 600px) {
+  .post-header__title {
+    font-size: 32px;
+  }
+}
+
+.post-header__meta {
+  text-align: right;
+  font-size: 18px;
+}
