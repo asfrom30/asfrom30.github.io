@@ -1,7 +1,9 @@
 ---
-layout: default/with-nav
+layout: router
 title: Quotes
 permalink: /router/about-me/words
+needFooter: false
+needNav: false
 ---
 
 <!-- liquid syntax for javascript -->
@@ -71,11 +73,11 @@ var words = {
 </script>
 
 <style>
-  {% include_relative index.css %}
+  {% include_relative about-me.words.router.css %}
 </style>
 
 <script>
-  {% include_relative index.js %}
+  {% include_relative about-me.words.router.js %}
 </script>
 
-{% include_relative index.html %}
+{% include_relative about-me.words.router.html %}
