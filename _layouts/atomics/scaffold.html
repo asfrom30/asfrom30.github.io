@@ -9,6 +9,13 @@ author: asfrom30
 
   <body>
 
+    <!-- nav bar -->
+    {% if page.needNav == true %}
+      {%- include /navigator/index.html -%}
+    {% endif%}
+
+
+
     {{ content }}
     
     <!-- disqus comment -->
