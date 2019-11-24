@@ -42,7 +42,8 @@ $ bundle exec jekyll serve --livereload
 - [ ] router 정리하기...
 - [ ] flow of thought는 가벼운 포스트로 변경하기
 - [ ] cheet sheet에 아이콘 넣기...
-- [ ] 2019년 읽은 책...
+- [ ] 2019년 읽은 책 정리하기
+- [ ] h1, h2, h3 인덴트 넣기
 - [ ] [transparent list 스타일 적용 고민](https://codepen.io/nodws/pen/lahqf)
 - [ ] bootstrap or material design
 - [ ] fetch all post summary and sort by select
@@ -51,7 +52,7 @@ $ bundle exec jekyll serve --livereload
   - https://arcath.net/2016/02/ajax-page-loading-in-jekyll-or-any-static-site/
 - [ ] 폰트 템플릿 하일라이트 수정
   - 특히 \*뒤에 `` 안먹히는 것.
-- [ ] Passing parameters to includes Quotes 만들기
+- [ ] Quotes 만들기
   - https://jekyllrb.com/docs/includes/#passing-parameters-to-includes
   - Atomic 스타일임
   - 이걸 사용하게 되면 md 내에서 자유롭게 include quote해서 스타일을 수정할 수 있겠다.
@@ -63,6 +64,8 @@ $ bundle exec jekyll serve --livereload
   - 모든 포스트는 그냥 다 보여주기식으로 나열해야됨.
 - Impl Style And Feature Testing (url : /router/tests) (\_posts/tests) (router_provider/tests)
 - 404 수정하기
+- Footer에 wiki 아이콘 만들고 링크 넣기
+- router 헤더 스타일 주기....
 
 # Next Task
 
