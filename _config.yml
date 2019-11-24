@@ -46,8 +46,8 @@ exclude:
   - node_modules
   - package.json
   - package-lock.json
-  - task-runners
-  - .staging
+  - .task-runners
+  - .archives
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/
