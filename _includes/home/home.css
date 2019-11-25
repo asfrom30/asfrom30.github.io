@@ -1,9 +1,4 @@
-.home__root li {
-  font-size: 16px;
-  line-height: 1.2em;
-}
-
-.home__bacground {
+.home__background {
   background-color: black;
   width: 100vw;
   max-width: 100%;
@@ -63,12 +58,6 @@
   display: none;
 }
 
-.home-menu__collapse-list li {
-  padding: 5px;
-  margin-left: 20px;
-  white-space: nowrap;
-}
-
 a,
 a:focus,
 a:active {
@@ -98,4 +87,32 @@ a:active {
 
 .home__external-icon {
   font-size: 12px;
+}
+
+/* List Style */
+.home-menu__collapse-list li {
+  padding: 4px;
+  margin-left: 12px;
+  white-space: nowrap;
+}
+
+.home__root ul li {
+  font-size: 16px;
+  line-height: 16px;
+  opacity: 0.6;
+}
+.home__root ul li:hover {
+  opacity: 1;
+}
+
+.home__root ul li:before {
+  content: "▶︎";
+  color: aqua;
+  display: inline-block;
+  text-align: center;
+  width: 1.2rem;
+  height: 16px;
+  font-size: 8px;
+  line-height: 16px;
+  transform: translate(0px, -3px);
 }

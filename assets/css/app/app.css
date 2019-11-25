@@ -18,6 +18,8 @@
   --link-color: #dddddd;
   --link-hover-color: rgba(255, 0, 0, 0.646);
 
+  /* color: #e96d88; */
+
   /* Identity Font Family */
   font-family: "Open Sans", sans-serif;
 }
@@ -229,7 +231,7 @@ p {
   margin-left: 24px;
 } */
 
-ul:not(.li--prevent-before) li:before {
+ul:not(.li--prevent-before) li::before {
   content: "▶︎";
   display: inline-block;
   width: 1.2rem;

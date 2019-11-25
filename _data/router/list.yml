@@ -1,5 +1,4 @@
 - title: About me
-  className: about-me
   subs:
     - title: Welcome
       url: /router/about-me/welcome
@@ -10,7 +9,6 @@
     - title: 言
       url: /router/about-me/words
 - title: Career
-  className: career
   subs:
     - title: Cover Letter
       url:
@@ -19,7 +17,6 @@
     - title: Portfolio
       url: /router/career/portfolio
 - title: Hardware
-  className: hardware
   subs:
     - title: All Posts
       url: /router/posts
@@ -30,7 +27,6 @@
     - title: Tests
       url: /router/tests
 - title: Software
-  className: devs
   subs:
     - title: TIL
       url: /router/devs/til
@@ -48,14 +44,12 @@
     - title: Dojo
       url: /router/sw/dojo
 - title: Third Value
-  className: third-value
   subs:
     - title: Camping Location
       url: https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=8
       external: true
     - title: Playing Guitar
 - title: Gallery
-  className: gallery
   subs:
     - title: Bible
       url: https://www.instagram.com/explore/tags/asfrom30_bible/
@@ -70,6 +64,5 @@
       url: https://twitter.com/asfrom30_log
       external: true
 - title: Extras
-  className: extras
   subs:
     - title: Join my project
