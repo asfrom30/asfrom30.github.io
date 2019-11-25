@@ -1,45 +1,25 @@
 ---
 layout: router
 permalink: /router/devs/til/by-subject
+needFooter: false
 ---
 
 {% assign posts = site.posts | where_exp: "item", "item.category == 'til'" | where_exp: "item", "item.tag contains 'by-subject'" %}
 
-# By Subject ({{posts.size}})
+<div class="layout--center-focused">
 
-{% assign vuePosts = posts | where_exp: "item", "item.category == 'til'" | where_exp: "item", "item.tag contains 'vue'" %}
+<div markdown="1">
 
-### Vue ({{vuePosts.size}})
+<h1>List of Subjects</h1>
+- [Go to vue subject](#vue)
+- [Go to css subject](#css)
 
-{% for post in vuePosts %}
+{% include_relative child/css.post-list.by-subject.md %}
+{% include_relative child/git.post-list.by-subject.md %}
+{% include_relative child/vue.post-list.by-subject.md %}
+{% include_relative child/webpack.post-list.by-subject.md %}
+{% include_relative child/gulp.post-list.by-subject.md %}
 
-<li>
-  <a href="{{ post.url }}"> <b>{{post.title}}</b></a>
-</li>
-{% endfor %}
+</div>
 
-<!-- Webpack  -->
-
-{% assign webpackPosts = posts | where_exp: "item", "item.category == 'til'" | where_exp: "item", "item.tag contains 'webpack'" %}
-
-### Webpack ({{webpackPosts.size}})
-
-{% for post in webpackPosts %}
-
-<li>
-  <a href="{{ post.url }}"> <b>{{post.title}}</b></a>
-</li>
-{% endfor %}
-
-<!-- Gulp -->
-
-{% assign gulpPosts = posts | where_exp: "item", "item.category == 'til'" | where_exp: "item", "item.tag contains 'gulp'" %}
-
-### Webpack ({{webpackPosts.size}})
-
-{% for post in gulpPosts %}
-
-<li>
-  <a href="{{ post.url }}"> <b>{{post.title}}</b></a>
-</li>
-{% endfor %}
+</div>
