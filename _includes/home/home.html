@@ -2,21 +2,14 @@
   {% include home/home.css %}
 </style>
 
-<script>
-  {% include home/home.js %}
-</script>
-
-<main aria-label="Content">
-  <div class="home home__container">
+<main class="home__root ff-noto-sans f-w-100" aria-label="Content">
+  <div class="home__bacground">
     <div class="home__center">
       <div class="side-image"></div>
       <div class="home-menu">
         {% for mainRow in site.data.router.list %}
         <div class="{{mainRow.className}}">
-          <div
-            class="home-menu__collapse-title"
-            onclick="toggleCollapseList('{{mainRow.className}}', event)"
-          >
+          <div class="home-menu__collapse-title" onclick="toggleCollapseList('{{mainRow.className}}', event)">
             <span>| {{mainRow.title}}</span>
             <span>></span>
           </div>
@@ -36,15 +29,11 @@
                   </span>
                 </a>
                 {% endif %} {% elsif sub.title == 'dev-post' %}
-                <a href="{{sub.url}}"
-                  >See all {{site.categories.dev.size}} posts</a
-                >
+                <a href="{{sub.url}}">See all {{site.categories.dev.size}} posts</a>
                 {% for post in site.categories.dev limit:3 %}
                 <article class="archive-item">
                   <li class="m-l-5">
-                    <a href="{{ site.baseurl }}{{ post.url }}"
-                      >{{post.title}}</a
-                    >
+                    <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
                   </li>
                 </article>
                 {% endfor %} {% endif %}
@@ -58,3 +47,7 @@
     </div>
   </div>
 </main>
+
+<script>
+  {% include home/home.js %}
+</script>

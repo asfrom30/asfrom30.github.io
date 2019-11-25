@@ -247,7 +247,7 @@ ol li {
 
 li {
   color: #c5c5c5;
-  font-family: "Nanum Gothic", sans-serif;
+  /* font-family: "Nanum Gothic", sans-serif; */
   font-size: 18px;
   padding-left: 0.8em; /* indent */
   line-height: 1.8em;
