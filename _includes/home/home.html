@@ -7,29 +7,13 @@
     <div class="home__center">
       <div class="side-image"></div>
       <div class="home-menu">
-        <div onclick="test(event)">
-          <div class="home-menu__collapse-title">
-            <span>| TEST</span>
-            <span>></span>
-          </div>
-          <div class="home-menu__collapse-list">
-            <ul>
-              <li>TT</li>
-              <li>TT</li>
-              <li>TT</li>
-            </ul>
-          </div>
-        </div>
         {% for mainRow in site.data.router.list %}
-        <!--  -->
-        {% assign containerClassName = mainRow.className | prepend : "js-" %}
-        <div>{{containerClassName}}</div>
-        <div class="{{mainRow.className}}">
-          <div class="home-menu__collapse-title" onclick="toggleCollapseList('{{mainRow.className}}', event)">
+        <div onclick="toggleCollapseList(event)">
+          <div class="home-menu__collapse-title js-row__title">
             <span>| {{mainRow.title}}</span>
             <span>></span>
           </div>
-          <div class="home-menu__collapse-list">
+          <div class="home-menu__collapse-list js-row__body">
             <ul>
               {% for sub in mainRow.subs %}
               <li>

@@ -48,6 +48,7 @@ exclude:
   - package-lock.json
   - .task-runners
   - .archives
+  - .til
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/
