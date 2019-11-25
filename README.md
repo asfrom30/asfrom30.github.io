@@ -66,6 +66,7 @@ $ bundle exec jekyll serve --livereload
 - 404 수정하기
 - Footer에 wiki 아이콘 만들고 링크 넣기
 - router 헤더 스타일 주기....
+- Add emoji to home.html
 
 # Next Task
 
