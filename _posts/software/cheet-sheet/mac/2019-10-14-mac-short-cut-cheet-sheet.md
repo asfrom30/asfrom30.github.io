@@ -1,5 +1,5 @@
 ---
-layout: cheet-sheet
+layout: cheat-sheet
 category: cheat-sheet
 title: Mac Short Cut
 tag: mac

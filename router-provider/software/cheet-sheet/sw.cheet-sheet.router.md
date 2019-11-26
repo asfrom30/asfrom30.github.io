@@ -1,11 +1,11 @@
 ---
 layout: router
 title: My page
-permalink: /router/devs/cheet-sheet
+permalink: /router/devs/cheat-sheet
 needFooter: false
 ---
 
-{% assign posts = site.posts | where_exp: "item", "item.category == 'cheet-sheet'" %}
+{% assign posts = site.posts | where_exp: "item", "item.category == 'cheat-sheet'" %}
 
 <div class="layout--center-focused">
 
@@ -16,7 +16,7 @@ needFooter: false
 </li>
 {% endfor %}
 
-{% assign macPosts = site.posts | where_exp: "item", "item.category == 'cheet-sheet'" | where_exp: "item", "item.tag == 'mac'" %}
+{% assign macPosts = site.posts | where_exp: "item", "item.category == 'cheat-sheet'" | where_exp: "item", "item.tag == 'mac'" %}
 
 <h3>Mac Short Cut ({{ macPosts.size }})</h3>
 {% for post in macPosts %}
@@ -26,7 +26,7 @@ needFooter: false
 {% endfor %}
 
 <h3>Vim Short Cut ({{ posts.size }})</h3>
-{% assign vimPosts = site.posts | where_exp: "item", "item.category == 'cheet-sheet'" | where_exp: "item", "item.tag == 'vim'" %}
+{% assign vimPosts = site.posts | where_exp: "item", "item.category == 'cheat-sheet'" | where_exp: "item", "item.tag == 'vim'" %}
 {% for post in vimPosts %}
 <li>
   <a href="{{ post.url }}"> <b>{{post.title}}</b>, {{ post.date | date: '%B %d, %Y' }}</a>
