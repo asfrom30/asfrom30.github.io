@@ -67,6 +67,7 @@ $ bundle exec jekyll serve --livereload
 - Footer에 wiki 아이콘 만들고 링크 넣기
 - router 헤더 스타일 주기....
 - Add emoji to home.html
+- [ ] smooth scroll
 
 # Next Task
 

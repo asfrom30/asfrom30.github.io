@@ -1,28 +1,33 @@
 ---
-layout: page
 title: Categories
+layout: router
 permalink: /router/categories
 ---
 
-<div id="archives">
+<div id="archives" class="layout--center-focused">
+  <h1>By Categories</h1>
+
+  <div>
+    {% for category in site.categories %}
+    <!--  -->
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    <!--  -->
+    <a href="#{{category_name}}">{{category_name}}</a>
+    {% endfor %}
+  </div>
+
   {% for category in site.categories %}
   <div class="archive-group">
     {% capture category_name %}{{ category | first }}{% endcapture %}
-    <div id="#{{ category_name | slugize }}"></div>
-    <p></p>
-
+    <div id="{{ category_name | slugize }}"></div>
     <!-- Category Header-->
     <div>
       <h3 class="category-head">{{ category_name }}</h3>
-      <!-- TODO: 포스트당 맥시멈 보여주는 개수 4개로 수정 -->
-      <h5>
-        <a href="/categories/{{category_name}}" name="{{category_name}}"
-          >더보기</a
-        >
-      </h5>
+      <!-- TODO: Not yet impl : 포스트당 맥시멈 보여주는 개수 4개로 수정 -->
+      <!-- <h5> <a href="/categories/{{category_name}}" name="{{category_name}}">더보기</a> </h5> -->
     </div>
 
-    <!-- Category post list -->
+    <!-- Loop by Category -->
     <ul>
       {% for post in site.categories[category_name] %}
       <article class="archive-item">

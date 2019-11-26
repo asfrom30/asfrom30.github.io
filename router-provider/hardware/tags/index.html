@@ -1,17 +1,37 @@
 ---
-layout: page
 title: Tags
+layout: router
 permalink: /router/tags
 ---
 
-<!-- show all tags -->
+<div id="archives" class="layout--center-focused">
+  <h1>By Tags</h1>
+  <div>
+    {% for tag in site.tags %}
+    <!--  -->
+    {% capture tag_name %}{{ tag | first }}{% endcapture %}
+    <!--  -->
+    <a href="#{{tag_name}}">{{tag_name}}</a>
+    {% endfor %}
+  </div>
 
-<div>hi</div>
+  {% for category in site.tags %}
+  <div class="archive-group">
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    <div id="{{ category_name | slugize }}"></div>
+    <!-- Category Header-->
+    <div>
+      <h3 class="category-head">{{ category_name }}</h3>
+    </div>
 
-<h1>Tag</h1>
-{{site.tags}}
-
-<h1>Software Tags</h1>
-{% for swTags in site.data.tag-sorter.sw.tags %}
-<div>{{swTags}}</div>
-{% endfor %}
+    <!-- Loop by Category -->
+    <ul>
+      {% for post in site.tags[category_name] %}
+      <article class="archive-item">
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
+      </article>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>
