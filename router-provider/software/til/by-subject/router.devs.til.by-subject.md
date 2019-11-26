@@ -4,7 +4,7 @@ permalink: /router/devs/til/by-subject
 needFooter: false
 ---
 
-{% assign posts = site.posts | where_exp: "item", "item.category == 'til'" | where_exp: "item", "item.tag contains 'by-subject'" %}
+{% assign posts = site.posts | where_exp: "item", "item.category == 'til'" | where_exp: "item", "item.tag contains 'til-by-subject'" %}
 
 <div class="layout--center-focused">
 

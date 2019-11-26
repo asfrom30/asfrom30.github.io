@@ -8,8 +8,8 @@ needFooter: false
 
 </style>
 
-{% assign tilBySubjectPosts = site.posts | where_exp: "item", "item.category == 'til'" | where_exp: "item", "item.tag contains 'by-subject'" %}
-{% assign tilByDatePosts = site.posts | where_exp: "item", "item.category == 'til'" | where_exp: "item", "item.tag contains 'by-date'" %}
+{% assign tilBySubjectPosts = site.posts | where_exp: "item", "item.category == 'til'" | where_exp: "item", "item.tag contains 'til-by-subject'" %}
+{% assign tilByDatePosts = site.posts | where_exp: "item", "item.category == 'til'" | where_exp: "item", "item.tag contains 'til-by-date'" %}
 
 <div class="layout--center-focused" style="min-height: 100vh; padding: 0">
   <div class="category-and-tag-filter">
