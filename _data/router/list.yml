@@ -24,6 +24,8 @@
       url: /router/tags
     - title: By Category
       url: /router/categories
+    - title: Dashboard
+      url: /router/dashboard
     - title: Tests
       url: /router/tests
 - title: Software

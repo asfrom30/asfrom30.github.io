@@ -1,6 +1,6 @@
 ---
-layout: atomics/scaffold
-permalink: /dashboard
+layout: router
+permalink: /router/dashboard
 ---
 
 <h1> Check Using Google Analytics </h1>

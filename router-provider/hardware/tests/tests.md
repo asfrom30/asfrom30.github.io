@@ -1,6 +1,6 @@
 ---
-layout: atomics/scaffold
-permalink: /tests
+layout: router
+permalink: /router/tests
 ---
 
 <h1>Text Indentation</h1>
