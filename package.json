@@ -4,7 +4,7 @@
   "description": "- install ruby or rvm ()",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "bundle exec jekyll serve --livereload"
+    "start": "bundle exec jekyll serve --drafts --livereload"
   },
   "repository": {
     "type": "git",
