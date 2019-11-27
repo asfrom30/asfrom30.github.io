@@ -14,14 +14,6 @@ needFooter: false
 <div class="layout--center-focused" style="min-height: 100vh; padding: 0">
   <div class="category-and-tag-filter">
       <div>
-        <h1>Workflow</h1>
-        <ul>
-          <li>TIL by date (Daily)</li>
-          <li>TIL by subject (Bulk)</li>
-          <li>Move to Wiki (Organize)</li>
-        </ul>
-      </div>
-      <div>
         <h1>
           <a href="by-subject">By Subject ({{tilBySubjectPosts.size}})</a>
         </h1>
