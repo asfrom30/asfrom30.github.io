@@ -17,17 +17,6 @@
     - title: Portfolio
       url: /router/career/portfolio
 - title: Hardware
-  subs:
-    - title: All Posts
-      url: /router/posts
-    - title: By Tag
-      url: /router/tags
-    - title: By Category
-      url: /router/categories
-    - title: Dashboard
-      url: /router/dashboard
-    - title: Tests
-      url: /router/tests
 - title: Software
   subs:
     - title: TIL
@@ -68,3 +57,5 @@
 - title: Extras
   subs:
     - title: Join my project
+    - title: Posts by *
+      url: /router/by-*
