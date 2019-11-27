@@ -1,7 +1,4 @@
 ---
-title: Vue Template
-
-layout: post
 tag: vue
 ---
 
