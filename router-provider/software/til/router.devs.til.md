@@ -4,12 +4,8 @@ permalink: /router/devs/til
 needFooter: false
 ---
 
-<style>
-
-</style>
-
-{% assign tilBySubjectPosts = site.posts | where_exp: "item", "item.category == 'til-by-subject'" %}
-{% assign tilByDatePosts = site.posts | where_exp: "item", "item.category == 'til-by-date'" %}
+{% assign tilBySubjectPosts = site.tils | where_exp: "item", "item.category == 'by-subject'" %}
+{% assign tilByDatePosts = site.tils | where_exp: "item", "item.category == 'by-date'" %}
 
 <div class="layout--center-focused" style="min-height: 100vh; padding: 0">
   <div class="category-and-tag-filter">
@@ -35,15 +31,11 @@ needFooter: false
         <div>
           <ul>
             <li>
-              <a href="{{ post.url }}"> {{ post.title }}</a>
+              <a href="{{ post.url }}"> {{ post.title }} TIL</a>
             </li>
           </ul>
         </div>
         {%- endfor -%}
       </div>
-  </div>
-  <div>
-    <div>_tils ({{site.tils.size}}) </div> 
-    <div>{{site.tils}}</div>
   </div>
 </div>

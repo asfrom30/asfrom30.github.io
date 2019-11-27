@@ -1,6 +1,6 @@
 ---
 title: Vue Template
-category: til-by-subject
+
 layout: post
 tag: vue
 ---
