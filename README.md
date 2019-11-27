@@ -68,6 +68,7 @@ $ bundle exec jekyll serve --livereload
 - router 헤더 스타일 주기....
 - Add emoji to home.html
 - [ ] smooth scroll
+- 변경을 생각하면 til을 collection으로 다 묶는게 좋을것 같다. 만약 레이아웃이나 형식이 변한다면? 그낭 task-runner를 사용해도 될거 같은데.
 
 # Next Task
 

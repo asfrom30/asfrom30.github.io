@@ -234,6 +234,11 @@ table {
 .f-w-700 { font-weight: 700; }
 .f-w-900 { font-weight: 900; }
 
+/* text transform */
+.f-tt-lower {text-transform: lowercase;}
+.f-tt-upper {text-transform: uppercase;}
+.f-tt-capital {text-transform: capitalize;}
+
 /* text handling */
 .overflow-hidden{overflow:hidden}
 .text-ellipsis{ overflow: hidden; white-space: nowrap; text-overflow: ellipsis}
