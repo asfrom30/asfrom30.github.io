@@ -3,7 +3,8 @@ title: All Posts
 layout: router
 permalink: /router/posts
 ---
-{% assign posts = site.posts | where_exp: "item", "item.category != 'til-by-date'" | where_exp: "item", "item.category != 'til-by-subject'" %}
+{% assign excludeDraftPosts = site.posts | where_exp: "item", "item.draft == false" %}
+{% assign posts = excludeDraftPosts | where_exp: "item", "item.category != 'til-by-date'" | where_exp: "item", "item.category != 'til-by-subject'" %}
 
 {%- if page.title -%}
 <h1 class="page-heading">{{ page.title }} {{posts.size}}</h1>

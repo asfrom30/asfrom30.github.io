@@ -48,13 +48,11 @@ exclude:
   - package-lock.json
   - .task-runners
   - .archives
-  - .til
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
 
-# plugins
 plugins:
   - jekyll-feed
   - jekyll-paginate
@@ -71,4 +69,16 @@ disqus:
     # Leave shortname blank to disable comments site-wide.
     # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
     shortname: http-asfrom30-github-io
+
+collections:
+  tils:
+      output: true
+
+defaults:
+  -
+    scope:
+      path: "_drafts" # an empty string here means all files in the project
+    values:
+      layout: "draft"
+
 

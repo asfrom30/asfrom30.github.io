@@ -42,16 +42,8 @@ needFooter: false
         {%- endfor -%}
       </div>
   </div>
+  <div>
+    <div>_tils ({{site.tils.size}}) </div> 
+    <div>{{site.tils}}</div>
+  </div>
 </div>
-
-<!-- <div>
-    <h1>Subject 별 분류</h1>
-    <ul>
-      <li>
-        <a href="css">CSS에 속한 글들</a>
-      </li>
-      <li>
-        <a href="vue">Vue에 속한 글들</a>
-      </li>
-    </ul>
-  </div> -->
