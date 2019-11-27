@@ -1,4 +1,4 @@
-{% assign cssPosts = posts | where_exp: "item", "item.category == 'til'" | where_exp: "item", "item.tag contains 'css'" %}
+{% assign cssPosts = posts | where_exp: "item", "item.tag contains 'css'" %}
 
 {:id="css"}
 

@@ -1,4 +1,4 @@
-{% assign gitPosts = posts | where_exp: "item", "item.category == 'til'" | where_exp: "item", "item.tag contains 'git'" %}
+{% assign gitPosts = posts | where_exp: "item", "item.tag contains 'git'" %}
 
 {:id="git"}
 

@@ -5,7 +5,7 @@ permalink: /router/devs/til/by-date
 
 <h1>By Date</h1>
 
-{% assign posts = site.posts | where_exp: "item", "item.category == 'til'" | where_exp: "item", "item.tag == 'by-date'" %}
+{% assign posts = site.posts | where_exp: "item", "item.category == 'til-by-date'"%}
 
 <h3>Total : {{ posts.size }}</h3>
 

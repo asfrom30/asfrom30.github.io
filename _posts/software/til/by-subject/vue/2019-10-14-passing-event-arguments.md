@@ -1,8 +1,8 @@
 ---
 title: Vue Template
-category: til
+category: til-by-subject
 layout: post
-tag: [til-by-subject, vue]
+tag: vue
 ---
 
 # Passing Event Argumnets

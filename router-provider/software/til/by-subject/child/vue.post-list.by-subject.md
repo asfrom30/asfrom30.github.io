@@ -1,4 +1,4 @@
-{% assign vuePosts = posts | where_exp: "item", "item.category == 'til'" | where_exp: "item", "item.tag contains 'vue'" %}
+{% assign vuePosts = posts | where_exp: "item", "item.tag contains 'vue'" %}
 
 {:id="vue"}
 
