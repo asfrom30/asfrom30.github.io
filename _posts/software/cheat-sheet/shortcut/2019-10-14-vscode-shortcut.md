@@ -2,7 +2,7 @@
 layout: cheat-sheet
 category: cheat-sheet
 title: VS Code Short cut
-tag: editor
+tag: shortcut
 ---
 
 # Multi Cursor
