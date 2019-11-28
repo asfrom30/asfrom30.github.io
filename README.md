@@ -84,12 +84,41 @@ $ bundle exec jekyll serve --livereload
 
 # BUG
 
-- 아래 렌더링 이상하게 됨 p 태그가 삽입됨
+### 아래 렌더링 이상하게 됨 p 태그가 삽입됨
 
+Nested list 일 때 생기는 버그 아래 리스트가 하나 더 붙으면
+
+```md
+## Multi
+
+- ## Multi
+
+  -
+
+- Multi
 ```
+
+위에 것이 포매팅이 아래와 같이 된다.
+
+```md
 ## Multi
 
 - Multi
+
+  ## -
+
+- Multi
+```
+
+따라서 `<br>` 태그를 삽입해서 포매팅을 방지하자
+
+```md
+## Multi
+
+- ## Multi
+  -
+
+<br/>
 
 - Multi
 ```
