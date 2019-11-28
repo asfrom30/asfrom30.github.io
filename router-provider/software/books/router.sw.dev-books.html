@@ -5,7 +5,9 @@
 </div>
 
 <div class="dev-books-router-container">
-  <div class="dev-books__size">Reading Road Map <a href="https://asfrom30.atlassian.net/wiki/spaces/public/pages/426004">Link</a></div>
+  <div class="dev-books__size">
+    Reading Road Map <a href="https://drive.google.com/open?id=1dzvEMcr2tggIKSSpRND9bFI14cD5ugwBlNu2N0FZd94" target="_blank">Link</a>
+  </div>
   <div class="dev-books__size">
     Total Dev books I read :
     <strong class="c-white">{{site.categories[page.category].size}}</strong>
@@ -13,7 +15,7 @@
   <div>
     {% for year in page.years %}
     <div class="dev-books__year-title">{{year}}</div>
-    <ul class="flex-wrap no-margin no-padding">
+    <ul class="flex-wrap no-margin no-padding li--prevent-before">
       {% for post in site.categories[page.category] %}
       <!--  -->
       {% assign postYear = post.date | date: "%Y" %}

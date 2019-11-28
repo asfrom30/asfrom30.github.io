@@ -31,7 +31,7 @@
     - title: Post
       url: /router/devs/dev-post
     - title: Books
-      url: /router/devs/dev-book
+      url: /router/sw/dev-books
     - title: Dojo
       url: /router/sw/dojo
 - title: Third Value
