@@ -81,3 +81,15 @@ $ bundle exec jekyll serve --livereload
 - site.pages
   - 이게 헤더에 선언이 되어 있는데. 아마 생성된 모든 url 링크를 자동으로 헤더에 삽입하는거 같다. 카테고리 별로 되는게 아니고.
   - pagenate를 적용했더니 이게 그냥 계속 늘어난다. /page2 /page3 url에도 네비게이션에 자동으로 삽입된다.
+
+# BUG
+
+- 아래 렌더링 이상하게 됨 p 태그가 삽입됨
+
+```
+## Multi
+
+- Multi
+
+- Multi
+```

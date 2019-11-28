@@ -1,0 +1,71 @@
+<style>
+  .b-r {
+    border: 1px solid red;
+  }
+  .b-c {
+    border: 1px solid cyan;
+  }
+</style>
+<h3><code>i</code> tag의 경우</h3>
+<ul>
+  <li>인라인태그라고 하더라도 width가 100% 먹는다.(i랑 p일때 다르네)</li>
+</ul>
+<div class="b-c" style="height: 200px; width: 100%">
+  <i class="b-r">i tag</i>
+</div>
+
+<ul>
+  <li>display: flex, child에 margin: auto 추가</li>
+</ul>
+<div class="b-c" style="height: 200px; width: 100%; display: flex;">
+  <i class="b-r" style="margin:auto">i tag</i>
+</div>
+
+<ul>
+  <li>flex만 추가</li>
+</ul>
+<div class="b-c" style="height: 200px; width: 100%; display: flex;">
+  <i class="b-r">i tag</i>
+</div>
+
+<ul>
+  <li>flex를 변경</li>
+</ul>
+<div
+  class="b-c"
+  style="height: 200px; width: 100%; display: flex; justify-content: center; align-items: center;"
+>
+  <i class="b-r">i tag</i>
+</div>
+
+<h3><code>p</code> tag의 경우</h3>
+<ul>
+  <li></li>
+</ul>
+<div class="b-c" style="height: 200px; width: 100%">
+  <p class="b-r">p tag</p>
+</div>
+
+<ul>
+  <li>display: flex, child에 margin: auto 추가</li>
+</ul>
+<div class="b-c" style="height: 200px; width: 100%; display: flex;">
+  <p class="b-r" style="margin:auto; padding:0 !important">i tag</p>
+</div>
+
+<ul>
+  <li>flex만 추가</li>
+</ul>
+<div class="b-c" style="height: 200px; width: 100%; display: flex;">
+  <i class="b-r">i tag</i>
+</div>
+
+<ul>
+  <li>flex를 변경</li>
+</ul>
+<div
+  class="b-c"
+  style="height: 200px; width: 100%; display: flex; justify-content: center; align-items: center;"
+>
+  <i class="b-r">i tag</i>
+</div>
