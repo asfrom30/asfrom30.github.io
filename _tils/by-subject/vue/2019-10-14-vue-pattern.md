@@ -1,3 +1,7 @@
+---
+tag: vue
+---
+
 # Attribute Pattern.
 
 ```html
@@ -11,7 +15,7 @@
   export default {
     mounted() {
       this.$attrs.resizable; // ""
-    },
+    }
   };
 </script>
 ```
@@ -22,14 +26,23 @@
 
 ```html
 <!-- windowBootstraps is array -->
-<div v-for="({uuid, initPos, zIndex} = bootstrap, index) in windowBootstraps" :key="index" :id="uuid"></div>
+<div
+  v-for="({uuid, initPos, zIndex} = bootstrap, index) in windowBootstraps"
+  :key="index"
+  :id="uuid"
+></div>
 ```
 
 # Find `Ref` includes specific `Attribute`
 
 ```html
 <div v-for="({uuid, initPos, zIndex} = bootstrap) in windowBootstraps">
-  <tg-window ref="TgWindows" :windowEventBus="windowEventBus" :data-window-id="uuid" @minimize="onMinimize(uuid, $event)"></tg-window>
+  <tg-window
+    ref="TgWindows"
+    :windowEventBus="windowEventBus"
+    :data-window-id="uuid"
+    @minimize="onMinimize(uuid, $event)"
+  ></tg-window>
 </div>
 ```
 
@@ -37,14 +50,14 @@
 export default {
   methods: {
     findRef(uuid) {
-      const i = this.$refs.TgWindows.findIndex((obj) => {
-        return obj.$attrs['data-window-id'] === uuid;
+      const i = this.$refs.TgWindows.findIndex(obj => {
+        return obj.$attrs["data-window-id"] === uuid;
       });
-      if (i === -1) return alert('can`t find ref');
+      if (i === -1) return alert("can`t find ref");
 
       const ref = this.$refs.TgWindows[i];
-    },
-  },
+    }
+  }
 };
 ```
 
@@ -54,8 +67,8 @@ export default {
 // Global
 new Vue({
   data: {
-    sharedStyle,
-  },
+    sharedStyle
+  }
 });
 
 // Each Component
@@ -70,17 +83,17 @@ export default {
 new Vue({
   data: {
     sharedStyle: {
-      mainTitle: 'font-weight-bold elevation-14 main-content__title',
-      subTitle: 'display-1 font-weight-bold',
-    },
-  },
+      mainTitle: "font-weight-bold elevation-14 main-content__title",
+      subTitle: "display-1 font-weight-bold"
+    }
+  }
 });
 
 export default {
   data() {
     return {
-      sharedStyle: this.$root.sharedStyle,
+      sharedStyle: this.$root.sharedStyle
     };
-  },
+  }
 };
 ```

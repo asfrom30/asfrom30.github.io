@@ -1,5 +1,7 @@
 ---
+title: 클린코드 Command / Query Separation (CQS)
 layout: draft
+needNav: false
 ---
 
 # 클린코드 : Command / Query Separation (CQS)

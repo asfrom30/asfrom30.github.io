@@ -1,5 +1,5 @@
 ---
-tag: git
+tag: [git]
 ---
 
 ### Cherry Pick

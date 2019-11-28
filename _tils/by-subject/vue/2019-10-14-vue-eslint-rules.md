@@ -1,3 +1,7 @@
+---
+tag: vue
+---
+
 ```
 extends: [
     '@nuxtjs',
