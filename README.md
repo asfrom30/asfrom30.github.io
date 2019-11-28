@@ -20,6 +20,12 @@ $ bundle install
 $ bundle exec jekyll serve --livereload
 ```
 
+## CLI
+
+```
+$ bundle update // update dependency
+```
+
 # DashBoard
 
 - `/dashboard`
