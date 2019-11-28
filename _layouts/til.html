@@ -4,9 +4,10 @@ needNav: true
 needFooter: false
 ---
 
+{% include atomic/title-header/index.html needDate=true %}
+<!--  -->
 {% include atomic/corner-label/index.html label="Today I Learned" color="yellow" %}
 
 <div class="layout--center-focused">
-  <h1>{{page.title}} TIL</h1>
   {{content}}
 </div>
