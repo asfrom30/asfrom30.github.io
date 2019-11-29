@@ -273,14 +273,35 @@ code {
   padding: 0 3px;
 }
 
-/* app global link */
+/* STYLED <a> TAG */
 a {
-  /* color: #404040; */
-  color: var(--link-color);
+  /* color: var(--link-color); */
+  color: inherit;
   text-decoration: none;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-bottom: 3px solid rgba(0, 255, 0, 0.6);
+  transition: border-bottom 0.5s ease, color 0.5s ease;
 }
+
 a:hover {
-  color: var(--link-hover-color);
+  /* color: var(--link-hover-color); */
+  color: rgba(255, 255, 255, 1);
+  border-bottom: 3px solid rgba(0, 255, 0, 0.8);
+}
+
+a:after {
+  content: "";
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+  width: 0.8em;
+  height: 0.8em;
+  background: url("/assets/icons/external-link-alt-solid.svg") no-repeat top right;
+}
+
+a:hover:after {
+  /* background: url("/assets/icons/external-link-alt-solid-hover.svg") no-repeat top right; */
 }
 
 /* app global separator */

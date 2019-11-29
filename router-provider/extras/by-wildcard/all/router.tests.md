@@ -31,20 +31,9 @@ needFooter: false
 
 <h1> a Link</h1>
 
-<style>
-a {
-  color: #94d31b
-}
+- See more Details [Link](qwerasdf)
+- <a href="">HELLO</a>
 
-a:after {
-    content: "";
-    display: inline-block;
-    background: url("/assets/icons/external-link-alt-solid.svg") no-repeat top right;
-    width: 14px;
-    height: 12px;
-    color: #94d31b !important; 
-}
+typeof 연산자는 typeof null 을 “object”라고 판단하는데, 이런 행동은 버그라고 해도 할 말이 없습니다. null 은 당연히 객체가 아니라 원시 값입니다. typeof null 이 “object”라고 판단하는데 이런 행동은 버그라고 해도 할말이 없습니다. [null 은 당연히 객체가 아니라 원시 값입니다](). typeof null 이 “object”를 반환한다는 사실을 이용하는 코드가 너무 많이 생겨서 이제는 돌이킬 수 없게 됐고, 명세에 수록됐으므로 바꿀수도 없습니다.
 
-</style>
-
-<a>HELLO</a>
+typeof 는 배열과 배열 아닌 객체도 정확히 구분하지 못합니다. 함수(객체의 특별한 타입)는 정확히 식별하지만, typeof []는 “object”를 반환합니다.
