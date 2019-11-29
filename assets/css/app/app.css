@@ -231,7 +231,7 @@ p {
   margin-left: 24px;
 } */
 
-ul:not(.li--prevent-before) li::before {
+ul:not(.li--prevent-before) li:before {
   content: "▶︎";
   display: inline-block;
   width: 1.2rem;

@@ -1,6 +1,7 @@
 ---
 layout: router
 permalink: /router/tests
+needFooter: false
 ---
 
 <h1>Text Indentation</h1>
@@ -27,3 +28,23 @@ permalink: /router/tests
   1. helllo
     1. hello
 2. hllo
+
+<h1> a Link</h1>
+
+<style>
+a {
+  color: #94d31b
+}
+
+a:after {
+    content: "";
+    display: inline-block;
+    background: url("/assets/icons/external-link-alt-solid.svg") no-repeat top right;
+    width: 14px;
+    height: 12px;
+    color: #94d31b !important; 
+}
+
+</style>
+
+<a>HELLO</a>
