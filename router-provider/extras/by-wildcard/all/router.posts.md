@@ -1,25 +1,28 @@
 ---
-title: All Posts 
+title: All Posts
 layout: router
 permalink: /router/posts
 ---
+
 {% assign excludeDraftPosts = site.posts | where_exp: "item", "item.draft == false" %}
 {% assign posts = excludeDraftPosts | where_exp: "item", "item.category != 'til-by-date'" | where_exp: "item", "item.category != 'til-by-subject'" %}
 
 {%- if page.title -%}
+
 <h1 class="page-heading">{{ page.title }} {{posts.size}}</h1>
 {%- endif -%}
 
 {% for post in posts %}
-  {% assign currentdate = post.date | date: "%Y" %}
-  {% if currentdate != date %}
-    {% unless forloop.first %}</ul>{% endunless %}
-    <h2 id="y{{post.date | date: "%Y"}}">{{ currentdate }}</h2>
-    <ul>
-    {% assign date = currentdate %}
-  {% endif %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% if forloop.last %}</ul>{% endif %}
+{% assign currentdate = post.date | date: "%Y" %}
+{% if currentdate != date %}
+{% unless forloop.first %}</ul>{% endunless %}
+
+<h2 id="y{{post.date | date: "%Y"}}">{{ currentdate }}</h2>
+<ul>
+{% assign date = currentdate %}
+{% endif %}
+<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% if forloop.last %}</ul>{% endif %}
 {% endfor %}
 
 <!-- TIL 빼고 모든 포스트 년도 별로 정리하기  -->
@@ -30,7 +33,7 @@ permalink: /router/posts
 
   <h3>2019</h3>
   <h3>2018</h3>
-  
+
   {%- if site.posts.size > 0 -%}
   <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
   <ul class="post-list">
@@ -45,7 +48,7 @@ permalink: /router/posts
     {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
     {%- endfor -%}
   </ul>
-  
+
   {%- endif -%}
 </div> -->
 
