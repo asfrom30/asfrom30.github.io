@@ -4,14 +4,32 @@
   </div>
 </div>
 
+{% assign swBookPosts = site.posts | where_exp: "item", "item.category contains 'sw-book'" %}
+{% assign onReadingBooks = site.posts | where_exp: "item", "item.category contains 'sw-book'" | where: 'onReading', true %}
+
+<div class="layout--center-focused">
+  <div>
+    <h2>Reading Road Map <a href="https://drive.google.com/open?id=1dzvEMcr2tggIKSSpRND9bFI14cD5ugwBlNu2N0FZd94" target="_blank">Link</a></h2>
+    <h2>On Reading book Count : {{onReadingBooks.size}}</h2>
+    <h2>Total Dev books I read : <strong class="c-white">{{site.categories[page.category].size}}</strong></h2>
+  </div>
+  <section>
+      {% for post in swBookPosts %}
+        {% assign currentdate = post.date | date: "%Y" %}
+        {% if currentdate != date %}
+          {% unless forloop.first %}</ul>{% endunless %}
+          <h2 id="y{{post.date | date: "%Y"}}">{{ currentdate }}</h2>
+          <ul>
+          {% assign date = currentdate %}
+        {% endif %}
+        <!-- Book Card -->
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% if forloop.last %}</ul>{% endif %}
+      {% endfor %}
+  </section>
+</div>
+
 <div class="dev-books-router-container">
-  <div class="dev-books__size">
-    Reading Road Map <a href="https://drive.google.com/open?id=1dzvEMcr2tggIKSSpRND9bFI14cD5ugwBlNu2N0FZd94" target="_blank">Link</a>
-  </div>
-  <div class="dev-books__size">
-    Total Dev books I read :
-    <strong class="c-white">{{site.categories[page.category].size}}</strong>
-  </div>
   <div>
     {% for year in page.years %}
     <div class="dev-books__year-title">{{year}}</div>
@@ -70,9 +88,5 @@
       {% endif %} {% endfor %}
     </ul>
     {% endfor %}
-    <!-- {% if site.categories[page.category] %}
-    {% else %}
-    <p>There are no posts for this categories.</p>
-    {% endif %} -->
   </div>
 </div>
