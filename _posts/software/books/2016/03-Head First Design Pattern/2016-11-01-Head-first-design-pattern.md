@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: book
 title:  헤드퍼스트 디자인패턴
 slug: head-first-design-pattern 
 author: 에릭 프리먼

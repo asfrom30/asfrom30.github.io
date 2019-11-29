@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: book
 title:  "Functional programming"
 date:   2018-04-21 14:30:43 +0900
 categories: [books]

@@ -1,10 +1,9 @@
 ---
-layout: post
+layout: book
 title: Javascript Patterns
 author: 스토얀 스테파노프
 category: [dev-book]
 bookCoverUrl: http://image.kyobobook.co.kr/images/book/xlarge/157/x9788966260157.jpg
-slug: clean coder
 onReading: true
 hasSummary: true
 ---

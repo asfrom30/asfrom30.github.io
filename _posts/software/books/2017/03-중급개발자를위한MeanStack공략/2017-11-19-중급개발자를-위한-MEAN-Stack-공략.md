@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: book
 title: 중급 개발자를 위한 MEAN Stack 공략
 author: 아모스 하비브
 slug: "Mean Web Development"

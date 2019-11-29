@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: book
 title: The Nature of Software Development 
 slug: the nature of software development
 author: 론 제프리스 
