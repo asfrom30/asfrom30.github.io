@@ -90,45 +90,6 @@ strong {
   font-size: 35px;
 }
 
-/**
-  FONT DECLARATION
-*/
-.ff-open-sans {
-  font-family: "Open Sans", sans-serif;
-}
-
-.ff-black-han-sans {
-  font-family: "Black Han Sans", sans-serif;
-}
-
-.ff-helvetica {
-  font-family: Helvetica, Arial, Sans-Serif;
-}
-
-.ff-patua-one {
-  font-family: "Patua One", cursive;
-}
-
-.ff-nanum-myeonjo {
-  font-family: "Nanum Myeongjo", serif;
-}
-
-.ff-nanum-gothic {
-  font-family: "Nanum Gothic", sans-serif;
-}
-
-.ff-josefin-sans {
-  font-family: "Josefin Sans", sans-serif;
-}
-
-.ff-noto-sans {
-  font-family: "Noto Sans KR", sans-serif;
-}
-
-.ff-courier {
-  font-family: courier, monospace;
-}
-
 /* COLOR DECLARATION */
 .Cf2f2f2 {
   color: #f2f2f2;
