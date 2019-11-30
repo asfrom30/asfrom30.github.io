@@ -3,21 +3,31 @@
   padding-bottom: 24px;
 }
 
-.assay__title { 
+.assay__title {
   font-size: 40px;
   font-weight: 600;
   line-height: 1em;
   padding-bottom: 10px;
-  color: gray;
   border-bottom: 1px solid gray;
 }
 
 .assay__date {
   margin-top: 10px;
   font-size: 24px;
-  line-height:1em;
+  color: gray;
+  line-height: 1em;
 }
 
-a:hover .assay__title, a:hover .assay__date {
+@media only screen and (max-width: 600px) {
+  .assay__title {
+    font-size: 32px;
+  }
+  .assay__date {
+    font-size: 20px;
+  }
+}
+
+a:hover .assay__title,
+a:hover .assay__date {
   color: #0075aa;
 }
