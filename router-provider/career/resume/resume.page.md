@@ -1,7 +1,8 @@
 ---
 title: Resume
-layout: default/with-nav
+layout: router
 permalink: /router/career/resume
+needFooter: false
 ---
 
 <style>
