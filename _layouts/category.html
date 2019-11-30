@@ -1,16 +1,16 @@
 ---
 layout: page
 ---
-<h3>카테고리에 포함된 글들 </h3>
+
+<h3>카테고리에 포함된 글들</h3>
 <div>
   {% if site.categories[page.category] %}
-    <ul class="tags">
-        {% for post in site.categories[page.category] %}
-        <li class="tag"><a class="tag-link" href="{{ site.baseurl }}{{post.url}}">{{post.title}}</a></li>
-        {% endfor %}
-    </ul>
+  <ul class="tags">
+    {% for post in site.categories[page.category] %}
+    <li class="tag"><a class="tag-link" href="{{ site.baseurl }}{{post.url}}">{{post.title}}</a></li>
+    {% endfor %}
+  </ul>
   {% else %}
-    <p>There are no posts for this categories.</p>
+  <p>There are no posts for this categories.</p>
   {% endif %}
 </div>
-
