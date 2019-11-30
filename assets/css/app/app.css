@@ -206,6 +206,7 @@ li {
   }
 }
 
+/* Inline code style */
 code {
   letter-spacing: -0.05em;
   word-spacing: -0.2em;
@@ -259,6 +260,7 @@ a:hover {
 /* app global separator */
 .separator {
   border-bottom: 1px solid gray;
+  /* border-bottom: 1px dashed rgba(#fafafa, 0.15); */
 }
 
 /* app global blockquote */

@@ -1,5 +1,22 @@
+<style>
+  .disqus__container {
+    margin: auto;
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .disqus__container {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+</style>
+
 {%- if page.comments != false -%}
-<div id="disqus_thread"></div>
+<div class="disqus__container">
+  <div id="disqus_thread"></div>
+</div>
 <script>
   /**
    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
