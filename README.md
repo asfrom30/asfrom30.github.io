@@ -80,6 +80,7 @@ $ bundle update // update dependency
 - [ ] improve blockquote style(인용과 강조를 나눠서할 것.)
 - [ ] improve screw footer and header
   - https://codepen.io/pipozoft/pen/vBwjl
+- essay, post, hw-post list 스타일 include 하나로 합치기
 
 # Next Task
 
