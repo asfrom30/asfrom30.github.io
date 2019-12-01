@@ -1,0 +1,12 @@
+<div class="padding-for-header"></div>
+
+<div class="layout--center-focused">
+  {% for essay in site.categories.flow-of-thoughts %}
+  <div class="assay__container">
+    <a href="{{essay.url}}">
+      <div class="assay__title">{{essay.title}}</div>
+      <div class="assay__date">{{essay.date | date_to_long_string}}</div>
+    </a>
+  </div>
+  {% endfor %}
+</div>
