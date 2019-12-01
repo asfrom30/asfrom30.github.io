@@ -77,6 +77,9 @@ $ bundle update // update dependency
 - 변경을 생각하면 til을 collection으로 다 묶는게 좋을것 같다. 만약 레이아웃이나 형식이 변한다면? 그낭 task-runner를 사용해도 될거 같은데.
 - `<a class="u-url" href="{{ page.url | relative_url }}" hidden></a>` <-- what is this.
 - [ ] Book Card에 grid view 적용할 것.
+- [ ] improve blockquote style(인용과 강조를 나눠서할 것.)
+- [ ] improve screw footer and header
+  - https://codepen.io/pipozoft/pen/vBwjl
 
 # Next Task
 

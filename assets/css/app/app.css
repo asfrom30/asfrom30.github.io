@@ -263,10 +263,6 @@ a:hover {
   /* border-bottom: 1px dashed rgba(#fafafa, 0.15); */
 }
 
-/* app global blockquote */
-blockquote {
-}
-
 /* text indent */
 
 /** CODE STYLE **/
@@ -334,4 +330,20 @@ li {
 /** Image container for aspect ratio **/
 .img-container img {
   width: 100%;
+}
+
+/** BLOCQUOTE **/
+blockquote {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  border-radius: 2px;
+}
+blockquote {
+  margin-left: 20px;
+}
+
+blockquote p {
+  margin-bottom: 0;
+  padding: 8px;
 }
