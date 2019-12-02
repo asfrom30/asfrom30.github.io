@@ -1,6 +1,7 @@
 ---
-layout: default/with-nav
+layout: router
 permalink: /router/about-me/essay
+needFooter: false
 ---
 
 <style>

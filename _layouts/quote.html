@@ -1,0 +1,84 @@
+---
+layout: atomics/scaffold
+needNav: true
+needFooter: false
+---
+
+<style>
+  .quote {
+    color: #ffffffe1;
+    font-family: "Josefin Sans", "Noto Sans KR", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    letter-spacing: -0.08em;
+  }
+
+  .quote__layout {
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .quote__content pre {
+    text-align: center;
+  }
+
+  .quote__author {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: 32px;
+  }
+  @media only screen and (max-width: 600px) {
+    .quote__author {
+      font-size: 20px;
+    }
+  }
+
+  .quote__content p,
+  .quote__content code {
+    font-size: 32px;
+    text-align: center;
+    line-height: 1.5;
+    word-break: keep-all;
+    white-space: pre-wrap;
+  }
+  @media only screen and (max-width: 600px) {
+    .quote__content p,
+    .quote__content code {
+      font-size: 20px;
+    }
+  }
+
+  .quote__content p:first-child::before {
+    font-size: 2em;
+    line-height: 0.1em;
+    color: #ccc;
+    content: open-quote;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+
+  .quote__content p:first-child::after {
+    font-size: 2em;
+    color: #ccc;
+    content: close-quote;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+</style>
+
+<div class="quote quote__layout">
+  {% if page.categories contains 'words-poets' %}
+  <div class="quote__author">{{page.title}} / {{ page.author }}</div>
+  {% endif %}
+
+  <div class="quote__content">{{content}}</div>
+
+  {% unless page.categories contains 'words-poets' %}
+  <div class="quote__author">{{page.author}}</div>
+  {% endunless %}
+</div>

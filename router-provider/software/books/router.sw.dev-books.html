@@ -4,75 +4,57 @@
   </div>
 </div>
 
-<div class="dev-books-router-container">
-  <div class="dev-books__size">
-    Reading Road Map <a href="https://drive.google.com/open?id=1dzvEMcr2tggIKSSpRND9bFI14cD5ugwBlNu2N0FZd94" target="_blank">Link</a>
-  </div>
-  <div class="dev-books__size">
-    Total Dev books I read :
-    <strong class="c-white">{{site.categories[page.category].size}}</strong>
-  </div>
-  <div>
-    {% for year in page.years %}
-    <div class="dev-books__year-title">{{year}}</div>
-    <ul class="flex-wrap no-margin no-padding li--prevent-before">
-      {% for post in site.categories[page.category] %}
-      <!--  -->
-      {% assign postYear = post.date | date: "%Y" %}
+{% assign swBookPosts = site.posts | where_exp: "item", "item.category contains 'sw-book'" %}
+{% assign onReadingBooks = site.posts | where_exp: "item", "item.category contains 'sw-book'" | where: 'onReading', true %}
 
-      <!-- On Rading Book list-->
-      {% if year == "onReading" and post.onReading == true %}
-      <li class="dev-books__book-list">
-        {% if post.hasSummary == true %}
-        <a href="{{ site.baseurl }}{{post.url}}">
-          {% endif %}
-          <div class="flex p-a-15">
-            <div class="img-container flex f-wh-center dev-books__cover-img">
-              <img src="{{post.bookCoverUrl}}" />
-            </div>
-            <div class="dev-books__meta flex flex--column w-auto">
-              <div class="dev-books__title">{{post.title}}</div>
-              <div class="dev-books__author">{{post.author}}</div>
-              <div class="dev-books__stars flex f-w-end">{{post.stars}}</div>
-              <div class="dev-books__date flex f-w-end">
-                {{post.date | date_to_long_string }}
-              </div>
-            </div>
-          </div>
-          {% if post.hasSummary == true %}
-        </a>
-        {% endif %}
+<div class="layout--center-focused">
+  <section>
+    <h2>Summary</h2>
+    <ul>
+      <li>Reading Road Map :
+        <a href="https://drive.google.com/open?id=1dzvEMcr2tggIKSSpRND9bFI14cD5ugwBlNu2N0FZd94" target="_blank">Link<i class="fas fa-external-link-alt"></i></a>
       </li>
-
-      <!-- Read Book list-->
-      {% elsif post.onReading != true and year == postYear %}
-      <li class="dev-books__book-list">
-        {% if post.hasSummary == true %}
-        <a href="{{ site.baseurl }}{{post.url}}">
-          {% endif %}
-          <div class="flex p-a-15">
-            <div class="img-container flex f-wh-center dev-books__cover-img">
-              <img src="{{post.bookCoverUrl}}" />
-            </div>
-            <div class="dev-books__meta flex flex--column w-auto">
-              <div class="dev-books__title">{{post.title}}</div>
-              <div class="dev-books__author">{{post.author}}</div>
-              <div class="dev-books__stars flex f-w-end">{{post.stars}}</div>
-              <div class="dev-books__date flex f-w-end">
-                {{post.date | date_to_long_string }}
-              </div>
-            </div>
-          </div>
-          {% if post.hasSummary == true %}
-        </a>
-        {% endif %}
-      </li>
-      {% endif %} {% endfor %}
+      <li>On Reading book Count : {{onReadingBooks.size}}</li>
+      <li>Total Dev books I read : <strong class="c-white">{{site.categories[page.category].size}}</strong></li>
     </ul>
-    {% endfor %}
-    <!-- {% if site.categories[page.category] %}
-    {% else %}
-    <p>There are no posts for this categories.</p>
-    {% endif %} -->
-  </div>
+  </section>
+  <section>
+    <!-- On Reading Section -->
+  </section>
+  <section>
+      {% for post in swBookPosts %}
+        {% assign currentdate = post.date | date: "%Y" %}
+        {% if currentdate != date %}
+          {% unless forloop.first %}</div>{% endunless %} <!-- closing tag except last -->
+          <h2 id="y{{post.date | date: "%Y"}}">{{ currentdate }}</h2>
+          <div class="book-card__layout">
+          {% assign date = currentdate %}
+        {% endif %}
+        <!-- Book Card -->
+        {% if post.hasSummary %}
+        <a href="{{post.url}}">
+        {% endif %}
+          <div class="book-card__item">
+            <div class="book-card__color"></div>
+            <div class="book-card__cover">
+                <img src="{{post.bookCoverUrl}}" />
+            </div>
+            <!-- hasSummary -->
+            <div class="book-card__info-list">
+              {% if post.hasSummary %}
+              <span style="position: absolute; right: 0; top: 0">
+                <i class="fas fa-external-link-alt"></i>
+              </span>
+              {% endif %}
+              <div class="text-ellipsis" style="text-align: center; font-size: 16px; font-weight: 300; margin: 30px 8px 20px 8px">{{post.title}}</div>
+              <div style="text-align: center; color:grey"><i class="fas fa-user-alt"></i> {{post.author}}</div>
+              <div style="text-align: center; color:grey"><i class="far fa-calendar-alt"></i> {{post.date | date_to_long_string }}</div>
+            </div>
+          </div>
+        {% if post.hasSummary %}
+        </a>
+        {% endif %}
+        {% if forloop.last %}</div>{% endif %} <!-- Last year closing tag -->
+      {% endfor %}
+  </section>
 </div>

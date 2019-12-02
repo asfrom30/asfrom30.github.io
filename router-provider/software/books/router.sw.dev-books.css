@@ -25,82 +25,53 @@
   }
 }
 
-.dev-books-router-container {
-  max-width: 960px;
-  margin: auto;
-}
-@media only screen and (max-width: 600px) {
-  .dev-books-router-container {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
+.book-card__layout {
+  font-family: "Josefin Sans", "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: 100;
 }
 
-.dev-books-router-container a {
-  text-decoration: none;
+.book-card__layout a:hover {
+  color: inherit;
 }
 
-.dev-books-router-container * {
-  font-family: "Nanum Gothic", sans-serif;
-  color: gray;
-  line-height: 1.4em;
+.book-card__layout {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.dev-books__size {
-  font-size: 36px;
-  color: white;
-  margin-top: 1em;
-  margin-bottom: 1em;
+.book-card__item {
+  margin: 4px;
+  width: 260px;
+  height: 140px;
+  border: 1px solid rgba(95, 158, 160, 0.2);
+  display: flex;
 }
 
-@media only screen and (max-width: 600px) {
-  .dev-books__size {
-    font-size: 24px;
-  }
-}
-.dev-books__year-title {
-  margin-top: 30px;
-  font-size: 42px;
-  font-family: "Black Han Sans", sans-serif;
-  color: white;
-}
-@media only screen and (max-width: 600px) {
-  .dev-books__year-title {
-    font-size: 32px;
-  }
+.book-card__item:hover {
+  border: 1px solid rgba(95, 158, 160, 1);
 }
 
-/* Book list style */
-.dev-books__book-list {
-  width: 50%;
-  overflow: hidden;
+.book-card__color {
+  width: 6px;
+  height: 100%;
+  background-color: rgba(95, 158, 160, 1);
 }
 
-@media only screen and (max-width: 600px) {
-  .dev-books__book-list {
-    width: 100%;
-  }
+.book-card__cover {
+  flex-shrink: 0;
+  margin-left: 2px;
+  width: 100px;
+  height: 100%;
 }
 
-.dev-books__meta {
+.book-card__cover img {
   width: 100%;
-  padding-left: 10px;
+  height: 100%;
 }
 
-.dev-books__cover-img {
-  min-width: 100px;
-  max-width: 100px;
-  min-height: 140px;
-  max-height: 140px;
-}
-
-.dev-books__title {
-  font-size: 24px;
-  font-weight: 900;
-  color: white;
-}
-@media only screen and (max-width: 600px) {
-  .dev-books__title {
-    font-size: 20px;
-  }
+.book-card__info-list {
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
 }

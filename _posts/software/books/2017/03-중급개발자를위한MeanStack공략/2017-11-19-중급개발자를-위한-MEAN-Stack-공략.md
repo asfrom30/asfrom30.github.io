@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: book
 title: 중급 개발자를 위한 MEAN Stack 공략
 author: 아모스 하비브
 slug: "Mean Web Development"
-category: dev-book
+category: sw-book
 bookCoverUrl: http://image.kyobobook.co.kr/images/book/xlarge/217/x9788960777217.jpg
 hasSummary: true
 ---

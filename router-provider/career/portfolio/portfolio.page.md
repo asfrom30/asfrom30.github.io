@@ -1,7 +1,8 @@
 ---
 title: Portfolio
-layout: default/with-nav
+layout: router
 permalink: /router/career/portfolio
+needFooter: false
 ---
 
 <style>

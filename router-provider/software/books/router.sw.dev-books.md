@@ -1,7 +1,7 @@
 ---
 layout: router
 title: Dev Books
-category: dev-book
+category: sw-book
 permalink: /router/sw/dev-books
 years: ["onReading", "2018", "2017", "2016"]
 needFooter: false

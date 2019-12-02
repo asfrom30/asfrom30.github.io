@@ -1,8 +1,7 @@
 ---
 title: Cover Letter
-layout: default/with-nav
+layout: router
 permalink: /cover-letter
 ---
 
 # Cover Letter
-

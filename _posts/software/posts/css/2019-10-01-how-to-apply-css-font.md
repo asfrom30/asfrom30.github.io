@@ -8,6 +8,8 @@ dev-tags: [css3]
 updatedAt:
 ---
 
+{:toc}
+
 # 1. html에서 바로 적용한다.
 
 ```html
@@ -15,11 +17,7 @@ updatedAt:
 <html>
   <head>
     ...
-    <link
-      href="https://fonts.googleapis.com/css?family=Monoton"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet" type="text/css" />
     ...
   </head>
 

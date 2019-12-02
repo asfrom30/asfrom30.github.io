@@ -4,6 +4,8 @@
       url: /router/about-me/welcome
     - title: 기억의 습작
       url: /router/about-me/essay
+    - title: Flow of Thoughts
+      url: /router/about-me/flow-of-thought
     - title: Book
       url: /router/about-me/book
     - title: 言
@@ -17,23 +19,24 @@
     - title: Portfolio
       url: /router/career/portfolio
 - title: Hardware
+  subs:
+    - title: Posts
+      url: /router/hw/posts
 - title: Software
   subs:
     - title: TIL
       url: /router/devs/til
     - title: Cheat Sheet
       url: /router/devs/cheat-sheet
-    - title: Flow of Thoughts
-      url: /router/devs/flow-of-thoughts
-    - title: Wiki
-      url: https://asfrom30.atlassian.net/wiki/
-      external: true
     - title: Post
       url: /router/devs/dev-post
     - title: Books
       url: /router/sw/dev-books
     - title: Dojo
       url: /router/sw/dojo
+    - title: Wiki
+      url: https://asfrom30.atlassian.net/wiki/
+      external: true
 - title: Third Value
   subs:
     - title: Camping Location

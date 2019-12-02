@@ -5,6 +5,7 @@ permalink: /router/sw/dojo
 slideCount: 2
 slideShowUrls: ["/assets/images/slide-show/kata-1.jpeg", "/assets/images/slide-show/kata-2.jpeg"]
 slideQuotes: ["If it's important, Do it everyday", "begin again"]
+needFooter: false
 ---
 
 <style>
@@ -13,7 +14,7 @@ slideQuotes: ["If it's important, Do it everyday", "begin again"]
 
 {% include atomic/slide-show/index.html %}
 
-<div class="center-focused-960">
+<div class="layout--center-focused">
 
 <div>
   <a href="https://www.notion.so/visualcamp/d6cab9b93289422ea0f8f79d17e6b03f?v=8f29e6f2f2a346d3aff839845c9f2f3a">KATA Schedule</a>

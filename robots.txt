@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /router/about-me/welcome
+Disallow: /router/career/
+Disallow: /essay
