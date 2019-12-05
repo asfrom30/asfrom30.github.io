@@ -81,6 +81,8 @@ $ bundle update // update dependency
 - [ ] improve screw footer and header
   - https://codepen.io/pipozoft/pen/vBwjl
 - essay, post, hw-post list 스타일 include 하나로 합치기
+- 한글 영문 폰트 다른 것 적용하기
+  - https://github.com/xodgree/Hugggg/wiki/%ED%95%9C%EA%B8%80,-%EC%98%81%EB%AC%B8-%ED%8F%B0%ED%8A%B8%EB%A5%BC-%EB%8B%A4%EB%A5%B4%EA%B2%8C-%EC%A0%81%EC%9A%A9%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95
 
 # Next Task
 
