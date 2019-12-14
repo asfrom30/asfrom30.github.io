@@ -1,6 +1,6 @@
 <div class="padding-for-content"></div>
 
-<div class="resume-container">
+<div class="resume-container layout--center-focused">
   <div class="resume__h1">학력 및 경력</div>
   <div class="resume-row">
     <div class="resume__h3 flex f-w-between">
@@ -32,13 +32,17 @@
       </div>
       <div>
         <div class="resume__h5">주요교과목</div>
-        <div class="resume__p">디지털 회로 설계, 컴퓨터 계측제어, 마이크로 프로세서, 프로그래밍 응용, 컴퓨터 구조설계, 고체역학 제어공학, 기계공작법</div>
+        <div class="resume__p">
+          디지털 회로 설계, 컴퓨터 계측제어, 마이크로 프로세서, 프로그래밍 응용, 컴퓨터 구조설계, 고체역학 제어공학, 기계공작법
+        </div>
       </div>
       <div>
         <div class="resume__h5">프로젝트</div>
-        <div class="resume__p">Pro-E로 우주왕복선 모델링, 카운터 무드등 회로 설계 및 제작, FPGA를 사용한 라인트레이서, 마이크로프로세서를 사용한 태양광 추적 전지판, PID 모터제어, FPGA 계산기, Web 기반의
-          Home Network System </div>
-        <div class="resume__p">자세히 보기 > </div>
+        <div class="resume__p">
+          Pro-E로 우주왕복선 모델링, 카운터 무드등 회로 설계 및 제작, FPGA를 사용한 라인트레이서, 마이크로프로세서를 사용한 태양광 추적
+          전지판, PID 모터제어, FPGA 계산기, Web 기반의 Home Network System
+        </div>
+        <div class="resume__p">자세히 보기 ></div>
       </div>
     </div>
   </div>
@@ -65,7 +69,7 @@
       </div>
       <div>
         <div class="resume__h5">프로젝트</div>
-        <div class="resume__p">자세히 보기 > </div>
+        <div class="resume__p">자세히 보기 ></div>
       </div>
     </div>
   </div>
@@ -95,17 +99,18 @@
 
   <div class="resume__h1">기술스택</div>
   <div class="resume__p">
-    하기 기술 스택은 시기와 흐름에 따라 더 익숙하거나, 잊혀진 것이 있을 수 있습니다. 하지만 모두 직접 사용하여 프로젝트를 수행하였고, 주어졌을 때 무리 없이 사용 가능합니다
+    하기 기술 스택은 시기와 흐름에 따라 더 익숙하거나, 잊혀진 것이 있을 수 있습니다. 하지만 모두 직접 사용하여 프로젝트를 수행하였고,
+    주어졌을 때 무리 없이 사용 가능합니다
   </div>
   <div class="resume-row">
-    <div class="resume__h3"> 소프트웨어 </div>
+    <div class="resume__h3">소프트웨어</div>
     <div class="resume-row__content">
       {% for sw-stack in site.data.resume.sw-stacks %}
       <div class="m-l-10">
-        <div class="resume__h5"> {{sw-stack.category}} </div>
+        <div class="resume__h5">{{sw-stack.category}}</div>
         <div class="resume__p flex flex-wrap" style="opacity: 0.7;">
           {% for obj in sw-stack.stacks %}
-           <img class="stack-img" src="/assets/images/tech-stack/{{obj.stack}}"> 
+          <img class="stack-img" src="/assets/images/tech-stack/{{obj.stack}}" />
           {% endfor %}
         </div>
       </div>
@@ -114,12 +119,12 @@
   </div>
 
   <div class="resume-row">
-    <div class="resume__h3"> 하드웨어 </div>
+    <div class="resume__h3">하드웨어</div>
     <div class="resume-row__content">
       <div>
         <div class="resume__h5 flex flex-wrap" style="opacity: 0.7;">
           {% for hw-stack in site.data.resume.hw-stacks %}
-            <img class="stack-img" src="/assets/images/tech-stack/{{hw-stack}}">
+          <img class="stack-img" src="/assets/images/tech-stack/{{hw-stack}}" />
           {% endfor %}
         </div>
         <div class="resume__h5">자동화 설비 설계</div>
@@ -156,5 +161,4 @@
       </div>
     </div>
   </div>
-
 </div>

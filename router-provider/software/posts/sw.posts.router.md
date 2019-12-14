@@ -1,5 +1,5 @@
 ---
-layout: default/with-nav
+layout: router
 title: My page
 permalink: /router/devs/dev-post
 ---

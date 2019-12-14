@@ -1,9 +1,5 @@
-
-
 .resume-container {
-  font-family: 'Nanum Myeongjo', serif;
-  margin-left: 10px;
-  margin-right: 10px;
+  font-family: "Nanum Myeongjo", serif;
 }
 
 .resume-row {
@@ -39,7 +35,6 @@
     font-size: 22px;
   }
 }
-
 
 .resume__h5 {
   font-size: 22px;
@@ -102,7 +97,6 @@ table td {
   height: 50px;
   min-width: 50px;
 }
-
 
 @media only screen and (max-width: 600px) {
   .stack-img {

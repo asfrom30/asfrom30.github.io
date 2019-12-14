@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Patua+One);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-body {
-  font-family: "Open Sans", sans-serif;
+.navigator__container {
+  font-family: "Patua One", cursive;
 }
 
 nav p {
@@ -51,12 +51,9 @@ nav p {
   -ms-transform-origin: 0px 4px;
   -o-transform-origin: 0px 4px;
   transform-origin: 0px 4px;
-  -webkit-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-    -webkit-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  -moz-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-    -moz-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-    transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -webkit-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  -moz-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -moz-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 .line:nth-child(1) {
@@ -131,7 +128,6 @@ nav li {
   position: relative;
   background: #222;
   color: #fff;
-  font-family: "Patua One", cursive;
 }
 
 nav li:hover {
@@ -139,167 +135,99 @@ nav li:hover {
 }
 
 nav.in li:nth-child(1) {
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1)
-      0.1s,
-    opacity 0.5s linear 0.1s;
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s,
-    opacity 0.5s linear 0.1s;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s,
-    opacity 0.5s linear 0.1s;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
 }
 
 nav.in li:nth-child(2) {
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1)
-      0.2s,
-    opacity 0.5s linear 0.2s;
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
-    opacity 0.5s linear 0.2s;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
-    opacity 0.5s linear 0.2s;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, opacity 0.5s linear 0.2s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, opacity 0.5s linear 0.2s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, opacity 0.5s linear 0.2s;
 }
 
 nav.in li:nth-child(3) {
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1)
-      0.3s,
-    opacity 0.5s linear 0.3s;
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-    opacity 0.5s linear 0.3s;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-    opacity 0.5s linear 0.3s;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s, opacity 0.5s linear 0.3s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s, opacity 0.5s linear 0.3s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s, opacity 0.5s linear 0.3s;
 }
 
 nav.in li:nth-child(4) {
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1)
-      0.4s,
-    opacity 0.5s linear 0.4s;
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s,
-    opacity 0.5s linear 0.4s;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s,
-    opacity 0.5s linear 0.4s;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s, opacity 0.5s linear 0.4s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s, opacity 0.5s linear 0.4s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s, opacity 0.5s linear 0.4s;
 }
 
 nav.in li:nth-child(5) {
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1)
-      0.5s,
-    opacity 0.5s linear 0.5s;
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s,
-    opacity 0.5s linear 0.5s;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s,
-    opacity 0.5s linear 0.5s;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
 }
 
 nav.in li:nth-child(6) {
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1)
-      0.5s,
-    opacity 0.5s linear 0.5s;
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s,
-    opacity 0.5s linear 0.5s;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s,
-    opacity 0.5s linear 0.6s;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.6s;
 }
 
 nav.in li:nth-child(7) {
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1)
-      0.5s,
-    opacity 0.5s linear 0.5s;
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s,
-    opacity 0.5s linear 0.5s;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s,
-    opacity 0.5s linear 0.7s;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.7s;
 }
 
 nav.in li:nth-child(8) {
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1)
-      0.5s,
-    opacity 0.5s linear 0.5s;
-  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s,
-    opacity 0.5s linear 0.5s;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s,
-    opacity 0.5s linear 0.8s;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
+  -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.8s;
 }
 
 nav.out li:nth-child(8) {
-  -webkit-transition: -webkit-transform 0.3s
-      cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s,
-    opacity 0.3s linear 0s;
-  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s,
-    opacity 0.3s linear 0s;
-  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s,
-    opacity 0.3s linear 0s;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
 }
 
 nav.out li:nth-child(7) {
-  -webkit-transition: -webkit-transform 0.3s
-      cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s,
-    opacity 0.3s linear 0s;
-  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s,
-    opacity 0.3s linear 0s;
-  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.05s,
-    opacity 0.3s linear 0.05s;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.05s, opacity 0.3s linear 0.05s;
 }
 
 nav.out li:nth-child(6) {
-  -webkit-transition: -webkit-transform 0.3s
-      cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s,
-    opacity 0.3s linear 0s;
-  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s,
-    opacity 0.3s linear 0s;
-  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s,
-    opacity 0.3s linear 0.1s;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s, opacity 0.3s linear 0.1s;
 }
 
 nav.out li:nth-child(5) {
-  -webkit-transition: -webkit-transform 0.3s
-      cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s,
-    opacity 0.3s linear 0s;
-  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s,
-    opacity 0.3s linear 0s;
-  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s,
-    opacity 0.3s linear 0.15s;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s, opacity 0.3s linear 0.15s;
 }
 
 nav.out li:nth-child(4) {
-  -webkit-transition: -webkit-transform 0.3s
-      cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.05s,
-    opacity 0.3s linear 0.05s;
-  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
-      0.05s,
-    opacity 0.3s linear 0.05s;
-  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s,
-    opacity 0.3s linear 0.2s;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.05s, opacity 0.3s linear 0.05s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.05s, opacity 0.3s linear 0.05s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s, opacity 0.3s linear 0.2s;
 }
 
 nav.out li:nth-child(3) {
-  -webkit-transition: -webkit-transform 0.3s
-      cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s,
-    opacity 0.3s linear 0.1s;
-  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
-      0.1s,
-    opacity 0.3s linear 0.1s;
-  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.25s,
-    opacity 0.3s linear 0.25s;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s, opacity 0.3s linear 0.1s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s, opacity 0.3s linear 0.1s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.25s, opacity 0.3s linear 0.25s;
 }
 
 nav.out li:nth-child(2) {
-  -webkit-transition: -webkit-transform 0.3s
-      cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s,
-    opacity 0.3s linear 0.15s;
-  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
-      0.15s,
-    opacity 0.3s linear 0.15s;
-  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.3s,
-    opacity 0.3s linear 0.3s;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s, opacity 0.3s linear 0.15s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s, opacity 0.3s linear 0.15s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.3s, opacity 0.3s linear 0.3s;
 }
 
 nav.out li:nth-child(1) {
-  -webkit-transition: -webkit-transform 0.3s
-      cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s,
-    opacity 0.3s linear 0.2s;
-  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
-      0.2s,
-    opacity 0.3s linear 0.2s;
-  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.35s,
-    opacity 0.3s linear 0.35s;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s, opacity 0.3s linear 0.2s;
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s, opacity 0.3s linear 0.2s;
+  transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.35s, opacity 0.3s linear 0.35s;
 }
 
 nav.out li {
@@ -375,7 +303,6 @@ nav.in li {
   color: #fff;
   position: absolute;
   margin: 0;
-  font-family: "Patua One", cursive;
   text-align: center;
   display: block;
   top: 50%;
