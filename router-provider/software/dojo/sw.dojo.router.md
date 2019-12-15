@@ -17,10 +17,16 @@ needFooter: false
 <div class="layout--center-focused">
 
 <div>
-  <a href="https://www.notion.so/visualcamp/d6cab9b93289422ea0f8f79d17e6b03f?v=8f29e6f2f2a346d3aff839845c9f2f3a">KATA Schedule</a>
+  <a href="https://www.notion.so/d6cab9b93289422ea0f8f79d17e6b03f?v=8f29e6f2f2a346d3aff839845c9f2f3a">KATA Schedule</a>
 </div>
 
 <div markdown="1">
+
+# Design Pattern
+
+- js mixin pattern
+
+# Lang
 
 ### 알고 있는 모든 언어로 Todo List 만들기
 
@@ -33,7 +39,11 @@ needFooter: false
 - ~~Python~~
 - ~~Go~~
 
+# Testing
+
 ### Vending Machine TDD
+
+# development
 
 ### 개발-배포 이터레이션
 
