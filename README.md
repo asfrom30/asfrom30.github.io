@@ -81,6 +81,7 @@ $ bundle update // update dependency
 - [ ] improve screw footer and header
   - https://codepen.io/pipozoft/pen/vBwjl
 - essay, post, hw-post list 스타일 include 하나로 합치기
+- [] cheat-sheet는 컬렉션으로 옮기는게 좋겠다. 앞에 날짜 붙이고 프론트 매터 붙이기가 귀찮음... 좀더 해보자..
 
 # Next Task
 

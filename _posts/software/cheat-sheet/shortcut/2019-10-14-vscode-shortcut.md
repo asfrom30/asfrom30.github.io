@@ -42,3 +42,8 @@ function isExistAttr(key) {
 ### with drag
 
 `alt(option)` + `shift` + drag
+
+# Find
+
+- next find
+  - `cmd` + `g`
