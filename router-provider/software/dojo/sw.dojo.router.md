@@ -22,13 +22,13 @@ needFooter: false
 
 <div markdown="1">
 
-# Design Pattern
+# Code
+
+## Design Pattern
 
 - js mixin pattern
 
-# Lang
-
-### 알고 있는 모든 언어로 Todo List 만들기
+## 알고 있는 모든 언어로 Todo List 만들기
 
 - Javascript
 - Typescript
@@ -39,18 +39,35 @@ needFooter: false
 - ~~Python~~
 - ~~Go~~
 
-# Testing
+## Testing
 
-### Vending Machine TDD
+- Vending Machine TDD
+- 엘리베이터
+- 커피포트
 
-# development
+# UML
+
+# Development
+
+### Webpack
+
+- 웹팩 환경설정
+  - browserlist
+  - vetur
+  - prettier
+
+### Docker
+
+- docker redis 방문자 횟수
+- docker dev server and client
 
 ### 개발-배포 이터레이션
 
-- Docker
-- EBS
-- AWS
-- AWS-Nginx-Node-Kata
+- 개발-배포 이터레이션
+  - Docker
+  - EBS
+  - AWS
+  - AWS-Nginx-Node-Kata
 
 </div>
 
