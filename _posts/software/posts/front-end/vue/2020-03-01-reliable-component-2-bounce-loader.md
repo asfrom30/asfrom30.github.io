@@ -3,7 +3,7 @@ layout: post
 title: Reliable Component 2편
 subtitle: BounceLoader.vue
 category: [dev, sw]
-tags:
+tags: [testing]
 dev-category: sw
 dev-tags: [storybook, vue]
 updatedAt:
@@ -11,6 +11,8 @@ assetUrl: /assets/posts/2020-03-01-reliable-component-2-bounce-loader
 ---
 
 # Introduction
+
+[1편 Settings](/dev/sw/2020/03/01/reliable-component-1-settings.html)의 준비가 다 되었다면
 
 이제 준비가 다 되었으니 처음으로 스토리북을 이용해서 컴포넌트를 만들어볼 차례다.
 
