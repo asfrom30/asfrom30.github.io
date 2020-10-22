@@ -13,11 +13,11 @@
 - title: Career
   subs:
     - title: Cover Letter
-      url:
+      # url:
     - title: Resume
-      url: /router/career/resume
+      # url: /router/career/resume
     - title: Portfolio
-      url: /router/career/portfolio
+      # url: /router/career/portfolio
 - title: Hardware
   subs:
     - title: Posts
@@ -34,9 +34,6 @@
       url: /router/sw/dev-books
     - title: Dojo
       url: /router/sw/dojo
-    - title: Wiki
-      url: https://asfrom30.atlassian.net/wiki/
-      external: true
 - title: Third Value
   subs:
     - title: Camping Location
