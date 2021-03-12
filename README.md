@@ -1,6 +1,17 @@
 # Introduction
 
-## CLI
+# Install ans Run
+
+### Ruby 2.7
+
+- If version is not 2.7
+  - $ rvm install 2.7
+  - $ bundle update —bundler
+  - $ bundle install
+  - $ bundle update
+  - $ npm run start
+
+### CLI
 
 ```
 $ bundle install

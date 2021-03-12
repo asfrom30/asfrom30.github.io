@@ -18,6 +18,8 @@
       # url: /router/career/resume
     - title: Portfolio
       # url: /router/career/portfolio
+    - title: Projects
+      # url: /router/career/portfolio
 - title: Hardware
   subs:
     - title: Posts
@@ -28,7 +30,7 @@
       url: /router/devs/til
     - title: Cheat Sheet
       url: /router/devs/cheat-sheet
-    - title: Post
+    - title: Posts
       url: /router/devs/dev-post
     - title: Books
       url: /router/sw/dev-books
