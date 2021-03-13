@@ -7,7 +7,7 @@
     <div class="home__center">
       <div class="side-image"></div>
       <div class="home-menu">
-        {% for mainRow in site.data.router-link %}
+        {% for mainRow in site.data.routes %}
         <div onclick="toggleCollapseList(event)">
           <div class="home-menu__collapse-title js-row__title">
             <span>| {{mainRow.title}}</span>
