@@ -1,22 +1,21 @@
-# Introduction
+## Setup and Running
 
-# Install ans Run
+### Environments
 
-### Ruby 2.7
+- install rvm
+- require ruby 2.7
+  - `$ rvm install 2.71
 
-- If version is not 2.7
-  - $ rvm install 2.7
-  - $ bundle update —bundler
-  - $ bundle install
-  - $ bundle update
-  - $ npm run start
-
-### CLI
+### Install Dependency
 
 ```
-$ bundle install
-$ bundle update // update dependency
-$ bundle exec jekyll serve --livereload
+$ sh install.sh
+```
+
+### Livereload
+
+```
+$ sh livereload.sh
 ```
 
 ## Structure
