@@ -1,4 +1,14 @@
-## Setup and Running
+- [Setup and Running](#setup-and-running)
+    - [Environments](#environments)
+    - [Install Dependency](#install-dependency)
+    - [Livereload](#livereload)
+- [Structure](#structure)
+    - [Type of Navigation](#type-of-navigation)
+- [For Development](#for-development)
+    - [/index.html](#indexhtml)
+- [For Writing](#for-writing)
+
+# Setup and Running
 
 ### Environments
 
@@ -18,7 +28,7 @@ $ sh install.sh
 $ sh livereload.sh
 ```
 
-## Structure
+# Structure
 
 ### Type of Navigation
 
