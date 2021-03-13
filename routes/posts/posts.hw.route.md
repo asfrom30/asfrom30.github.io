@@ -1,11 +1,7 @@
 ---
-layout: router
+# title: My page
+layout: post-list
 permalink: /posts/hw
 needFooter: false
+categoryName: hw-post
 ---
-
-<style>
-  {% include_relative posts.hw.route.css %}
-</style>
-
-{% include_relative posts.hw.route.html %}

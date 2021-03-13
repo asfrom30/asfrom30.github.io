@@ -1,6 +1,9 @@
 ---
-layout: router
-title: My page
+# title: My page
+layout: post-list
 permalink: /posts/sw
 needFooter: false
+categoryName: sw
 ---
+
+<!-- TODO: pagination -->

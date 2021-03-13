@@ -1,5 +1,5 @@
 ---
-layout: atomics/scaffold
+layout: atomics/root
 author: asfrom30
 needNav: true
 needFooter: true
@@ -8,12 +8,11 @@ needComments: true
 
 {% include atomic/title-header/index.html %}
 <!-- DRAFT LABEL -->
-{%- if page.draft -%} {% include atomic/corner-label/index.html label="DRAFT"
-color="blue" %} {%- endif -%}
+{%- if page.draft -%} {% include atomic/corner-label/index.html label="DRAFT" color="blue" %} {%- endif -%}
 <article class="layout--center-focused">
   <h3>Table of Content</h3>
   {% include toc.html html=content %}
-  <div style="height:40px"></div>
+  <div style="height: 40px"></div>
   <!--  -->
   {{ content }}
 </article>

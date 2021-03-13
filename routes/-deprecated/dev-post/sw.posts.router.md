@@ -1,7 +1,7 @@
 ---
 layout: router
 title: My page
-permalink: /router/devs/dev-post
+permalink: /deprecated/devs/dev-post
 ---
 
 <style>

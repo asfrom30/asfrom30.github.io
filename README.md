@@ -5,6 +5,8 @@
 - [Structure](#structure)
     - [Type of Navigation](#type-of-navigation)
 - [For Development](#for-development)
+    - [최상위 템플릿](#최상위-템플릿)
+    - [최상위 템플릿에서 전역 css 삽입하기](#최상위-템플릿에서-전역-css-삽입하기)
     - [/index.html](#indexhtml)
 - [For Writing](#for-writing)
 - [Domain Syntax](#domain-syntax)
@@ -44,6 +46,23 @@ $ sh livereload.sh
 
 # For Development
 
+### 최상위 템플릿
+
+- 경로 `_layouts/atomics/root.html`
+  - JAVA의 최상위 Object 처럼 이곳이 최상위 템플릿이 된다.
+  - 다른 레이아웃도 최상위 레이아웃을 상속 받을 수 있다.
+    - 프론트매터에 다음과 같이 선언 : `layout: atomics/root`
+  - post에서도 상속 받을 수 있다.
+    - 프론트매터에 다음과 같이 선언 : `layout: atomics/root`
+
+### 최상위 템플릿에서 전역 css 삽입하기
+
+- 모든 css, js, images 경로는 projectRoot/assets로 한다.
+- 최상위 템플릿의 `head` 태그에 삽입한다.
+- head-tag.html 보기
+  - app.css
+  - common.css
+
 ### /index.html
 
 - ~/\_data/router/list.yml
@@ -51,6 +70,8 @@ $ sh livereload.sh
   - 외부 링크는 `external: true`를 주면 아이콘이 하나 더 붙게 작업해 놓음.
 
 # For Writing
+
+> Post의 경로는 중요하지 않다. 프론트 매터가 중요함.
 
 # Domain Syntax
 

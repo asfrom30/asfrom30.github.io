@@ -19,7 +19,7 @@
 :root {
   /* font-family: "Nanum Gothic", sans-serif; */
   /* font-family: "Open Sans", sans-serif; */
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 body {
@@ -180,7 +180,7 @@ p {
 } */
 
 ul:not(.li--prevent-before) li:before {
-  content: '▶︎';
+  content: "▶︎";
   display: inline-block;
   width: 1.2rem;
   font-size: 12px;
@@ -244,13 +244,13 @@ a:hover {
 }
 
 .styled-a a:after {
-  content: '';
+  content: "";
   display: inline-block;
   margin-left: 4px;
   margin-right: 4px;
   width: 0.8em;
   height: 0.8em;
-  background: url('/assets/icons/external-link-alt-solid.svg') no-repeat top right;
+  background: url("/assets/icons/external-link-alt-solid.svg") no-repeat top right;
 }
 
 .styled-a a:hover:after {
@@ -275,7 +275,7 @@ pre.quote code {
   word-break: keep-all;
   white-space: pre-wrap;
   color: #ffffffe1;
-  font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
+  font-family: "Josefin Sans", "Noto Sans KR", sans-serif;
   font-weight: 100;
   letter-spacing: -0.08em;
 }
@@ -350,4 +350,39 @@ blockquote p {
 
 img {
   max-width: 100%;
+}
+
+/* POST LIST */
+.post-list__container {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.post-list__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1em;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.post-list__date {
+  margin-top: 10px;
+  font-size: 24px;
+  color: gray;
+  line-height: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  .post-list__title {
+    font-size: 32px;
+  }
+  .post-list__date {
+    font-size: 20px;
+  }
+}
+
+a:hover .post-list__title,
+a:hover .post-list__date {
+  color: #0075aa;
 }
