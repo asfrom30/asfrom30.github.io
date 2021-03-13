@@ -10,9 +10,15 @@ needComments: true
 <!-- DRAFT LABEL -->
 {%- if page.draft -%} {% include atomic/corner-label/index.html label="DRAFT" color="blue" %} {%- endif -%}
 <article class="layout--center-focused">
-  <h3>Table of Content</h3>
-  {% include toc.html html=content %}
+  <!-- Table Of Content -->
+  <div class="table-of-content">
+    <h3>Table of Content</h3>
+    {% include toc.html html=content class="ul--right-point" %}
+  </div>
+
+  <!-- Padding -->
   <div style="height: 40px"></div>
-  <!--  -->
+
+  <!-- Content  -->
   {{ content }}
 </article>
