@@ -7,6 +7,8 @@
 - [For Development](#for-development)
     - [/index.html](#indexhtml)
 - [For Writing](#for-writing)
+- [Domain Syntax](#domain-syntax)
+    - [disable footer](#disable-footer)
 
 # Setup and Running
 
@@ -49,3 +51,13 @@ $ sh livereload.sh
   - 외부 링크는 `external: true`를 주면 아이콘이 하나 더 붙게 작업해 놓음.
 
 # For Writing
+
+# Domain Syntax
+
+### disable footer
+
+```
+---
+needFooter: false
+---
+```
