@@ -11,6 +11,8 @@
 - [For Writing](#for-writing)
 - [Domain Syntax](#domain-syntax)
     - [disable footer](#disable-footer)
+- [Syntax](#syntax)
+    - [Code block을 리스트 안에 넣으려면](#code-block을-리스트-안에-넣으려면)
 
 # Setup and Running
 
@@ -82,3 +84,9 @@ $ sh livereload.sh
 needFooter: false
 ---
 ```
+
+# Syntax
+
+### Code block을 리스트 안에 넣으려면
+
+- 인덴트를 2배 주면 된다. 2였으면 4, 4였으면 8
