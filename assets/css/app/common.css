@@ -145,9 +145,15 @@ h5 {
 
 p {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding-left: 20px;
 }
+/* 헤더 바로 뒤에 오는 p태그 인덴트 */
+/* h1 + p { padding-left: 4px !important; }
+h2 + p { padding-left: 8px !important; }
+h3 + p { padding-left: 12px !important; }
+h4 + p { padding-left: 16px !important; }
+h5 + p { padding-left: 20px !important; } */
 
 /* 헤더 바로 뒤에 오는 p태그 */
 h1 + p,
@@ -210,11 +216,9 @@ p {
 
 /* Inline code style */
 code {
-  letter-spacing: -0.05em;
-  word-spacing: -0.2em;
   background-color: rgb(63, 63, 63);
   border-radius: 3px;
-  font-family: courier, monospace;
+  font-weight: 100;
   color: #99e9ff;
   padding: 0 3px;
 }

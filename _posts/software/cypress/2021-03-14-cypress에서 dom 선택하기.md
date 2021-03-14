@@ -53,9 +53,7 @@ Type of 'await' operand must either be a valid promise or must not contain a cal
 
 # 3. 라이브러리 사용하기 (cypress-promise)
 
-2018년에도 이슈가 올라왔음에도 아직 지원하지 않고 있지만, 누군가 `Wrapper`를 만들었기 해당 래퍼를 사용하면 더 좋겠다.
-
-- https://www.npmjs.com/package/cypress-promise
+2018년에도 이슈가 올라왔음에도 아직 지원하지 않고 있지만, 누군가 `Wrapper`를 만들었기 해당 래퍼를 사용하면 더 좋겠다. [npm library](https://www.npmjs.com/package/cypress-promise)
 
 해당 라이브러리를 사용하면 좋은점은 `eslint` 에러도 깔끔하고 반환 값이 `dom`이기 때문에(정확히는 jquery dom) 에디터에서 `intellisense`의 지원도 기대해 볼만하다.
 
