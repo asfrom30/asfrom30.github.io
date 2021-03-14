@@ -16,9 +16,11 @@ needFooter: false
 {% for group in groupedPostsByTag %}
 
 <h3 class="f-tt-capital">{{group.name}}</h3>
+  <ul>
   {% for post in group.items %}
   <li> <a href="{{ post.url }}"> <b>{{post.title}}</b></a> </li>
   {% endfor %}
+  </ul>
 {% endfor %}
 
 </div>

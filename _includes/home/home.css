@@ -96,9 +96,13 @@ a:active {
 }
 
 /* List Style */
+.home__root ul {
+  margin-top: 4px;
+  margin-left: 12px;
+}
+
 .home-menu__collapse-list li {
   padding: 4px;
-  margin-left: 12px;
   white-space: nowrap;
 }
 
@@ -109,16 +113,4 @@ a:active {
 }
 .home__root ul li:hover {
   opacity: 1;
-}
-
-.home__root ul li:before {
-  content: "▶︎";
-  color: aqua;
-  display: inline-block;
-  text-align: center;
-  width: 1.2rem;
-  height: 16px;
-  font-size: 8px;
-  line-height: 16px;
-  transform: translate(0px, -3px);
 }
