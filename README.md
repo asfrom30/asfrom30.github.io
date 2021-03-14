@@ -13,6 +13,7 @@
     - [disable footer](#disable-footer)
 - [Syntax](#syntax)
     - [Code block을 리스트 안에 넣으려면](#code-block을-리스트-안에-넣으려면)
+- [Test](#test)
 
 # Setup and Running
 
@@ -90,3 +91,7 @@ needFooter: false
 ### Code block을 리스트 안에 넣으려면
 
 - 인덴트를 2배 주면 된다. 2였으면 4, 4였으면 8
+
+# Test
+
+- 수동으로 테스트한다. 스타일 페이지를 만들어서 눈검사하도록 한다.
