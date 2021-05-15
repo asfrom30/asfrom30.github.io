@@ -145,9 +145,11 @@ describe("", () => {
 
 # Cypress x Webpack
 
-자 이제 두개를 합칠 시간이다. `run-
+자 이제 두개를 합칠 시간이다.
 
 합치기 위해서는 `serve-using-webpack.js`과 `run-cypress.js`를 함수로 호출할 수 있게 변경해야 한다.
+
+- `serve-using-webpack.js`
 
 ```js
 "use strict";

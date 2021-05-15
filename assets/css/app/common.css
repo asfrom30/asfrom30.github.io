@@ -200,21 +200,28 @@ ol + h5 {
   }
 }
 
+p {
+  text-indent: 4px; /* 말 앞머리  */
+}
+
+/**
+** CODE
+**/
+
+/* Block Code Style - Prism override */
 .code-toolbar {
   padding-left: 28px;
+  font-size: 15px;
 }
 
 @media only screen and (max-width: 600px) {
   .code-toolbar {
     padding-left: 4px;
+    font-size: 14px;
   }
 }
 
-p {
-  text-indent: 4px; /* 말 앞머리  */
-}
-
-/* Inline code style */
+/* Inline Code Style */
 code {
   background-color: rgb(63, 63, 63);
   border-radius: 3px;
