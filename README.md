@@ -1,38 +1,30 @@
-- [Setup and Running](#setup-and-running)
-    - [Environments](#environments)
-    - [Install Dependency](#install-dependency)
-    - [Livereload](#livereload)
-- [Structure](#structure)
-    - [Type of Navigation](#type-of-navigation)
-- [For Development](#for-development)
-    - [최상위 템플릿](#최상위-템플릿)
-    - [최상위 템플릿에서 전역 css 삽입하기](#최상위-템플릿에서-전역-css-삽입하기)
-    - [/index.html](#indexhtml)
-- [For Writing](#for-writing)
-- [Domain Syntax](#domain-syntax)
-    - [disable footer](#disable-footer)
-- [Syntax](#syntax)
-    - [Code block을 리스트 안에 넣으려면](#code-block을-리스트-안에-넣으려면)
-- [Test](#test)
-- [Managing Project](#managing-project)
+# asfrom30 x Jekyll
 
-# Setup and Running
+[Welcome to my blog](https://asfrom30.github.io/)
 
-### Environments
+### Setup and Running
+
+**Setup**
 
 - install rvm
 - require ruby 2.7
-  - `$ rvm install 2.71
+  - `$ rvm install 2.71`
 
-### Install Dependency
+**Install Dependency**
 
+```sh
+$ sh bin/install.sh
 ```
-$ sh install.sh
+
+**Build**
+
+```sh
+$ sh bin/build.sh
 ```
 
-### Livereload
+**Livereload**
 
-```
+```sh
 $ sh livereload.sh
 ```
 
@@ -49,23 +41,6 @@ $ sh livereload.sh
   - cf) camping location
 
 # For Development
-
-### 최상위 템플릿
-
-- 경로 `_layouts/atomics/root.html`
-  - JAVA의 최상위 Object 처럼 이곳이 최상위 템플릿이 된다.
-  - 다른 레이아웃도 최상위 레이아웃을 상속 받을 수 있다.
-    - 프론트매터에 다음과 같이 선언 : `layout: atomics/root`
-  - post에서도 상속 받을 수 있다.
-    - 프론트매터에 다음과 같이 선언 : `layout: atomics/root`
-
-### 최상위 템플릿에서 전역 css 삽입하기
-
-- 모든 css, js, images 경로는 projectRoot/assets로 한다.
-- 최상위 템플릿의 `head` 태그에 삽입한다.
-- head-tag.html 보기
-  - app.css
-  - common.css
 
 ### /index.html
 
@@ -92,10 +67,6 @@ needFooter: false
 ### Code block을 리스트 안에 넣으려면
 
 - 인덴트를 2배 주면 된다. 2였으면 4, 4였으면 8
-
-# Test
-
-- 수동으로 테스트한다. 스타일 페이지를 만들어서 눈검사하도록 한다.
 
 # Managing Project
 
