@@ -11,7 +11,7 @@ needFooter: true
 {{content}}
 
 <div class="layout--center-focused">
-  {% for post in site.categories.[categoryName] %}
+  {% for post in site.categories[categoryName] %}
   <div class="post-list__container">
     <a href="{{post.url}}">
       <div class="post-list__title">{{post.title}}</div>
