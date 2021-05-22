@@ -1,0 +1,767 @@
+---
+permalink: /archives/ggez/hero
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GgEZ - 오버워치 기간별, 티어별 전적조회</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="subject" content="오버워치 기간별, 티어별 전적비교" />
+    <meta
+      name="description"
+      content="오버워치, 기간별 전적비교, 티어별 전적비교, 티어확인, 랭킹, 인벤, GGEZ.KR, 오버워치 전적비교"
+    />
+    <meta name="keywords" content="오버워치 전적검색, 기간별 비교, 티어별 비교, 오버로그, 인벤, 오버워치 랭킹" />
+    <meta name="author" content="DOYOON KIM" />
+
+    <!-- be responsive to mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- http://rateyo.fundoocode.ninja/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.js"></script>
+
+    <!-- Animate Number -->
+    <script src="/assets/archives/ggez/js/animateNumber/demo/jquery.color.min.js"></script>
+    <script src="/assets/archives/ggez/js/animateNumber/jquery.animateNumber.min.js"></script>
+
+    <!-- CSS Style Description -->
+    <!-- Ggez CSS -->
+    <!-- 마지막에 로딩할 것. 누군가 background css를 가로챈다.. -->
+    <link rel="stylesheet" href="/assets/archives/ggez/css/hero.css" type="text/css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <div class="navbar navbar-inverse">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">GgEZ.kr</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- GGEZ-HERO -->
+      <ins
+        class="adsbygoogle"
+        style="display: block"
+        data-ad-client="ca-pub-1722366924586940"
+        data-ad-slot="5878328514"
+        data-ad-format="auto"
+      ></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <div class="mainTitle" style="margin-bottom: 10px; margin-top: 10px">
+        <div style="display: flex; align-items: center">
+          <div id="mainTitleImg"></div>
+          <div>
+            <div><span id="battleTag"></span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Tab Page -->
+      <!-- Tab button -->
+      <div class="mainTab">
+        <ul class="nav nav-tabs">
+          <li id="normalContentBtn">
+            <a data-toggle="tab" href="#normalContent">전체요약</a>
+          </li>
+          <li id="heroContentBtn" class="active">
+            <a data-toggle="tab" href="#heroContent">영웅상세</a>
+          </li>
+        </ul>
+      </div>
+      <div style="position: relative">
+        <div class="tab-loading" style="position: absolute; width: 100%">
+          <div style="display: flex; justify-content: center">
+            <div>
+              <iframe
+                src="/assets/archives/ggez/html/overwatch-loader.html"
+                height="300"
+                width="300"
+                frameborder="0"
+              ></iframe>
+            </div>
+          </div>
+          <div class="loading-label">전적을 분석하고 있습니다. 잠시만 기다려주세요...</div>
+          <div class="loading-label">무한 로딩이 발생하면 Ctrl+5로 새로고침하거나, 인터넷 사용기록을 삭제해주세요</div>
+        </div>
+
+        <div class="tab-content fade-out">
+          <div id="normalContent" class="tab-pane fade in">
+            <!-- 전체요약 content -->
+            <!-- Profile divider -->
+            <div
+              class="rowDivider"
+              style="margin-top: 0px; display: flex; align-items: center; justify-content: flex-start"
+            >
+              <div style="flex: 0 0 auto">
+                <span class="label label-primary" style="font-size: 15px">Profile</span>
+              </div>
+              <div style="flex: 1 0 auto">
+                <div style="height: 50%; border-bottom: 2px solid #337ab7"></div>
+              </div>
+            </div>
+
+            <!-- profile content -->
+            <div class="profile">
+              <div class="content">
+                <div class="box" id="box-1">
+                  <div>경쟁전 점수</div>
+                  <div>-</div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="box" id="box-2">
+                  <div>티어</div>
+                  <div></div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="box" id="box-3">
+                  <div>승률</div>
+                  <div>
+                    <div><span>-</span><span>%</span></div>
+                    <div>-/-/-</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- most3 divider -->
+            <div
+              class="rowDivider"
+              style="
+                margin-top: 25px;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+              "
+            >
+              <div style="flex: 0 0 auto">
+                <span class="label label-danger" style="font-size: 15px">Most 3</span>
+              </div>
+              <div style="flex: 1 0 auto">
+                <div style="height: 50%; border-bottom: 2px solid #d9534f"></div>
+              </div>
+            </div>
+
+            <!-- most3 Content -->
+            <div class="most3 contentBox" style="margin-left: 5px; margin-right: 5px">
+              <!-- most3 content-->
+              <!-- most3Wrapper 참고 -->
+              <!-- <div class="subTitle"><span class="glyphicon glyphicon-search"></span> MOST3</div>  -->
+              <div class="subContent">
+                <table class="table" style="table-layout: fixed">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>승률</th>
+                      <th>평점</th>
+                      <th>KDA</th>
+                      <th>평균폭주</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="most1">
+                      <td>
+                        <div></div>
+                        <div>-</div>
+                      </td>
+                      <td>
+                        <div>-</div>
+                        <div style="font-size: 15px; color: DarkGray">-/-/-</div>
+                      </td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr id="most2">
+                      <td>
+                        <div></div>
+                        <div>-</div>
+                      </td>
+                      <td>
+                        <div>-</div>
+                        <div style="font-size: 15px; color: DarkGray">-/-/-</div>
+                      </td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr id="most3">
+                      <td>
+                        <div></div>
+                        <div>-</div>
+                      </td>
+                      <td>
+                        <div>-</div>
+                        <div style="font-size: 15px; color: DarkGray">-/-/-</div>
+                      </td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- trend divider -->
+            <div
+              class="rowDivider"
+              style="
+                margin-top: 25px;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+              "
+            >
+              <div style="flex: 0 0 auto">
+                <span class="label label-warning" style="font-size: 15px">Trend</span>
+              </div>
+              <div style="flex: 1 0 auto">
+                <div style="height: 50%; border-bottom: 2px solid orange"></div>
+              </div>
+            </div>
+
+            <!-- trend content -->
+            <div class="trend">
+              <!-- trend content -->
+              <div class="trend-btnGroup">
+                <!-- button group -->
+                <button class="trendBtn btn btn-default btn-xs" id="trend-ystBtn">
+                  <div>어제경기</div>
+                  <div>-</div>
+                </button>
+                <button class="trendBtn btn btn-default btn-xs active" id="trend-todayBtn">
+                  <div>오늘경기</div>
+                  <div>-</div>
+                </button>
+                <button class="trendBtn btn btn-default btn-xs" id="trend-weekBtn">
+                  <div>주간경기</div>
+                  <div>-</div>
+                </button>
+              </div>
+              <div>
+                <!-- Trend > 경쟁전 점수 -->
+                <div class="contentBox" id="trend-cptPt">
+                  <div class="subTitle"><span class="glyphicon glyphicon-sort"></span> 경쟁전 점수</div>
+                  <div class="subContent">
+                    <div><span id="trend-cptPtPrefix">-</span></div>
+                    <div>
+                      <span id="trend-diffCptPt" class="number">---</span>
+                      <span id="label">점</span>
+                    </div>
+                    <div>
+                      <div class="upper">
+                        <span id="trend-preCptLabel">--</span>
+                      </div>
+                      <div class="lower">
+                        <span id="trend-preCptPt" class="number">---</span>
+                      </div>
+                    </div>
+                    <div>→</div>
+                    <div>
+                      <div class="upper">
+                        <span id="trend-postCptLabel">--</span>
+                      </div>
+                      <div class="lower">
+                        <span id="trend-postCptPt" class="number">---</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Trend > 승률 -->
+                <div class="contentBox winRating">
+                  <div class="subTitle"><span class="glyphicon glyphicon-tasks"></span> 승률</div>
+                  <div class="subContent">
+                    <div style="width: 65%">
+                      <div>시즌3</div>
+                      <div id="trend-preWinRating" class="progress">
+                        <div id="success" class="progress-bar progress-bar-success" role="progressbar"></div>
+                        <div id="danger" class="progress-bar progress-bar-danger" role="progressbar"></div>
+                      </div>
+                    </div>
+                    <div class="labelNumber"><span id="trend-preWinRatingNum"></span><span>%</span></div>
+                  </div>
+                  <div class="subContent">
+                    <div style="width: 45%">
+                      <div class="trend-postLabel">--</div>
+                      <div id="trend-postWinRating" class="progress">
+                        <div id="success" class="progress-bar progress-bar-success" role="progressbar"></div>
+                        <div id="danger" class="progress-bar progress-bar-danger" role="progressbar"></div>
+                      </div>
+                    </div>
+                    <div class="labelNumber"><span id="trend-postWinRatingNum"></span><span>%</span></div>
+                  </div>
+                </div>
+
+                <!-- Trend > 평점 -->
+                <div class="contentBox">
+                  <div class="subTitle"><span class="glyphicon glyphicon-signal"></span> MOST3 플레이</div>
+                  <div class="subContent" id="ptRating">
+                    <div>
+                      <div>시즌3</div>
+                      <div class="fiveStar" id="trend-prePtRatingStar"></div>
+                    </div>
+                    <div class="labelNumber">
+                      <span id="trend-prePtRatingNum"></span>
+                    </div>
+                  </div>
+                  <div class="subContent" id="ptRating">
+                    <div>
+                      <div class="trend-postLabel">--</div>
+                      <div class="fiveStar" id="trend-postPtRatingStar">--</div>
+                    </div>
+                    <div class="labelNumber">
+                      <span id="trend-postPtRatingNum"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of Normal Content -->
+
+          <!-- Hero Content -->
+          <div id="heroContent" class="tab-pane fade in active">
+            <div class="layout-2-column">
+              <div class="contentBox">
+                <div>
+                  <!-- <div class="radarContainer"> -->
+                  <div class="subTitle">
+                    <span class="glyphicon glyphicon-object-align-left"></span>
+                    영웅 성적
+                  </div>
+                  <div class="radarContainer" style="position: relative">
+                    <canvas id="radarCanvas" class="fade-out" style="background-color: rgba(255, 255, 255, 0)"></canvas>
+                    <!-- <iframe id="radarLoading" class="fade-out" src="./overwatch-loader.html" frameBorder="0" style="position: relative; width:100%; height:100%; position:absolute; left:0; top:0; z-index:-1;"></iframe>  -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="contentBox" id="hero-radarTable">
+                <div class="subContent">
+                  <table class="table" style="table-layout: fixed">
+                    <thead>
+                      <tr>
+                        <th>
+                          <button style="background-color: dimgrey; border-radius: 10px">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                            <br />
+                            상세정보
+                          </button>
+                        </th>
+                        <th><div>내 평균</div></th>
+                        <th><div>--</div></th>
+                        <th><div>--</div></th>
+                        <th>
+                          <button style="background-color: dimgrey; border-radius: 10px">비교<br />변경</button>
+                        </th>
+                      </tr>
+                    </thead>
+
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- 상세보기 나중에 넣을것.
+				<div>
+					<div class="subTitle" data-toggle="collapse" data-target="#tableData">
+						<span class="glyphicon glyphicon-th-list"></span> 상세보기
+						<i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+					</div>
+					<div id="tableData" class="tableWrapper collapse"></div>
+				</div>
+				-->
+
+            <!-- fixed bottom을 위한 space -->
+            <div id="heroContent-spacer"></div>
+
+            <!-- fixed bottom content -->
+            <div class="navbar navbar-inverse navbar-fixed-bottom" id="heroContent-selector">
+              <div style="postion: relative">
+                <div class="selectorWrapper collapse in" id="selectorWrapper">
+                  <div class="subTitle"><span class="glyphicon glyphicon-ok-circle"></span> 내 데이터 선택하기</div>
+                  <div class="heroPeriodBtn-Group btn-group">
+                    <button class="heroPeriodBtn btn btn-labeled btn-default btn-xs" id="yesterDayBtn">
+                      <div>어제 전체 경기</div>
+                      <div>-</div>
+                    </button>
+                    <button class="heroPeriodBtn btn btn-labeled btn-default btn-xs" id="todayBtn">
+                      <div>오늘 전체 경기</div>
+                      <div>-</div>
+                    </button>
+                    <button class="heroPeriodBtn btn btn-labeled btn-default btn-xs" id="weekBtn">
+                      <div>주간 전체 경기</div>
+                      <div>-</div>
+                    </button>
+                  </div>
+                  <!-- nav content -->
+                  <!-- <div class="navbar navbar-collapse collapse" id="heroList">  -->
+                  <div class="navbar-collapse collapse in" id="heroList">
+                    <div class="heroList clearfix">
+                      <ul class="nav navbar-nav" style="width: 100%">
+                        <li>
+                          <div
+                            class="roleContainer"
+                            style="background-image: url('/assets/archives/ggez/img/offense-icon.png')"
+                          ></div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Genji"
+                            style="background-image: url('/assets/archives/ggez/img/icon-genji.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">겐지</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Reaper"
+                            style="background-image: url('/assets/archives/ggez/img/icon-reaper.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">리퍼</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="McCree"
+                            style="background-image: url('/assets/archives/ggez/img/icon-mccree.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">맥크리</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Soldier76"
+                            style="background-image: url('/assets/archives/ggez/img/icon-soldier76.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">솔져76</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Sombra"
+                            style="background-image: url('/assets/archives/ggez/img/icon-sombra.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">솜브라</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Tracer"
+                            style="background-image: url('/assets/archives/ggez/img/icon-tracer.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">트레이서</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Pharah"
+                            style="background-image: url('/assets/archives/ggez/img/icon-pharah.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">파라</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div
+                            class="roleContainer"
+                            style="background-image: url('/assets/archives/ggez/img/defense-icon.png')"
+                          ></div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Mei"
+                            style="background-image: url('/assets/archives/ggez/img/icon-mei.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">메이</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Bastion"
+                            style="background-image: url('/assets/archives/ggez/img/icon-bastion.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">바스티온</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Widowmaker"
+                            style="background-image: url('/assets/archives/ggez/img/icon-widowmaker.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">위도우메이커</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Junkrat"
+                            style="background-image: url('/assets/archives/ggez/img/icon-junkrat.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">정크랫</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Torbjoern"
+                            style="background-image: url('/assets/archives/ggez/img/icon-torbjoern.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">토르비욘</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Hanzo"
+                            style="background-image: url('/assets/archives/ggez/img/icon-hanzo.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">한조</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div
+                            class="roleContainer"
+                            style="background-image: url('/assets/archives/ggez/img/tank-icon.png')"
+                          ></div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="DVa"
+                            style="background-image: url('/assets/archives/ggez/img/icon-dva.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">디바</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Reinhardt"
+                            style="background-image: url('/assets/archives/ggez/img/icon-reinhardt.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">라인하르트</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Roadhog"
+                            style="background-image: url('/assets/archives/ggez/img/icon-roadhog.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">로드호그</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Winston"
+                            style="background-image: url('/assets/archives/ggez/img/icon-winston.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">윈스턴</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Zarya"
+                            style="background-image: url('/assets/archives/ggez/img/icon-zarya.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">자리야</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div
+                            class="roleContainer"
+                            style="background-image: url('/assets/archives/ggez/img/support-icon.png')"
+                          ></div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Lucio"
+                            style="background-image: url('/assets/archives/ggez/img/icon-lucio.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">루시우</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Mercy"
+                            style="background-image: url('/assets/archives/ggez/img/icon-mercy.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">메르시</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Symmetra"
+                            style="background-image: url('/assets/archives/ggez/img/icon-symmetra.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">시메트라</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Ana"
+                            style="background-image: url('/assets/archives/ggez/img/icon-ana.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">아나</span>
+                          </div>
+                          <div
+                            class="heroContainer img-rounded"
+                            id="Zenyatta"
+                            style="background-image: url('/assets/archives/ggez/img/icon-zenyatta.png')"
+                          >
+                            <span class="update"></span><span class="fupdate"></span
+                            ><span class="heroNameTag badge" style="">젠야타</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="subTitle">
+                    <span class="glyphicon glyphicon-ok-circle"></span> 다른티어 평균 선택<span
+                      id="tierSubTitle"
+                    ></span>
+                  </div>
+                  <div class="tierSelectBtn-Group btn-group">
+                    <button class="tierSelectBtn btn btn-labeled btn-default btn-xs" id="bronzeBtn">
+                      <div>브론즈</div>
+                      <div>-</div>
+                    </button>
+                    <button class="tierSelectBtn btn btn-labeled btn-default btn-xs" id="silverBtn">
+                      <div>실버</div>
+                      <div>-</div>
+                    </button>
+                    <button class="tierSelectBtn btn btn-labeled btn-default btn-xs" id="goldBtn">
+                      <div>골드</div>
+                      <div>-</div>
+                    </button>
+                    <button class="tierSelectBtn btn btn-labeled btn-default btn-xs" id="platinumBtn">
+                      <div>플래티넘</div>
+                      <div>-</div>
+                    </button>
+                    <button class="tierSelectBtn btn btn-labeled btn-default btn-xs" id="diaBtn">
+                      <div>다이아</div>
+                      <div>-</div>
+                    </button>
+                    <button class="tierSelectBtn btn btn-labeled btn-default btn-xs" id="masterBtn">
+                      <div>마스터</div>
+                      <div>-</div>
+                    </button>
+                    <button class="tierSelectBtn btn btn-labeled btn-default btn-xs" id="grandMasterBtn">
+                      <div>그랜드<br />마스터</div>
+                      <div>-</div>
+                    </button>
+                  </div>
+                </div>
+                <!-- end of selectorWrapper Class -->
+              </div>
+              <!-- nav header -->
+              <div id="heroContent-fixed-header">
+                <div class="left">
+                  <div id="titleHeroImg"></div>
+                  <div>
+                    <div class="upperText">All</div>
+                    <div class="lowerText">오늘 경기 결과</div>
+                  </div>
+                  <!-- 							<button class="btn btn-default dropdown-toggle" type="button" data-toggle="collapse" data-target="#selectorWrapper">
+								<span class="caret" style="border-width:6px;"></span>
+	 							</button> -->
+                </div>
+                <div class="right">
+                  <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#heroList">
+								<div style="display: flex; align-items:center; color:white;">
+									<div>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</div>
+									<div>영웅변경</div>
+								</div>
+							</button>  -->
+                  <button
+                    type="button"
+                    class="toggle"
+                    data-toggle="collapse"
+                    data-target="#selectorWrapper"
+                    id="userButton"
+                  >
+                    <span class="glyphicon glyphicon-th-list"></span> 데이터 선택
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- end of heroContent-selector -->
+          </div>
+        </div>
+      </div>
+      <!-- end of loading Wrapper -->
+    </div>
+    <script>
+      var btg = "냅둬라날#1234";
+      var isSample = true;
+      var loc = "kr";
+      var device = "mobile";
+    </script>
+
+    <script src="/assets/archives/ggez/js/hero.js"></script>
+    <script type="text/javascript">
+      var data = {
+        // 		    labels: ["1", "2", "3", "4", "5", "6"],
+        datasets: [
+          {
+            label: "",
+            backgroundColor: "rgba(154,208,245,0.2)",
+            borderColor: "rgba(154,208,245,1)",
+            // 		            backgroundColor: "rgba(179,181,198,0.2)",
+            // 		            borderColor: "rgba(179,181,198,1)",
+            pointBackgroundColor: "rgba(154,208,245,1)",
+            pointBorderColor: "#fff",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(179,181,198,1)",
+            data: [],
+          },
+          {
+            label: "",
+            backgroundColor: "rgba(255,99,132,0.2)",
+            borderColor: "rgba(255,99,132,1)",
+            pointBackgroundColor: "rgba(255,99,132,1)",
+            pointBorderColor: "#fff",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(255,99,132,1)",
+            data: [],
+          },
+          {
+            label: "",
+            backgroundColor: "rgba(255,230,170,0.2)",
+            borderColor: "rgba(255,230,170,1)",
+            pointBackgroundColor: "rgba(255,230,170,1)",
+            pointBorderColor: "#fff",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "rgba(255,99,132,1)",
+            data: [],
+          },
+        ],
+      };
+    </script>
+  </body>
+</html>

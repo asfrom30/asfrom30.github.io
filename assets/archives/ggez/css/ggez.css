@@ -1,0 +1,130 @@
+body {
+  background-color: black;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.defWarpper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/assets/archives/ggez/img/main/mercy-theatrical-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.mainBackgroundImage {
+  height: 20vh;
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .defWarpper {
+    background-image: url(/assets/archives/ggez/img/main/mercy-theatrical-tablet.jpg);
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .defWarpper {
+    background-image: url(/assets/archives/ggez/img/main/mercy-theatrical-wide.jpg);
+  }
+}
+
+.collapsing {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.border {
+  border: 1px solid cyan;
+}
+
+.mainWrapper {
+  max-width: 700px;
+}
+
+#mainLogo {
+  background-image: url(../img/mainLogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 0;
+  padding-top: 60%;
+  /** padding-top: 52.38%; /* (img-height / img-width * container-width) */
+  /* (440 / 840 * 100) */
+}
+
+#mainInput {
+  width: 80%;
+}
+
+#mainInput button {
+  opacity: 0.8;
+  background-color: #dddddd;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+#mainInput input {
+  opacity: 0.8;
+}
+
+#mainLabel {
+  margin-top: 10px;
+  color: Gainsboro;
+  font-size: 10px;
+  font-weight: 800px;
+  letter-spacing: -0.5px;
+}
+
+/** Duplicate Btg Table**/
+#duplicateBtgTableWrapper {
+  width: 80%;
+}
+#duplicateBtgTableWrapper th:nth-child(1),
+#duplicateBtgTableWrapper th:nth-child(2),
+#duplicateBtgTableWrapper th:nth-child(3) {
+  width: 33.33%;
+  height: 50px;
+}
+
+#duplicateBtgTableWrapper td:nth-child(1),
+#duplicateBtgTableWrapper td:nth-child(2) {
+  vertical-align: middle;
+}
+
+#duplicateBtgTableWrapper td:nth-child(3) > div {
+  width: 100%;
+  height: 25px;
+  background-image: url('../img/icon-all.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 5px;
+}
+
+#duplicateBtgTableWrapper td > a,
+#duplicateBtgTableWrapper td {
+  color: white;
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  #mainInput button {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #mainLabel {
+    font-size: 12px;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  #mainInput button {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #mainLabel {
+    font-size: 12px;
+  }
+}

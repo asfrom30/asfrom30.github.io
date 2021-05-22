@@ -1,0 +1,414 @@
+---
+permalink: /archives/ggez
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GgEZ - 오버워치 기간별, 티어별 전적조회</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="subject" content="오버워치 기간별, 티어별 전적비교" />
+    <meta
+      name="description"
+      content="오버워치, 기간별 전적비교, 티어별 전적비교, 티어확인, 랭킹, 인벤, GGEZ.KR, 오버워치 전적비교"
+    />
+    <meta name="keywords" content="오버워치 전적검색, 기간별 비교, 티어별 비교, 오버로그, 인벤, 오버워치 랭킹" />
+    <meta name="author" content="DOYOON KIM" />
+
+    <!-- 기간별, 티어별 전적조회 -->
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Ggez CSS -->
+    <link rel="stylesheet" href="/assets/archives/ggez/css/ggez.css" />
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="defWarpper">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" id="notice">NOTICE</a>
+          </div>
+        </div>
+      </nav>
+      <div class="mainBackgroundImage"></div>
+      <div align="center">
+        <div class="mainWrapper">
+          <div id="mainLogo"></div>
+          <div id="mainInput" class="input-group">
+            <div class="input-group-btn" style="height: 20px">
+              <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                  <span id="locationName"></span><span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu location-list" role="menu">
+                  <li class="active" id="kr"><a href="#">KR</a></li>
+                  <li id="us" class="disabled"><a href="#">US</a></li>
+                  <li id="eu" class="disabled"><a href="#">EU</a></li>
+                  <li id="cn" class="disabled"><a href="#">CN</a></li>
+                </ul>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                  <span id="deviceName"></span><span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu device-list" role="menu">
+                  <li class="active" id="pc"><a href="#">pc</a></li>
+                  <li id="ps4" class="disabled"><a href="#">ps4</a></li>
+                  <li id="xbox" class="disabled"><a href="#">xbox</a></li>
+                </ul>
+              </div>
+            </div>
+            <input id="btgTextInput" name="btg" type="text" class="form-control" placeholder="배틀태그를 입력하세요" />
+            <div class="input-group-btn">
+              <button class="btn btn-secondary" type="submit" id="btgSearchBtn">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="collapse in" id="duplicateBtgTableWrapper">
+            <table class="table" style="table-layout: fixed">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div id="mainLabel">
+            <div>
+              <div>
+                <span class="label label-danger">첫방문이세요?</span
+                ><span> 배틀태그 영문 '대소문자'를 반드시 구분해서 기입해주세요</span>
+              </div>
+              <div style="margin-top: 5px">
+                <span class="label label-success">이후 방문부터는</span
+                ><span> '대소문자' 그리고 '숫자'없이 간편하게 조회가 가능합니다.</span>
+              </div>
+            </div>
+            <!--            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+            <!--            <!-- GGEZ-INDEX -->
+            <!--            <ins class="adsbygoogle"-->
+            <!--                 style="display:block"-->
+            <!--                 data-ad-client="ca-pub-1722366924586940"-->
+            <!--                 data-ad-slot="4401595312"-->
+            <!--                 data-ad-format="auto"></ins>-->
+            <!--            <script>-->
+            <!--              (adsbygoogle = window.adsbygoogle || []).push({});-->
+            <!--            </script>-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function updateLocationName() {
+        var activeLocationId = getAcitveLocation();
+        $("#locationName").text(activeLocationId.toUpperCase());
+      }
+
+      function getAcitveLocation() {
+        var result;
+        $(".location-list li")
+          .siblings()
+          .each(function () {
+            if ($(this).hasClass("active")) {
+              result = $(this).attr("id");
+              return;
+            }
+          });
+        return result;
+      }
+
+      function updateDeviceName() {
+        var activeDeviceId = getActiveDevice();
+        $("#deviceName").text(activeDeviceId.toUpperCase());
+      }
+
+      function getActiveDevice() {
+        var result;
+        $(".device-list li")
+          .siblings()
+          .each(function () {
+            if ($(this).hasClass("active")) {
+              result = $(this).attr("id");
+              return;
+            }
+          });
+        return result;
+      }
+
+      function sendBtg(btg) {
+        document.getElementById("demo").innerHTML = btg;
+        // 정상적으로 등록 되었습니다 or 탈퇴 되었습니다.
+        // 			register Class Activate 해제하기..
+      }
+
+      function makeUrlQuery(urlKey, urlValue) {
+        return "&" + urlKey + "=" + urlValue;
+      }
+
+      $(document).ready(function () {
+        updateDeviceName();
+        updateLocationName();
+
+        $("#notice").click(function () {
+          console.log("hel");
+          openNewWindow("/email", false, true, false, 0, 0, 400, 800, false);
+        });
+
+        $(".location-list li").click(function () {
+          alert("죄송합니다. 현재는 PC-KR만 이용 가능합니다.");
+          // 			$(this).addClass("active").siblings().removeClass("active");
+          // 			updateLocationName();
+        });
+
+        $(".device-list li").click(function () {
+          alert("죄송합니다. 현재는 PC-KR만 이용 가능합니다.");
+          // 			$(this).addClass("active").siblings().removeClass("active");
+          // 			updateDeviceName();
+        });
+
+        // 등록하기 버튼..
+        $("#checkin").click(function () {
+          window.open("./register", "", "width=400, height=800, history=no, resizable=no, status=no, scrollbars=no");
+        });
+
+        // 탈퇴하기 버튼..
+        $("#checkout").click(function () {
+          window.open("./remove", "", "width=400, height=800, history=no, resizable=no, status=no, scrollbars=no");
+        });
+
+        //건의사항 및 버그신고 버튼
+        $("#email").click(function () {
+          var w = 600;
+          var h = 460;
+          var left = screen.width / 2 - w / 2;
+          var top = screen.height / 2 - h / 2;
+
+          window.open(
+            "./email",
+            "_blank",
+            "toolbar=yes,scrollbars=no,resizable=no," +
+              "width= " +
+              w +
+              ", height=" +
+              h +
+              ", top=" +
+              top +
+              ", left=" +
+              left
+          );
+        });
+
+        /** Search Button Declaration **/
+        // on Click
+        $("#btgSearchBtn").click(function () {
+          excuteSearch();
+        });
+
+        // Enter pressed
+        $("#btgTextInput").on("keyup", function (e) {
+          if (e.keyCode == 13) {
+            excuteSearch();
+          }
+        });
+
+        /** Search Duplicate Table Button Declaration **/
+        $("#duplicateBtgTableWrapper tr").click(function () {
+          excuteTableSearch($(this));
+        });
+      });
+
+      function excuteSearch() {
+        var btg = $("#btgTextInput").val();
+        console.log(btg);
+        var loc = getAcitveLocation();
+        var device = getActiveDevice();
+
+        if (completeBtg(btg)) {
+          moveHeroPage(btg, loc, device, false);
+        } else {
+          checkDuplicate(btg, loc, device, false);
+        }
+      }
+
+      function excuteTableSearch(target) {
+        var btg = target.find("td:nth-child(1)").text();
+        var loc = target.find("td:nth-child(2)").text();
+        var device = target.find("td:nth-child(3)").text();
+        moveHeroPage(target.attr("id"), loc, device, false);
+      }
+
+      function completeBtg(btg) {
+        if (btg.search("#") == -1) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+
+      function checkDuplicate(btg, loc, device, isSample) {
+        if (window.XMLHttpRequest) {
+          // code for IE7+, Firefox, Chrome, Opera, Safari
+          xmlhttp = new XMLHttpRequest();
+        } else {
+          // code for IE6, IE5
+          xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        // StatDatas Onready State
+        xmlhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            var response = this.responseText;
+            console.log(response);
+            response = JSON.parse(response);
+            duplicateProcess(response);
+            console.log(response);
+          }
+        };
+        var encode_uri = encodeURI(
+          "/checkDuplicateBtg.php?" +
+            makeUrlQuery("btg", btg) +
+            makeUrlQuery("loc", loc) +
+            makeUrlQuery("device", device) +
+            makeUrlQuery("sample", isSample)
+        );
+        xmlhttp.open("GET", encode_uri);
+        xmlhttp.send();
+      }
+
+      function duplicateProcess(response) {
+        $("#duplicateBtgTableWrapper tbody").html(""); //initiate
+
+        if (!chkValidResponse) {
+          // 			alert();
+          return;
+        }
+        var result = response["result"];
+
+        if (result.length == 1) {
+          moveHeroPage(result[0]["btg"], result[0]["loc"], result[0]["device"], false);
+          return;
+        }
+
+        $("#duplicateBtgTableWrapper").collapse("hide");
+
+        if (result.length == 0) {
+          $("#duplicateBtgTableWrapper tbody").html("<tr><td>검색된 플레이어가 없습니다.</td></tr>"); //initiate
+        } else {
+          for (var i = 0; i < result.length; i++) {
+            createDuplicateTableRow(result[i]["btg"], result[i]["hiddenBtg"], result[i]["cptPt"], result[i]["iconUrl"]);
+          }
+          // Click Button Refresh(새 엘리먼트가 추가될때마다 리프레쉬를 해줘야 한다.)
+          $("#duplicateBtgTableWrapper tr").click(function () {
+            excuteTableSearch($(this));
+          });
+
+          // 			$("body").css("overflow", "scroll");
+        }
+
+        // bootstrap에서 hide를 하면 이 함수가 작동할때까지 show가 작동하지 않는다.
+        // 따라서 딜레이를 쓸수 밖에 없었다.
+        // 주의 show, hide의 transition보다 큰 값을 딜레이로 넣을것.
+        setTimeout(function () {
+          $("#duplicateBtgTableWrapper").collapse("show");
+        }, 500);
+      }
+
+      function openNewWindow(url, toolbar, scrollbars, resizable, posX, posY, width, height, resizable) {
+        var toolbar = true2yes(toolbar);
+        var scrollbars = true2yes(scrollbars);
+        var resizable = true2yes(resizable);
+        var option =
+          "toolbar=" +
+          toolbar +
+          ", scrollbars=" +
+          scrollbars +
+          ", resizable=" +
+          resizable +
+          ", top=" +
+          posY +
+          ", left=" +
+          posX +
+          ", width=" +
+          width +
+          ", height=" +
+          height;
+
+        window.open(url, "_blank", option);
+      }
+
+      function true2yes(bool) {
+        if (bool) {
+          return "yes";
+        } else {
+          return "no";
+        }
+      }
+
+      function chkValidResponse(response) {
+        return true;
+      }
+
+      function createDuplicateTableRow(btg, hiddenBtg, cptPt, iconUrl) {
+        var iconUrl = "url('" + iconUrl + "')";
+        $("#duplicateBtgTableWrapper tbody").append(
+          '<tr id="' +
+            btg +
+            '"><td><a href="#">' +
+            hiddenBtg +
+            "</a></td><td>" +
+            cptPt +
+            '</td><td><div style="background-image:' +
+            iconUrl +
+            '"></div></td></tr>'
+        );
+      }
+
+      // Using battle Net Oauth
+      function moveHeroPage(btg, loc, device, isSample) {
+        var btg = btg.replace("#", "-");
+        //		console.log("./checkBtg.php?" + makeUrlQuery('btg', btg) + makeUrlQuery('loc', loc) + makeUrlQuery('device', device) + makeUrlQuery('sample', true));
+        //		window.location="./hero?btg=" + btg + makeUrlQuery('loc', loc) + makeUrlQuery('device', device) + makeUrlQuery('sample', isSample);
+        var form = document.createElement("form");
+        $(form).attr("action", "./hero/").attr("method", "post");
+        $(form).html(
+          '<input type="hidden" name="btg" value="' +
+            btg +
+            '" />' +
+            '<input type="hidden" name="loc" value="' +
+            loc +
+            '" />' +
+            '<input type="hidden" name="device" value="' +
+            device +
+            '" />' +
+            '<input type="hidden" name="sample" value="' +
+            isSample +
+            '" />'
+        );
+        document.body.appendChild(form);
+        $(form).submit();
+        document.body.removeChild(form);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,814 @@
+/* BeanTown */
+@font-face {
+    font-family: beantown;
+    src: url(./font/Beantown.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal
+}
+
+html{
+	font-size:10px;
+}
+
+body{
+	background-color:black;
+	color:white;
+}
+
+.border{
+	border : 1px solid cyan;
+}
+
+.number{
+	font-family: beantown;
+}
+
+.noMargin{
+	margin:0;	
+}
+
+
+/**
+ Content Box 공통영역
+ **/
+/** 컨텐츠 박스는 데이터 주제 하나를 담는 박스입니다. **/
+.contentBox {
+	background-color: #404040 ;
+	border-left: 3px solid #999999;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+/** trend title **/
+/** contentBox의 제목 **/
+.contentBox .subTitle{
+	font-size:1.8rem;
+	font-weight:bold;
+	margin-left:0.5rem;
+}
+/** trend title **/
+/** contentBox의 제목의 아이콘 **/
+.contentBox .subTitle > span{
+	font-size:1.8rem;
+	font-weight:0;
+	margin-left:0.5rem;
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+
+/**
+	Main Title
+**/
+
+#battleTag {
+	font-size:2.5rem;
+	font-weight:bold;
+	color:white;
+}
+
+ /** height를 조금 수정하고 싶다. 고정값이기 때문에 진정한 의미의 responsive가 아닌거 같음 **/
+ 
+ /**
+.mainTitle{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image:url('../img/overwatch-season-2-released-news-banner.jpg');
+	background-size : cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-radius: 5px 5px;
+}
+
+/** main title left right div(border) deprecated
+.mainTitle > div:nth-child(1), .mainTitle > div:nth-child(3){
+	height:100%;
+	flex: 1 0 auto;
+}
+**/
+#mainTitleImg{
+    flex: 0 0 auto;
+	width:61px;
+	height: 50px;
+	background-image:url('../img/0x02500000000008F3.png');
+	background-size : cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 5px 0px 5px 0px;
+}
+
+/** Main Tab Page (전체요약, 영웅상세 버튼 클릭)**/
+.mainTab{
+	margin-bottom:10px;
+}
+
+.mainTab li{
+	width:50%;
+	text-align:center;
+	height:30px;
+}
+
+#normalContentBtn, #heroContentBtn{
+	height:30px;
+}
+
+#normalContentBtn a, #heroContentBtn a{
+	padding:0;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+}
+
+#normalContentBtn a, #heroContentBtn a{
+	background-color : transparent;
+	border-bottom : 1px solid #999999;
+	color: grey;
+}
+
+#normalContentBtn.active a, #heroContentBtn.active a{
+	background-color : #404040;
+	border : 1px solid #999999;
+	color:white;
+}
+
+/** Normal Content **/
+/** Profile **/
+
+.profile .content{
+	display:flex;
+    justify-content:center;
+    margin-top : 10px;
+}
+.profile .content > .box{
+	
+	flex: 1 1 33%;
+	
+	display:flex;
+	flex-direction: column;
+	
+	overflow:hidden;
+	border-radius:2px;
+	background-color: #404040 ;
+	
+	padding-bottom:5px;
+
+}
+/** box title **/
+.profile .content > .box > div:nth-child(1){
+	flex : 0 0 auto;
+	padding-top: 5px;
+	display:flex;
+    justify-content:center;
+    align-items:center;
+	font-size:1.3rem;
+	font-weight:bold;
+}
+
+.profile .content > .box > div:nth-child(2){
+	flex : 1 1 auto;
+	display:flex;
+	justify-content:center;
+    align-items:center;
+	font-family:beantown;
+	letter-spacing: 1px;
+	font-size:2.5rem;
+	line-height:2.5rem;
+}
+
+/** 경쟁전 점수 box **/
+#box-1 > div:nth-child(2){
+    
+}
+
+/** 티어 box **/
+#box-2 > div:nth-child(2){
+	width: 100%;
+	height: 100%;
+	min-height: 40px;
+	/** background-image:url('../img/dia-badge.png'); **/
+	background-size : contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+/** 45%, 승무패**/
+#box-3 > div:nth-child(2){
+	display:block;
+	text-align:center;
+}
+#box-3 > div:nth-child(2) > div:nth-child(1) {
+	line-height: normal;
+}
+/** 45 **/
+#box-3 > div:nth-child(2) > div:nth-child(1) > span:nth-child(1){
+	
+}
+/** % **/
+#box-3 > div:nth-child(2) > div:nth-child(1) > span:nth-child(2){
+	font-size:0.5rem;
+}
+/** 승/무/패 **/
+#box-3 > div:nth-child(2) > div:nth-child(2) {
+	color:DarkGray ;
+	font-size:1.5rem;
+	line-height:1.5rem;
+}
+
+
+
+.profile .content > .divider{
+	width:1px;
+	border:1px solid grey;
+	margin-left:0.5rem;
+	margin-right:0.5rem;
+}
+
+/** most3 table **/
+.most3 table th{
+	font-size:1.5rem;
+	text-align:center;
+	vertical-align: middle;
+	background-color:DimGray  ;
+} 
+.most3 table th:nth-child(1){
+	width: 25%;
+}
+.most3 table th:nth-child(2){
+	width: 25%;
+}
+.most3 table th:nth-child(3){
+	width: 15%;
+}
+.most3 table th:nth-child(4){
+	width: 15%;
+}
+.most3 table th:nth-child(5){
+	width: 20%;
+}
+
+.most3 table > tbody > tr > td{
+	font-size:2.2rem;
+	font-family:beantown;
+	letter-spacing : 1px;
+	width: 15%;
+	text-align:center;
+	vertical-align: middle;
+}
+/** col 1 **/
+.most3 table td:nth-child(1){
+	font-family : initial;
+	letter-spacing : -1.5px;
+	font-size:1.5rem;
+	font-weight:bold;
+}
+
+.most3 table td:nth-child(1) > div:nth-child(1){
+	border-radius: 3px 0px 3px 0px;
+	background-size : cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width:60px;
+	height: 45px;
+	display:inline-block;	
+}
+.most3 table td:nth-child(1) > div:nth-child(2){
+}
+/** col 2 **/
+.most3 table td:nth-child(2){
+}
+.most3 table td:nth-child(5){
+	font-size:1.5rem;
+} 
+
+/**
+	Trend 공통영역
+**/
+
+/** trend Button group **/
+.trend-btnGroup{
+	display: flex;
+	justify-content:center;
+}
+
+.trend-btnGroup > button{
+	width:33%;
+	margin:0;
+	color:grey;
+	background-color : #404040;
+	border: #999999;
+}
+
+.trend-btnGroup > button > div:nth-child(1){
+	font-weight: bold;
+	font-size:1.5rem;
+}
+
+.trend-btnGroup > button > div:nth-child(2){
+	font-weight: bold;
+	font-size:1.2rem;
+}
+
+#trend-ystBtn:focus, #trend-todayBtn:focus, #trend-weekBtn:focus{
+	background-color : #404040;
+	outline: none;
+}
+
+#trend-ystBtn:hover, #trend-todayBtn:hover, #trend-weekBtn:hover{
+	background-color : #404040;
+	border: 1px solid DarkGray;
+	color:DarkGray;	
+}
+
+#trend-ystBtn.active, #trend-todayBtn.active, #trend-weekBtn.active{
+	background-color : #404040;
+	border: 1px solid white;
+	color:white;	
+}
+
+
+/** (공통) trend content **/
+.trend .contentBox{
+	padding-bottom:10px;	
+}
+.trend .contentBox .subContent{
+	display:flex;
+    justify-content:flex-start;
+    align-items:center;
+	margin:0;
+	padding:0;
+	margin-left:1.5rem;
+	width: 100%;
+}
+
+/** (경쟁전 점수)  ▲ ▼ **/
+#trend-cptPt > .subContent > div:nth-child(1){
+	font-size:3rem;
+	line-height:4rem;
+}
+/** (경쟁전 점수) 2135점 **/
+#trend-cptPt > .subContent > div:nth-child(2){
+	display:flex;
+    align-items:center;
+	font-size:4rem;
+	line-height:4rem;
+	margin-right: 10px;
+}
+
+/** (공통) trend content **/
+/** 라벨 **/
+.trend .contentBox > .subContent > div:nth-child(2) > #label{
+	font-size:1.2rem;
+	line-height:1.2rem;
+}
+/** (공통) trend content **/
+/** → **/
+.trend .contentBox > .subContent > div:nth-child(4){
+	display:flex;
+    align-items:center;
+	font-size:3rem;
+	line-height:2rem;
+}
+/** (공통) trend content **/
+/** 하루전(2130) → 오늘(2302) **/
+.trend .contentBox > .subContent > div:nth-child(3), 
+.trend .contentBox > .subContent > div:nth-child(5) {
+	display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.trend .contentBox > .subContent > div:nth-child(3) > .upper, 
+.trend .contentBox > .subContent > div:nth-child(5) > .upper{
+	font-size:1.5rem;
+	line-height:2rem;
+}
+/** (경쟁전 점수) 위쪽라벨 **/
+.trend .contentBox > .subContent > div:nth-child(3) > .lower, 
+.trend .contentBox > .subContent > div:nth-child(5) > .lower{
+	font-size:2rem;
+	line-height:2rem;
+}
+
+/** winRating **/
+.contentBox.winRating > .subContent {
+	display:flex;
+	align-items:flex-end;
+}
+
+.contentBox.winRating > .subContent:nth-child(1) {
+	
+}
+
+.labelNumber{
+	font-family: beantown;
+	display:flex;
+    align-items:flex-end;
+	font-size:4rem;
+	line-height:2.5rem;
+	margin-left:5px;
+}
+
+.labelNumber > span:nth-child(2){
+	font-size: 2rem;
+}
+
+
+/**
+*	Radar Content
+**/
+.radarContainer{
+	width:100%;
+}
+
+.radarContainer:after {
+  padding-top: 100%;
+  /* 16:9 ratio */
+}
+
+
+/**
+*	Radar Table Content
+**/
+
+#hero-radarTable {
+	border-style:none;
+}
+
+#hero-radarTable th{
+	text-align:center;
+	width:20%;
+}
+#hero-radarTable th:nth-child(1){
+	width:40%;
+}
+
+#hero-radarTable td{
+	text-align:center;
+	width:20%;
+	overflow:hidden;
+}
+#hero-radarTable td:nth-child(1){
+	width:20%;
+}
+
+#hero-radarTable tr:nth-child(even) > td{
+	background-color: DimGrey ;
+}
+
+/** 
+** Fixed Bottom
+ **/
+ .navbar-fixed-bottom{
+ 	/** border-top:3px solid DeepPink; **/
+ }
+ 
+ /** Button Grounp **/
+ .navbar-fixed-bottom .heroPeriodBtn-Group{
+	width:100%;
+	display: flex;
+	justify-content:center;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.heroPeriodBtn-Group > button{
+	width:30%;
+	margin:0;
+	color:grey;
+	background-color : #404040;
+	border: #999999;
+}
+
+#yesterDayBtn:focus, #todayBtn:focus, #weekBtn:focus{
+	outline: none;
+}
+
+
+
+/** Hero List **/
+#heroList li{
+	display:flex;
+}
+
+.roleContainer{
+	width : 6%;
+	height : 40px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	margin-left:5px;
+}
+
+.heroContainer{
+	width : 12%;
+	height : 40px;
+	margin-top:4px;
+	margin-left: 2px; 
+	background-color: Grey;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border: 1px solid Olive ; 
+	position:relative;
+}
+
+.heroContainer:hover{
+	height : 43px;
+	margin-top: 1px;
+	background-color: YELLOW;
+}
+
+.heroContainer.active{
+	background-color: Gold;
+}
+
+.update{
+	position: absolute;
+	top:0%;
+	left:0%;
+	/** transform: translate(-50%, -25%); **/
+	font-size : 5px;
+	font-weight: bold;
+	color: OrangeRed ;
+	visibility:hidden;
+	/** 
+	-webkit-animation: neon1 2.0s ease-in-out infinite alternate;
+	animation: neon1 2.0s ease-in-out infinite alternate;
+	**/
+}
+
+.heroNameTag{
+	visibility:hidden;
+	font-size:1rem;
+	position: absolute;
+	top:100%;
+	left:50%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+
+/** Header Group 영웅이미지랑, 라인하르트, 오늘경기결과가 나오는 곳. **/
+#heroContent-fixed-header {
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	margin-top:20px;
+	height:50px;
+	width:100%;
+}
+
+#heroContent-fixed-header .left {
+	height:100%;
+	display: flex;
+	margin-left:10px;
+	margin-bottom:10px;
+}
+#heroContent-fixed-header .right {
+	display: flex;
+	align-items:center;
+}
+
+#titleHeroImg {
+    flex: 0 0 auto;
+	width:61px;
+	height: 100%;
+	background-image:url('../img/icon-All.png');
+	background-size : cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#heroContent-fixed-header .upperText{
+	font-size:2rem;
+	height:50%;
+	font-weight: bold;
+}
+
+#heroContent-fixed-header .lowerText{
+	font-size:2rem;
+	height:50%;
+	color:black;
+	background-color:orange;
+}
+
+
+#cptPoint > div:nth-child(1){
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+    align-items:center;
+	font-size:6rem;
+	line-height:6rem;
+}
+
+#cptPtArrowLabel{
+	font-size:3rem;
+	line-height:6rem;
+}
+
+#cptPoint > div:nth-child(3){
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+	font-size:3rem;
+	line-height:2rem;
+ }
+
+#cptPoint > div:nth-child(2){
+	margin-left:1rem;
+}
+
+#cptPoint > div:nth-child(2), #cptPoint > div:nth-child(4){
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	    -ms-flex-direction:column;
+	        flex-direction:column;
+	-webkit-box-align:center;
+	    -ms-flex-align:center;
+	        align-items:center;
+	-webkit-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	font-size:1.5rem;
+	line-height:2rem;
+}
+
+#prdCptPt, #todayCptPt{
+	font-size:2rem;
+	line-height:2rem;
+}
+
+.progress{
+	margin-bottom:0;
+	color:black;
+}
+
+#winRating .labelNumber{
+	margin-left:1rem;
+}
+
+/* 상세보기 */
+.chartArea > div:nth-child(4){
+	min-height: 5rem;
+}
+
+
+/* fade in out method */ 
+#radarCanvas, #radarLoading{
+    -webkit-transition: opacity 0.2s ease-in;
+            transition: opacity 0.2s ease-in;
+}
+
+/** Deprecated **/
+.subTitle{
+	font-size:1.8rem;
+	font-weight:bold;
+	margin-left:0.5rem;
+}
+
+.subTitle > span{
+	font-size:1.8rem;
+	font-weight:0;
+	margin-left:0.5rem;
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+
+
+p {
+  text-align: center;
+  font-size: 1em;
+  margin: 20px 0 20px 0;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+p a {
+  color: #FF1177;
+  font-family: Monoton;
+  -webkit-animation: neon1 0.5s ease-in-out infinite alternate;
+  animation: neon1 0.5s ease-in-out infinite alternate;
+}
+
+p a:hover {
+  color: #FF1177;
+  -webkit-animation: none;
+  animation: ;
+}
+
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
+}
+
+@-webkit-keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+  }
+}
+
+@-webkit-keyframes neon4 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+  }
+}
+
+@-webkit-keyframes neon5 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+  }
+}
+
+@-webkit-keyframes neon6 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
+}
+/*glow for mozilla*/
+/*glow*/
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+  }
+}
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
+}
+
+@keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+  }
+}
+
+@keyframes neon4 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+  }
+}
+
+@keyframes neon5 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+  }
+}
+
+.fade-in{
+	opacity: 1;
+}
+
+.fade-out{
+	opacity: 0;
+}
