@@ -1,7 +1,6 @@
 ---
 layout: post
 subtitle: 준비편
-category: [dev, sw]
 dev-category: sw
 dev-tags: [cloud, aws]
 updatedAt:
