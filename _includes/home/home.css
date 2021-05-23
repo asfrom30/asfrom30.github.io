@@ -24,8 +24,12 @@
 
 .home-menu {
   height: 300px;
-  width: 170px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 @media only screen and (max-width: 600px) {
   .home-menu {
     width: 140px;

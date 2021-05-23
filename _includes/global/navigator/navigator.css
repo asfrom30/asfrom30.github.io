@@ -51,9 +51,12 @@ nav p {
   -ms-transform-origin: 0px 4px;
   -o-transform-origin: 0px 4px;
   transform-origin: 0px 4px;
-  -webkit-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -webkit-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  -moz-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -moz-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    -webkit-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  -moz-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    -moz-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 .line:nth-child(1) {
@@ -124,7 +127,7 @@ nav ul {
 }
 
 nav li {
-  height: 12.5%;
+  height: 14.28%;
   position: relative;
   background: #222;
   color: #fff;
