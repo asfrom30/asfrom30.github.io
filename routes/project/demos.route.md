@@ -1,6 +1,6 @@
 ---
 # title: My page
-layout: atomics/root-centered
+layout: atomics/root--centered
 permalink: /project/demos
 needFooter: false
 categoryName: hw-post

@@ -86,13 +86,11 @@ defaults:
     values:
       layout: til
       category: 'by-subject'
-  -
-    scope:
+  - scope:
       path: "_drafts" # an empty string here means all files in the project
     values:
-      layout: "draft"
-  -
-    scope:
+      layout: "post"
+  - scope:
       path: "_drafts/tils" # an empty string here means all files in the project
     values: 
       category: 'til'
