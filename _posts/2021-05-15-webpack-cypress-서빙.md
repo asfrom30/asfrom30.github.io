@@ -1,8 +1,9 @@
 ---
+category: [dev, sw]
+
 layout: post
 title: Webpack x Cypress
 subtitle: 준비편
-category: [dev, sw]
 dev-category: sw
 dev-tags: [cypress]
 ---
