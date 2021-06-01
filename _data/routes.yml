@@ -25,7 +25,7 @@
 - title: Project
   subs:
     - title: Demos
-      url: /project/demos
+      # url: /project/demos
 - title: Gallery
   subs:
     - title: Bible
