@@ -1,47 +1,31 @@
 - title: About me
   subs:
-    - title: Welcome
-      url: /router/about-me/welcome
-    - title: 기억의 습작
-      url: /router/about-me/essay
+    # - title: Welcome
+    #   url: /router/about-me/welcome
+    # - title: 기억의 습작
+    #   url: /router/about-me/essay
     - title: Flow of Thoughts
       url: /router/about-me/flow-of-thought
-    - title: Book
+    - title: Books
       url: /router/about-me/book
     - title: 言
       url: /router/about-me/words
-- title: Career
-  subs:
-    - title: Cover Letter
-      # url:
-    - title: Resume
-      # url: /router/career/resume
-    - title: Portfolio
-      # url: /router/career/portfolio
-    - title: Projects
-      # url: /router/career/portfolio
-- title: Hardware
-  subs:
-    - title: Posts
-      url: /posts/hw
 - title: Software
   subs:
-    - title: TIL
-      url: /router/devs/til
-    - title: Cheat Sheet
-      url: /router/devs/cheat-sheet
+    # - title: Cheat Sheet
+    #   url: /router/devs/cheat-sheet
     - title: Posts
       url: /posts/sw
     - title: Books
       url: /router/sw/dev-books
-    - title: Dojo
-      url: /router/sw/dojo
-- title: Third Value
+- title: Hardware
   subs:
-    - title: Camping Location
-      url: https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=8
-      external: true
-    - title: Playing Guitar
+    - title: Posts
+      url: /posts/hw
+- title: Project
+  subs:
+    - title: Demos
+      url: /project/demos
 - title: Gallery
   subs:
     - title: Bible
@@ -53,11 +37,17 @@
     - title: Writing
       url: https://www.instagram.com/explore/tags/asfrom30_writing/
       external: true
-    - title: Monologue Twitter
-      url: https://twitter.com/asfrom30_log
-      external: true
+    # - title: Monologue Twitter
+    #   url: https://twitter.com/asfrom30_log
+    #   external: true
+    # - title: Camping Location
+    #   url: https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=https://www.google.com/maps/d/u/0/edit?hl=en&mid=1hbFlT6frvqGkpOpxA7b1mW1bs7Ko4ndi&ll=35.047768050956805%2C127.13625669999999&z=8
+    #   external: true
+    # - title: Playing Guitar
 - title: Extras
   subs:
-    - title: Join my project
+    # - title: Join my project
+    - title: TIL
+      url: /router/devs/til
     - title: Posts by *
       url: /router/by-*

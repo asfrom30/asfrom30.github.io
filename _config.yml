@@ -77,24 +77,27 @@ collections:
 
 defaults:
   - scope:
+      path: "_posts"
+    values:
+      layout: post
+  - scope:
+      path: "_drafts" # an empty string here means all files in the project
+    values:
+      layout: post--draft
+  - scope:
       path: "_tils/by-date"
     values:
-      layout: til
+      layout: post--til
       category: 'by-date'
   - scope:
       path: "_tils/by-subject"
     values:
-      layout: til
+      layout: post--til
       category: 'by-subject'
-  -
-    scope:
-      path: "_drafts" # an empty string here means all files in the project
-    values:
-      layout: "draft"
-  -
-    scope:
+  - scope:
       path: "_drafts/tils" # an empty string here means all files in the project
     values: 
       category: 'til'
+
 
 
