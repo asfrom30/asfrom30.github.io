@@ -150,54 +150,33 @@ h5 {
 }
 
 p {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  padding-left: 20px;
-}
-/* 헤더 바로 뒤에 오는 p태그 인덴트 */
-/* h1 + p { padding-left: 4px !important; }
-h2 + p { padding-left: 8px !important; }
-h3 + p { padding-left: 12px !important; }
-h4 + p { padding-left: 16px !important; }
-h5 + p { padding-left: 20px !important; } */
-
-/* 헤더 바로 뒤에 오는 p태그 */
-h1 + p,
-h2 + p,
-h3 + p,
-h4 + p,
-h5 + p {
-  margin-top: 0px;
+  margin-bottom: 32px;
+  padding-left: 8px;
 }
 
-p + h1,
-ul + h1,
-ol + h1 {
+h1 {
   margin-top: 20px;
+  margin-bottom: 6px;
 }
 
-p + h2,
-ul + h2,
-ol + h2 {
-  padding-top: 14px;
+h2 {
+  margin-top: 14px;
+  margin-bottom: 6px;
 }
 
-p + h3,
-ul + h3,
-ol + h3 {
-  padding-top: 12px;
+h3 {
+  margin-top: 12px;
+  margin-bottom: 6px;
 }
 
-p + h4,
-ul + h4,
-ol + h4 {
-  padding-top: 10px;
+h4 {
+  margin-top: 10px;
+  margin-bottom: 6px;
 }
 
-p + h5,
-ul + h5,
-ol + h5 {
-  padding-top: 8px;
+h5 {
+  margin-top: 8px;
+  margin-bottom: 6px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -216,7 +195,7 @@ p {
 
 /* Block Code Style - Prism override */
 .code-toolbar {
-  padding-left: 28px;
+  padding-left: 10px;
   font-size: 15px;
 }
 
@@ -442,3 +421,18 @@ ol li {
   list-style-type: disc;
   margin-left: 24px;
 } */
+
+.image {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 0px;
+}
+
+.image--label {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 16px;
+
+  color: var(--text-color-bright-2);
+}

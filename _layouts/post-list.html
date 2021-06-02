@@ -15,7 +15,12 @@ needFooter: true
   <div class="post-list__container">
     <a href="{{post.url}}">
       <div class="post-list__title">{{post.title}}</div>
-      <div class="post-list__date">{{post.date | date_to_long_string}}</div>
+
+      {% if post.description %}
+      <div class="post-list__description">{{post.description}}</div>
+      {% endif %}
+
+      <div class="post-list__date">{{post.date | date: "%Y. %m. %d, %A"}}</div>
     </a>
   </div>
   {% endfor %}
