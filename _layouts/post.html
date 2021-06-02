@@ -20,6 +20,12 @@ needComments: true
   <!-- Padding -->
   <div style="height: 40px"></div>
 
+  <!-- description -->
+  {% if page.description %}
+  <h1>설명</h1>
+  <p style="color: whitesmoke">> {{page.description}}</p>
+  {% endif %}
+
   <!-- Content  -->
   {{ content }}
 </article>

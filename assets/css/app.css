@@ -206,16 +206,6 @@ p {
   }
 }
 
-/* Inline Code Style */
-code {
-  border-radius: 3px;
-  font-weight: 100;
-  padding: 0 3px;
-
-  color: #99e9ff;
-  background-color: var(--bg-color-light-2);
-}
-
 /* DEFAULT <a> TAG */
 a {
   color: var(--link-color);
@@ -237,7 +227,19 @@ a:hover code {
 
 /* text indent */
 
-/** CODE STYLE **/
+/* Inline Code Style */
+code {
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0 3px 3px 3px;
+
+  color: #99e9ff;
+  background-color: var(--bg-color-light-2);
+  /* background-image: linear-gradient(transparent 85%, #00fff7af, #00fff7af); */
+}
+
+/* Block Code Style */
 pre.quote {
   text-align: center;
 }
