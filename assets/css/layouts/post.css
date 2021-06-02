@@ -1,0 +1,22 @@
+/* @ POST a link*/
+.post__root a {
+  background-image: linear-gradient(transparent 85%, #00fff7af, #00fff7af);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.post__root a:hover {
+  color: white !important;
+}
+.post__root a::before {
+  /* content: "@"; */
+}
+.post__root a::after {
+  content: "";
+}
+
+.post__root li a {
+  background-size: 0%;
+}
+.post__root li a::before {
+  content: none;
+}

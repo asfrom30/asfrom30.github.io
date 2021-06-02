@@ -16,6 +16,15 @@
   border-bottom: 1px solid gray;
 }
 
+.post-list__description {
+  margin: 10px 0px 10px 0px;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 1.4em;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
 .post-list__date {
   margin-top: 10px;
   font-size: 24px;
@@ -32,27 +41,10 @@
   }
 }
 
-a:hover .post-list__title,
-a:hover .post-list__date {
+a:hover .post-list__title {
   color: #0075aa;
 }
 
-/* @ POST a link*/
-.post__root a {
-  background-image: linear-gradient(transparent 85%, #00fff7af, #00fff7af);
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-.post__root a::before {
-  content: "@";
-}
-.post__root a::after {
-  content: "";
-}
-
-.post__root li a {
-  background-size: 0%;
-}
-.post__root li a::before {
-  content: none;
+a:hover .post-list__description {
+  color: var(--text-color-bright-2);
 }

@@ -24,8 +24,8 @@
       url: /posts/hw
 - title: Project
   subs:
-    - title: Demos
-      # url: /project/demos
+    - title: archives
+      url: /project/archives
 - title: Gallery
   subs:
     - title: Bible
