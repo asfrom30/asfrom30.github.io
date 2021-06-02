@@ -1,0 +1,58 @@
+/* 
+<link rel="stylesheet" href="/assets/css/layouts/post-list.css" />
+ */
+
+/* @ POST LIST */
+.post-list__container {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.post-list__title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1em;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.post-list__date {
+  margin-top: 10px;
+  font-size: 24px;
+  color: gray;
+  line-height: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  .post-list__title {
+    font-size: 32px;
+  }
+  .post-list__date {
+    font-size: 20px;
+  }
+}
+
+a:hover .post-list__title,
+a:hover .post-list__date {
+  color: #0075aa;
+}
+
+/* @ POST a link*/
+.post__root a {
+  background-image: linear-gradient(transparent 85%, #00fff7af, #00fff7af);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.post__root a::before {
+  content: "@";
+}
+.post__root a::after {
+  content: "";
+}
+
+.post__root li a {
+  background-size: 0%;
+}
+.post__root li a::before {
+  content: none;
+}

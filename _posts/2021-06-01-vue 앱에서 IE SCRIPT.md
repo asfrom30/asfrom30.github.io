@@ -2,7 +2,6 @@
 category: [dev, sw]
 
 title: Vue 앱에서 IE SCRIPT 에러 해결하기
-subTitle: node_modules를 ES5로 트랜스파일링하기
 description: vue cli에서 번들 디펜던시(node_modules)가 Babel로 트랜스파일링 되지 않는 이유와 해결 방법에 대해서 알아보도록 합니다.
 
 assetUrl: /assets/posts/2020-03-01-reliable-component-1-settings
@@ -20,9 +19,11 @@ node_modules를 ES5로 트랜스파일링하기
 
 퇴근 한두시간 전쯤 IE에서 서비스가 동작하지 않는 것 같다는 제보를 받았습니다. 곧바로 IE 환경에서 접속해보니 `SCRIPT 1002` 에러와 함께 애플리케이션이 동작하지 않는 것을 볼 수 있었습니다.
 
+{: .image}
 ![img](/assets/posts/2021/2021-06-01-0.png)
 
-> \<IE에서 발생한 구문오류\>
+{: .image--label}
+IE에서 발생한 구문오류
 
 이전 애플리케이션 버전에서는 쿼리 파라메터를 직접 빌드했지만, 이후 버전에서 `query-string` 이라는 디펜던시를 추가하고 사용했던 것이 문제의 원인이였습니다. 곧바로 `query-string` 의 디펜던시를 제거하고 해당 함수를 직접 구현하여 서비스를 배포하였습니다.
 

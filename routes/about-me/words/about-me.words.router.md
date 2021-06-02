@@ -4,6 +4,11 @@ title: Quotes
 permalink: /router/about-me/words
 ---
 
+<link rel="stylesheet" href="/assets/css/components/radio.css" />
+<style>
+  {% include_relative about-me.words.router.css %}
+</style>
+
 <!-- liquid syntax for javascript -->
 <script>
 var all =[
@@ -69,10 +74,6 @@ var words = {
   quotes: quotes,
 }
 </script>
-
-<style>
-  {% include_relative about-me.words.router.css %}
-</style>
 
 <script>
   {% include_relative about-me.words.router.js %}
