@@ -1,15 +1,11 @@
 ---
-category: [dev, sw]
+category: [posts, sw]
 
 title: Vue 앱에서 IE SCRIPT 에러 해결하기
-description: vue cli에서 번들 디펜던시(node_modules)가 Babel로 트랜스파일링 되지 않는 이유와 해결 방법에 대해서 알아보도록 합니다.
+description: Vue CLI에서 번들 디펜던시(node_modules)가 Babel로 트랜스파일링 되지 않는 이유와 해결 방법에 대해서 알아보도록 합니다.
 
-assetUrl: /assets/posts/2020-03-01-reliable-component-1-settings
+assetUrl:
 ---
-
-# 부제
-
-node_modules를 ES5로 트랜스파일링하기
 
 # 서론
 
