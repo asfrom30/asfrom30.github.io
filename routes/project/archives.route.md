@@ -1,15 +1,11 @@
 ---
 # title: My page
 layout: atomics/root--centered
-permalink: /project/demos
+permalink: /project/archives
 needFooter: false
 categoryName: hw-post
 ---
 
-# GGEZ
+# [GGEZ](/archives/ggez)
 
-[link](/archives/ggez)
-
-# MDI
-
-[link](/archives/mdi)
+# [MDI](/archives/mdi)

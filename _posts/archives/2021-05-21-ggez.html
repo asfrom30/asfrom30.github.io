@@ -1,7 +1,10 @@
 ---
+layout: atomics/empty
 permalink: /archives/ggez
 ---
 
+{%- include head-tag.html -%}
+<!-- {%- include /global/navigator/index.html -%} -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -245,11 +248,12 @@ permalink: /archives/ggez
         var loc = getAcitveLocation();
         var device = getActiveDevice();
 
-        if (completeBtg(btg)) {
-          moveHeroPage(btg, loc, device, false);
-        } else {
-          checkDuplicate(btg, loc, device, false);
-        }
+        window.location.href = "/archives/ggez/hero";
+        // if (completeBtg(btg)) {
+        //   moveHeroPage(btg, loc, device, false);
+        // } else {
+        //   checkDuplicate(btg, loc, device, false);
+        // }
       }
 
       function excuteTableSearch(target) {
