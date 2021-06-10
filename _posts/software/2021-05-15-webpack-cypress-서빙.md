@@ -1,9 +1,10 @@
 ---
-category: [dev, sw]
+category: [posts, sw]
 
-layout: post
 title: Webpack x Cypress
-subtitle: 준비편
+subtitle:
+description: npm run e2e 명령어로 Webpack Dev Server를 기동하고 이어서 Cypress까지 기동하는 테스트 환경을 구축해봅니다.
+
 dev-category: sw
 dev-tags: [cypress]
 ---
