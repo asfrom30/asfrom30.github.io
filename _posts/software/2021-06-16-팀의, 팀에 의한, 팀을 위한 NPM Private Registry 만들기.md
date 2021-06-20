@@ -15,6 +15,8 @@ updatedAt:
 
 > 주의 : npm install을 하고 build하고 deploy되는 과정에서 코드가 공개되는 것과 같은 휴먼에러는 누구도 막을 수 없습니다. 팀에서 사용하는 secret키나 비밀번호는 절대 저장하지 않도록 하며(이것은 애플리케이션에도 저장하지 않는 원칙과 동일합니다), 명령줄 도구를 공유하거나 원래 배포 목적으로 작성된 프론트엔드 공통 컴포넌트등을 공유하도록 합니다.
 
+> CI에서 NPM PRIVATE REGISTRY에 접근하지 못하는 경우 빌드가 실패할 수 있으니 이 점도 염두해두어야 합니다.
+
 # 1. npm registry 띄우기
 
 [verdaccio에서 제공하는 docker image](https://hub.docker.com/r/verdaccio/verdaccio)를 이용합니다.
