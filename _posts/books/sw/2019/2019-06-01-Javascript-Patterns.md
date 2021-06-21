@@ -4,7 +4,7 @@ title: Javascript Patterns
 author: 스토얀 스테파노프
 category: sw-book
 bookCoverUrl: http://image.kyobobook.co.kr/images/book/xlarge/157/x9788966260157.jpg
-onReading: true
+onReading: false
 hasSummary: true
 ---
 
