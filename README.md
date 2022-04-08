@@ -8,7 +8,7 @@
 
 - install rvm
 - require ruby 2.7
-  - `$ rvm install 2.71`
+  - `$ rvm install 2.7`
 
 **Install Dependency**
 
