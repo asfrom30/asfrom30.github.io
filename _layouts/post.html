@@ -13,8 +13,9 @@ needComments: true
 <article class="post__root layout--center-focused">
   <!-- Table Of Content -->
   <div class="table-of-content">
+    {% if page.toc != false %}
     <h3>Table of Content</h3>
-    {% include toc.html html=content class="ul--right-point" %}
+    {% include toc.html html=content class="ul--right-point" %} {% endif %}
   </div>
 
   <!-- Padding -->
