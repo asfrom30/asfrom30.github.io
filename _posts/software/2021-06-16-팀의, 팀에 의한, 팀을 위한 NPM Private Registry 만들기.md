@@ -6,7 +6,7 @@ subtitle:
 description: 우리 팀만 가지고 있는 npm 저장소(https://www.npmjs.com)가 있다면 얼마나 좋을까요? 팀에서 만든 CLI나 컴포넌트를 npm package로 서로 공유하여 쉽게 다운로드 받아 사용할 수 있는 동시에 외부에 공개되지 않도록 하는 방법에 대해서 알아봅니다.
 
 dev-category: sw
-dev-tags: [cloud native, k8s]
+dev-tags: []
 
 assetUrl: /assets/posts/2020-03-01-reliable-component-1-settings
 createdAt:

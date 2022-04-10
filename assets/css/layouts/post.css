@@ -1,3 +1,103 @@
+.post__root p {
+  padding-left: 8px;
+  margin-bottom: 0px;
+}
+
+.post__root p + p, .post__root blockquote + p, .post__root ul + p, .post__root ol + p {
+  margin-top: 20px;
+}
+
+.post__root h1 {
+  margin-top: 38px;
+  margin-bottom: 6px;
+}
+
+.post__root h2 {
+  margin-top: 34px;
+  margin-bottom: 6px;
+}
+
+.post__root h3 {
+  margin-top: 30px;
+  margin-bottom: 6px;
+}
+
+/* h1,h2 바로 뒤에 오는 경우 margin 없애기 */
+/* 여기서 scss를 쓰면 좋겠넹 */
+.post__root h1 + h2 {
+  margin-top: 0px;
+}
+.post__root h1 + h3 {
+  margin-top: 0px;
+}
+.post__root h2 + h3 {
+  margin-top: 0px;
+}
+
+/** BLOCK QUOTE: Markdown Syntax : `>` **/
+.post__root blockquote {
+  margin: 12px 0px 8px 20px;
+  border-left: 4px solid rgb(127, 187, 37);
+  border-radius: 2px;
+
+  background-color: var(--bg-color-light-1);
+}
+
+/* list */
+.post__root ol,
+.post__root ul {
+  /* marg-top이 있으므로써 nested ordered list에도 모두 적용되어 간격이 더 벌어진다. (top level에만 적용해야한다.) */
+  /* margin-top: 0.4rem; */
+  /* margin-bottom: 0.4rem; */
+  margin-left: 32px; /* list-style-position: inside; */
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-indent: -16px;
+}
+
+@media only screen and (max-width: 600px) {
+  ol,
+  ul {
+    margin-left: 24px;
+  }
+}
+
+.post__root li + li {
+  margin-top: 6px;
+}
+
+.post__root ul li::before {
+  transform: translate(16px, -2px);
+}
+
+
+
+/* Block Code Style - Prism override */
+.post__root .code-toolbar {
+  padding-left: 20px;
+  padding-right: 12px;
+  font-size: 15px;
+  margin-bottom: 32px;
+}
+
+.post__root ul.ul--right-point li::before {
+  content: "▶" !important;
+  font-size: 6px;
+  transform: translate(16px, -4px);
+}
+
+.post__root ul.ul--circle li::before {
+  content: "●" !important;
+  font-size: 6px;
+  transform: translate(16px, -6px);
+}
+
+.post__root ul.ul--check-list li::before {
+  content: "✔︎" !important;
+  font-size: 6px;
+  transform: translate(16px, -4px);
+}
+
 /* @ POST a link*/
 .post__root a {
   background-image: linear-gradient(transparent 85%, #00fff7af, #00fff7af);

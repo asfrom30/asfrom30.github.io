@@ -1,7 +1,9 @@
 ---
-title: Nand2Tetris를 시작하며
-category: flow-of-thoughts
 layout: post
+category: flow-of-thoughts
+
+title: Nand2Tetris를 시작하며
+toc: false
 ---
 
 처음 프로그래밍을 공부할 때에는 나도 프로그래머에 대한 환상이 있었다. 그래서 TCP/IP를 구현하거나, 네트워크 기술들이 어떻게 동작하는지 세세하게 알아야만 비로소 프로그래머 입니다라고 말할 수 있을 것 같았다. 파일이 압축되는 방식이나 해쉬코드가 생성되는 알고리즘에 대해 알고 성능개선을 위해 조금이라도 시도를 해봤어야 프로그래머입니다라고 말할 수 있을 것 같았다.
