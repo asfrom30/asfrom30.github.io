@@ -4,6 +4,7 @@ export default {
   nav: {
     home: "Home",
     posts: "Posts",
+    popular: "Popular",
     tags: "Tags",
     about: "About",
     archives: "Archives",
@@ -21,6 +22,14 @@ export default {
     editPage: "Edit page",
     previousPost: "Previous Post",
     nextPost: "Next Post",
+    popular: "Popular",
+    recent: "Recent",
+    related: "Related",
+    aboutAuthorIntro: "Hi, I'm {{author}}.",
+    aboutAuthorLink: "More about me",
+    followIntro: "Subscribe via",
+    followRss: "RSS",
+    followOutro: ".",
   },
   pagination: {
     prev: "Prev",
@@ -46,6 +55,9 @@ export default {
 
     postsTitle: "Posts",
     postsDesc: "All the articles I've posted.",
+
+    popularTitle: "Popular",
+    popularDesc: "Popular posts and good places to start.",
 
     archivesTitle: "Archives",
     archivesDesc: "All the articles I've archived.",

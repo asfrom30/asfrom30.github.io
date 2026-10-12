@@ -36,3 +36,11 @@
 :target {
   scroll-margin-block: 1rem;
 }
+
+/* 코드는 고정폭 글꼴 (본문 글꼴은 --font-app) */
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--font-code), monospace;
+}

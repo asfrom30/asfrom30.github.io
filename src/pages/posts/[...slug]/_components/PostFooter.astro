@@ -1,0 +1,66 @@
+---
+// 글 아래 블록 (lethain.com 구성): 저자 소개 · RSS 안내 · 인기 글 / 최근 글 / 관련 글
+// RSS 링크는 set:text로 넣는다: 자식 텍스트로 쓰면 포매터가 줄을 바꿔 "RSS 로"처럼 공백이 생긴다
+import type { CollectionEntry } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getPostUrl } from "@/utils/getPostPaths";
+import { useTranslations, tplStr } from "@/i18n";
+import config from "@/config";
+
+type Post = CollectionEntry<"posts">;
+
+type Props = {
+  popular: Post[];
+  recent: Post[];
+  related: Post[];
+};
+
+const { popular, recent, related } = Astro.props;
+const locale = Astro.currentLocale ?? config.site.lang;
+const t = useTranslations(locale);
+
+const sections = [
+  { title: t.post.popular, posts: popular },
+  { title: t.post.recent, posts: recent },
+  { title: t.post.related, posts: related },
+].filter(section => section.posts.length > 0);
+---
+
+<section class="text-muted-foreground mt-8 space-y-2 text-sm leading-relaxed">
+  <p>
+    {tplStr(t.post.aboutAuthorIntro, { author: config.site.author })}{" "}
+    <a
+      href={getRelativeLocaleUrl(locale, "about")}
+      class="text-accent underline decoration-dashed underline-offset-4"
+      set:text={t.post.aboutAuthorLink}
+    />
+  </p>
+  <p>
+    {t.post.followIntro}{" "}
+    <a
+      href={getRelativeLocaleUrl(locale, "rss.xml")}
+      class="text-accent underline decoration-dashed underline-offset-4"
+      set:text={t.post.followRss}
+    /><Fragment set:text={t.post.followOutro} />
+  </p>
+</section>
+
+{
+  sections.map(section => (
+    <section class="mt-8">
+      <h2 class="text-lg font-semibold">{section.title}</h2>
+      <ul class="mt-2 list-disc space-y-1 ps-5">
+        {section.posts.map(post => (
+          <li>
+            <a
+              href={getPostUrl(post.id, post.filePath, locale)}
+              class="hover:text-accent underline decoration-dashed underline-offset-4"
+            >
+              {post.data.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))
+}

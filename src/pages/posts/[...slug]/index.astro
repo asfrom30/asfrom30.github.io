@@ -13,17 +13,32 @@ import EditPost from "./_components/EditPost.astro";
 import ShareLinks from "./_components/ShareLinks.astro";
 import BackButton from "./_components/BackButton.astro";
 import BackToTopButton from "./_components/BackToTopButton.astro";
-import AdjacentPostNav from "./_components/AdjacentPostNav.astro";
+import PostFooter from "./_components/PostFooter.astro";
+import { getUniqueTags } from "@/utils/getUniqueTags";
+import {
+  getPopularPosts,
+  getRecentPosts,
+  getRelatedPosts,
+} from "@/utils/getPostLists";
 import config from "@/config";
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
   const sortedPosts = getSortedPosts(posts);
 
+  // 태그 옆에 보일 글 수 (태그 slug → 글 수)
+  const tagCounts = Object.fromEntries(
+    getUniqueTags(posts).map(({ tag, count }) => [tag, count])
+  );
+
   return sortedPosts.map((post, index) => ({
     params: { slug: getPostSlug(post.id, post.filePath) },
     props: {
       post,
+      tagCounts,
+      popular: getPopularPosts(sortedPosts, post),
+      recent: getRecentPosts(sortedPosts, post),
+      related: getRelatedPosts(sortedPosts, post),
       prevPost:
         index > 0
           ? {
@@ -54,9 +69,13 @@ type Props = {
   post: CollectionEntry<"posts">;
   prevPost: AdjacentPost;
   nextPost: AdjacentPost;
+  tagCounts: Record<string, number>;
+  popular: CollectionEntry<"posts">[];
+  recent: CollectionEntry<"posts">[];
+  related: CollectionEntry<"posts">[];
 };
 
-const { post, prevPost, nextPost } = Astro.props;
+const { post, tagCounts, popular, recent, related } = Astro.props;
 const locale = Astro.currentLocale ?? config.site.lang;
 
 const {
@@ -132,6 +151,20 @@ const ogImage = ogImageUrl
       <EditPost {hideEditPost} {post} class="max-sm:hidden" />
     </div>
 
+    <!-- 태그는 제목 아래에, 태그별 글 수와 함께 (lethain.com 구성) -->
+    <ul class="mt-2 flex flex-wrap gap-4">
+      {
+        tags.map(tag => (
+          <Tag
+            tag={slugifyStr(tag)}
+            tagName={tag}
+            count={tagCounts[slugifyStr(tag)]}
+            size="sm"
+          />
+        ))
+      }
+    </ul>
+
     <article
       id="article"
       class:list={[
@@ -149,15 +182,9 @@ const ogImage = ogImageUrl
 
     <BackToTopButton />
 
-    <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8">
-      {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} size="sm" />)}
-    </ul>
-
     <ShareLinks />
 
-    <hr class="my-8 border-dashed" />
-
-    <AdjacentPostNav {prevPost} {nextPost} />
+    <PostFooter {popular} {recent} {related} />
   </main>
   <Footer />
 </PostLayout>

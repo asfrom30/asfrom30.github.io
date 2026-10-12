@@ -2,6 +2,7 @@ export interface UIStrings {
   nav: {
     home: string;
     posts: string;
+    popular: string;
     tags: string;
     about: string;
     archives: string;
@@ -19,6 +20,14 @@ export interface UIStrings {
     editPage: string;
     previousPost: string;
     nextPost: string;
+    popular: string;
+    recent: string;
+    related: string;
+    aboutAuthorIntro: string;
+    aboutAuthorLink: string;
+    followIntro: string;
+    followRss: string;
+    followOutro: string;
   };
   pagination: {
     prev: string;
@@ -44,6 +53,9 @@ export interface UIStrings {
 
     postsTitle: string;
     postsDesc: string;
+
+    popularTitle: string;
+    popularDesc: string;
 
     archivesTitle: string;
     archivesDesc: string;
