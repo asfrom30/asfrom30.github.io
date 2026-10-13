@@ -5,7 +5,6 @@ export default {
     home: "홈",
     posts: "글",
     popular: "인기 글",
-    tags: "태그",
     about: "소개",
     archives: "보관함",
     search: "검색",
@@ -16,7 +15,6 @@ export default {
     sharePostIntro: "공유하기:",
     sharePostOn: "{{platform}}에 공유",
     sharePostViaEmail: "이메일로 공유",
-    tagLabel: "태그",
     backToTop: "맨 위로",
     goBack: "뒤로",
     editPage: "이 글 고치기",
@@ -24,7 +22,6 @@ export default {
     nextPost: "다음 글",
     popular: "인기 글",
     recent: "최근 글",
-    related: "관련 글",
     aboutAuthorIntro: "안녕하세요, {{author}}입니다.",
     aboutAuthorLink: "저에 대해 더 보기",
     followIntro: "새 글은",
@@ -47,12 +44,6 @@ export default {
     allRightsReserved: "All rights reserved.",
   },
   pages: {
-    tagTitle: "태그",
-    tagDesc: "이 태그가 붙은 글",
-
-    tagsTitle: "태그",
-    tagsDesc: "글에 붙은 모든 태그",
-
     postsTitle: "글",
     postsDesc: "지금까지 쓴 모든 글",
 

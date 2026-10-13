@@ -1,0 +1,52 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+
+export const getStaticPaths = (async () => {
+  const services = await getCollection("services", ({ data }) => !data.draft);
+  return services.map(service => ({
+    params: { slug: service.id },
+    props: { service },
+  }));
+}) satisfies GetStaticPaths;
+
+const { service } = Astro.props;
+const { Content } = await render(service);
+---
+
+<Layout
+  title={`${service.data.title} | ${config.site.title}`}
+  description={service.data.description}
+>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main pageTitle={service.data.title} pageDesc={service.data.description}>
+    {
+      service.data.url && (
+        <p class="mb-6">
+          <a
+            href={service.data.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-accent hover:underline"
+          >
+            {service.data.url}
+          </a>
+        </p>
+      )
+    }
+    <article class="app-prose max-w-app">
+      <Content />
+    </article>
+  </Main>
+
+  <Footer />
+</Layout>

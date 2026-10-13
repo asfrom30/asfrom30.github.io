@@ -17,18 +17,21 @@
       @apply italic;
     }
 
-    p,
     strong,
-    ol,
-    ul,
-    figcaption,
-    table,
     code {
       @apply text-foreground;
     }
 
+    p,
+    ol,
+    ul,
+    figcaption,
+    table {
+      @apply text-prose;
+    }
+
     a {
-      @apply text-foreground hover:text-accent wrap-break-word decoration-dashed underline-offset-4 focus-visible:no-underline;
+      @apply text-accent hover:text-accent/60 wrap-break-word no-underline transition-colors focus-visible:underline;
     }
 
     ul {
@@ -36,7 +39,7 @@
     }
 
     li {
-      @apply marker:text-accent;
+      @apply marker:text-muted-foreground;
     }
 
     hr {
@@ -45,6 +48,24 @@
 
     img {
       @apply border-border mx-auto border;
+    }
+
+    /* 소개 페이지의 경력/학력 항목: 왼쪽 로고 + 오른쪽 글 */
+    .org {
+      @apply my-5 flex items-center gap-4;
+
+      img,
+      .org-logo {
+        @apply m-0 size-10 shrink-0 rounded-lg border-0;
+      }
+
+      .org-logo {
+        @apply bg-muted text-muted-foreground flex items-center justify-center font-bold;
+      }
+
+      p {
+        @apply m-0;
+      }
     }
 
     img[role="button"] {

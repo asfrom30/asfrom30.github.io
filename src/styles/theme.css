@@ -7,31 +7,33 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
+  --color-prose: var(--prose);
   --font-app:
-    "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
-    system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    Georgia, "Noto Serif KR", "AppleMyungjo", "Nanum Myeongjo", Times, serif;
   --font-code: var(--font-google-sans-code);
 }
 
-/* Light theme values */
+/* Light theme values: lethain.com처럼 흰 배경, 회색 본문, 파란 링크 */
 :root,
 [data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --prose: #555555;
+  --accent: #357edd;
   --accent-foreground: #ffffff;
-  --muted: #e6e6e6;
-  --muted-foreground: #6b7280;
-  --border: #ece9e9;
+  --muted: #eeeeee;
+  --muted-foreground: #808080;
+  --border: #e0e0e0;
 }
 
-/* Dark theme values */
+/* Dark theme values: 같은 톤을 어둡게 뒤집음 */
 [data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --accent-foreground: #ffffff;
-  --muted: #343f60;
-  --muted-foreground: #afb9ca;
-  --border: #ab4b08;
+  --background: #111111;
+  --foreground: #eeeeee;
+  --prose: #bbbbbb;
+  --accent: #96ccff;
+  --accent-foreground: #111111;
+  --muted: #222222;
+  --muted-foreground: #888888;
+  --border: #333333;
 }

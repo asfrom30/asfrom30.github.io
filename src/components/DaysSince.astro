@@ -1,0 +1,52 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import config from "@/config";
+
+type Props = HTMLAttributes<"span">;
+
+const { class: className, ...attrs } = Astro.props;
+const since = config.site.leftCompanyOn;
+const timezone = config.site.timezone;
+
+// 사이트 시간대 기준의 오늘 날짜(YYYY-MM-DD)에서 since까지 며칠인지 센다.
+function daysSince(date: string, tz: string, now = new Date()) {
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: tz }).format(now);
+  return Math.round((Date.parse(today) - Date.parse(date)) / 86_400_000);
+}
+
+// 빌드 시점 값을 먼저 넣고, 브라우저에서 오늘 기준으로 다시 센다.
+const days = since ? daysSince(since, timezone) : null;
+---
+
+{
+  since && days !== null && (
+    <span
+      data-days-since={since}
+      data-timezone={timezone}
+      title={`${since.replaceAll("-", ".")} 퇴사`}
+      class:list={["tabular-nums", className]}
+      {...attrs}
+    >
+      D+{days}
+    </span>
+  )
+}
+
+<script>
+  function updateDaysSince() {
+    document.querySelectorAll<HTMLElement>("[data-days-since]").forEach(el => {
+      const since = el.dataset.daysSince;
+      const tz = el.dataset.timezone;
+      if (!since || !tz) return;
+      const today = new Intl.DateTimeFormat("en-CA", {
+        timeZone: tz,
+      }).format(new Date());
+      const days = Math.round(
+        (Date.parse(today) - Date.parse(since)) / 86_400_000
+      );
+      el.textContent = `D+${days}`;
+    });
+  }
+
+  document.addEventListener("astro:page-load", updateDaysSince);
+</script>

@@ -3,8 +3,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://asfrom30.github.io/",
-    // TODO: 사이트 이름이 정해지면 바꾼다
-    title: "asfrom30",
+    title: "회사밖생존기",
     description: "김도윤의 글",
     author: "김도윤",
     profile: "https://github.com/asfrom30",
@@ -12,6 +11,7 @@ export default defineAstroPaperConfig({
     lang: "ko",
     timezone: "Asia/Seoul",
     dir: "ltr",
+    leftCompanyOn: "2024-10-31",
   },
   posts: {
     perPage: 10,

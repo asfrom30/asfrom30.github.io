@@ -19,6 +19,8 @@ interface SiteConfig {
   dir?: "ltr" | "rtl" | "auto";
   /** Google Search Console verification meta tag value */
   googleVerification?: string;
+  /** 퇴사한 날(YYYY-MM-DD). 이 날을 D+0으로 두고 지난 날수를 D+n으로 보여 준다. */
+  leftCompanyOn?: string;
 }
 
 interface PostsConfig {
@@ -115,7 +117,7 @@ type ResolvedSiteConfig = Required<
     | "ogImage"
   >
 > &
-  Pick<SiteConfig, "profile" | "googleVerification">;
+  Pick<SiteConfig, "profile" | "googleVerification" | "leftCompanyOn">;
 
 export interface ResolvedAstroPaperConfig {
   site: ResolvedSiteConfig;

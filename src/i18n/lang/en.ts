@@ -5,7 +5,6 @@ export default {
     home: "Home",
     posts: "Posts",
     popular: "Popular",
-    tags: "Tags",
     about: "About",
     archives: "Archives",
     search: "Search",
@@ -16,7 +15,6 @@ export default {
     sharePostIntro: "Share this post:",
     sharePostOn: "Share this post on {{platform}}",
     sharePostViaEmail: "Share this post via email",
-    tagLabel: "Tags",
     backToTop: "Back to top",
     goBack: "Go back",
     editPage: "Edit page",
@@ -24,7 +22,6 @@ export default {
     nextPost: "Next Post",
     popular: "Popular",
     recent: "Recent",
-    related: "Related",
     aboutAuthorIntro: "Hi, I'm {{author}}.",
     aboutAuthorLink: "More about me",
     followIntro: "Subscribe via",
@@ -47,12 +44,6 @@ export default {
     allRightsReserved: "All rights reserved.",
   },
   pages: {
-    tagTitle: "Tag",
-    tagDesc: "All the articles with the tag",
-
-    tagsTitle: "Tags",
-    tagsDesc: "All the tags used in posts.",
-
     postsTitle: "Posts",
     postsDesc: "All the articles I've posted.",
 

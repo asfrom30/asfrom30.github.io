@@ -1,5 +1,5 @@
 ---
-// 글 아래 블록 (lethain.com 구성): 저자 소개 · RSS 안내 · 인기 글 / 최근 글 / 관련 글
+// 글 아래 블록 (lethain.com 구성): 저자 소개 · RSS 안내 · 인기 글 / 최근 글
 // RSS 링크는 set:text로 넣는다: 자식 텍스트로 쓰면 포매터가 줄을 바꿔 "RSS 로"처럼 공백이 생긴다
 import type { CollectionEntry } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
@@ -12,17 +12,15 @@ type Post = CollectionEntry<"posts">;
 type Props = {
   popular: Post[];
   recent: Post[];
-  related: Post[];
 };
 
-const { popular, recent, related } = Astro.props;
+const { popular, recent } = Astro.props;
 const locale = Astro.currentLocale ?? config.site.lang;
 const t = useTranslations(locale);
 
 const sections = [
   { title: t.post.popular, posts: popular },
   { title: t.post.recent, posts: recent },
-  { title: t.post.related, posts: related },
 ].filter(section => section.posts.length > 0);
 ---
 
