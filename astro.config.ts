@@ -21,6 +21,8 @@ import config from "./astro-paper.config";
 
 export default defineConfig({
   site: config.site.url,
+  // 포트는 `my service_port`에 asfrom30.github.io 4040으로 예약돼 있다 (dev·preview 공통).
+  server: { port: 4040 },
   integrations: [
     mdx(),
     sitemap({

@@ -1,7 +1,13 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist", "public/pagefind"],
+  "exclude": [
+    "dist",
+    "public/pagefind",
+    "app",
+    "cms",
+    "asfrom30.github.io.draft"
+  ],
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],
