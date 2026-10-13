@@ -35,7 +35,7 @@
          │ main에 push
          ▼
  .github/workflows/publish.yml
-   ① publish: true인 초안을 찾는다 (필수 칸이 비면 아무것도 안 하고 실패)
+   ① publish: true인 초안을 찾는다 (필수 칸이 비었거나 draft 칸이 있으면 아무것도 안 하고 실패)
    ② publish·publishedAt 칸을 빼고 공개 저장소의 같은 이름 파일로 쓴다
         journal/ → src/content/posts/
         service/ → src/content/services/
@@ -50,6 +50,7 @@
 ```
 
 - **초안 형식:** 맨 위 정보 칸은 공개 저장소의 스키마(`src/content.config.ts`)와 같다. 그래서 옮길 때 변환하지 않고 발행용 칸만 뺀다. 자세한 형식은 초안 저장소의 `README.md`에 있다.
+- **상태값은 `publish` 하나:** 초안 저장소의 파일은 모두 초안이라 `draft` 칸을 쓰지 않는다. 공개 저장소에 들어간 파일은 사이트에 안 보여도 GitHub에서 누구나 읽을 수 있으므로, `draft` 칸이 있는 초안은 workflow가 옮기지 않는다. `publishedAt`은 상태가 아니라 발행 시각 기록이다.
 - **다시 발행:** 발행한 글을 고쳐서 `publish: true`로 다시 저장하면 공개 글을 덮어쓴다.
 - **날짜:** CMS는 `pubDatetime`을 `+09:00`을 붙여 저장한다(`input_timezone: Asia/Seoul`). 블로그 스키마는 따옴표 친 날짜 문자열도 받도록 `z.coerce.date()`를 쓴다.
 
