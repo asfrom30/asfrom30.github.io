@@ -11,8 +11,9 @@ const posts = defineCollection({
   schema: ({ image }) =>
     z.object({
       author: z.string().default(config.site.author),
-      pubDatetime: z.date(),
-      modDatetime: z.date().optional().nullable(),
+      // CMS·앱이 날짜를 따옴표 친 문자열로 써도 읽도록 coerce한다
+      pubDatetime: z.coerce.date(),
+      modDatetime: z.coerce.date().optional().nullable(),
       title: z.string(),
       featured: z.boolean().optional(),
       draft: z.boolean().optional(),
@@ -31,7 +32,7 @@ const services = defineCollection({
     title: z.string(),
     description: z.string(),
     // 서비스를 시작한 날. 목록은 최신순으로 보여 준다.
-    startDate: z.date(),
+    startDate: z.coerce.date(),
     url: z.url().optional(),
     draft: z.boolean().optional(),
   }),
