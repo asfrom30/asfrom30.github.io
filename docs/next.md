@@ -4,9 +4,9 @@
 
 ## CMS 배포
 
-- [ ] **맥미니에 올리기**: `cms/`를 빌드해 `localhost:4041`에서 계속 서빙하고, 재부팅해도 다시 켜지게 한다.
-- [ ] **Cloudflare Tunnel**: `cms.asfrom30.cloud → localhost:4041` 연결을 추가한다.
-- [ ] **Cloudflare Access**: `cms.asfrom30.cloud`를 나만 들어오게 막는다.
+- [x] **맥미니에 올리기**: nginx 이미지로 `asfrom30-github-cms` 컨테이너를 띄웠다 (`cms/.sh/build.sh`, `deploy.sh`).
+- [x] **Cloudflare Tunnel**: `cms.asfrom30.cloud → http://asfrom30-github-cms:80` 경로를 추가했다.
+- [x] **Cloudflare Access**: `cms.asfrom30.cloud`는 `asfrom30@gmail.com`만 들어온다.
 - [ ] **cms 저장소 원격 백업**: `cms/`는 로컬 git에만 있다. GitHub에 비공개 저장소로 올릴지 정한다.
 
 ## 블로그 정리
