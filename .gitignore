@@ -31,10 +31,3 @@ public/pagefind
 
 # docker compose
 compose.override.yaml
-
-# app/ 은 독립 repo (app/.git) 로 관리 — 블로그 repo 는 추적하지 않는다.
-/app/
-
-# cms.asfrom30.cloud/ (웹 CMS)와 asfrom30.github.io.draft/ (비공개 초안 저장소)도 각자 독립 repo — 블로그 repo 는 추적하지 않는다.
-/cms.asfrom30.cloud/
-/asfrom30.github.io.draft/
