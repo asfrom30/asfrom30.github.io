@@ -4,10 +4,10 @@
 
 ## CMS 배포
 
-- [x] **맥미니에 올리기**: nginx 이미지로 `asfrom30-github-cms` 컨테이너를 띄웠다 (`cms/.sh/build.sh`, `deploy.sh`).
+- [x] **맥미니에 올리기**: nginx 이미지로 `asfrom30-github-cms` 컨테이너를 띄웠다 (`cms.asfrom30.cloud/.sh/build.sh`, `deploy.sh`).
 - [x] **Cloudflare Tunnel**: `cms.asfrom30.cloud → http://asfrom30-github-cms:80` 경로를 추가했다.
 - [x] **Cloudflare Access**: `cms.asfrom30.cloud`는 `asfrom30@gmail.com`만 들어온다.
-- [ ] **cms 저장소 원격 백업**: `cms/`는 로컬 git에만 있다. GitHub에 비공개 저장소로 올릴지 정한다.
+- [ ] **cms 저장소 원격 백업**: `cms.asfrom30.cloud/`는 로컬 git에만 있다. GitHub에 비공개 저장소로 올릴지 정한다.
 
 ## 블로그 정리
 

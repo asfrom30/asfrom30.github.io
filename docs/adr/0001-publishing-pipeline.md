@@ -20,7 +20,7 @@
 
 편집 도구는 두 가지다.
 
-- **웹:** `cms/`의 Sveltia CMS. 맥미니의 nginx 컨테이너를 `cms.asfrom30.cloud`(Cloudflare Tunnel + Access)로 서빙한다.
+- **웹:** `cms.asfrom30.cloud/`의 Sveltia CMS. 맥미니의 nginx 컨테이너를 `cms.asfrom30.cloud`(Cloudflare Tunnel + Access)로 서빙한다.
 - **모바일:** `app/`의 PocketBlog 앱
 
 ## 1. md 파일이 발행되기까지

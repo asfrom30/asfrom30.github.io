@@ -19,13 +19,13 @@ export default [
   },
   { rules: { "no-console": "error" } },
   {
-    // app/, cms/, asfrom30.github.io.draft/ 는 각자 독립 repo라 블로그 검사에서 뺀다
+    // app/, cms.asfrom30.cloud/, asfrom30.github.io.draft/ 는 각자 독립 repo라 블로그 검사에서 뺀다
     ignores: [
       "dist/**",
       ".astro/**",
       "public/pagefind/**",
       "app/**",
-      "cms/**",
+      "cms.asfrom30.cloud/**",
       "asfrom30.github.io.draft/**",
     ],
   },
