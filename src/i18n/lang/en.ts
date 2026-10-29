@@ -4,7 +4,6 @@ export default {
   nav: {
     home: "Home",
     posts: "Posts",
-    popular: "Popular",
     about: "About",
     archives: "Archives",
     search: "Search",
@@ -46,9 +45,6 @@ export default {
   pages: {
     postsTitle: "Posts",
     postsDesc: "All the articles I've posted.",
-
-    popularTitle: "Popular",
-    popularDesc: "Popular posts and good places to start.",
 
     archivesTitle: "Archives",
     archivesDesc: "All the articles I've archived.",

@@ -1,0 +1,24 @@
+---
+import { sectionName } from "@/sections";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+
+// 제안서: md 파일 없이 이 파일에 직접 쓴다.
+---
+
+<Layout title={`${sectionName("proposal")} | ${config.site.title}`}>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main pageTitle={sectionName("proposal")} class="app-prose">
+    <!-- TODO: 제안서 내용을 여기에 쓴다 -->
+    <p>준비 중입니다.</p>
+  </Main>
+
+  <Footer />
+</Layout>

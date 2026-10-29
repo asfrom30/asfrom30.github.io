@@ -1,4 +1,5 @@
 ---
+import { sectionName } from "@/sections";
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
@@ -20,12 +21,12 @@ export const getStaticPaths = (async ({ paginate }) => {
 const { page } = Astro.props;
 ---
 
-<Layout title={`Journal | ${config.site.title}`}>
+<Layout title={`${sectionName("journal")} | ${config.site.title}`}>
   <Header />
 
   <Breadcrumb />
 
-  <Main pageTitle="Journal">
+  <Main pageTitle={sectionName("journal")}>
     <ul>
       {page.data.map(data => <Card {...data} />)}
     </ul>

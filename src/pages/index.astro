@@ -3,13 +3,21 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
+import PostTile from "@/components/PostTile.astro";
 import config from "@/config";
+import { getCollection } from "astro:content";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import { getPopularPosts, getRecentPosts } from "@/utils/getPostLists";
 
 const locale = Astro.currentLocale ?? config.site.lang;
 const homePath = getRelativeLocaleUrl(locale, "");
+
+// 홈: 인기 글(featured: true)을 정사각형 칸으로 깐다. 인기 글이 없으면 최근 글로 채운다.
+const sorted = getSortedPosts(await getCollection("posts"));
+const popular = getPopularPosts(sorted, undefined, 12);
+const tiles = popular.length ? popular : getRecentPosts(sorted, undefined, 12);
 ---
 
-<!-- 홈은 일단 비워 둔다. 헤더와 푸터만 보인다. -->
 <Layout>
   <Header />
   <main
@@ -18,6 +26,9 @@ const homePath = getRelativeLocaleUrl(locale, "");
     data-home-path={homePath}
     class="app-layout"
   >
+    <ul class="grid grid-cols-2 gap-3 py-6 sm:grid-cols-3 sm:gap-4">
+      {tiles.map((post, index) => <PostTile {...post} index={index} />)}
+    </ul>
   </main>
   <Footer />
 </Layout>

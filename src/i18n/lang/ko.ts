@@ -4,7 +4,6 @@ export default {
   nav: {
     home: "홈",
     posts: "글",
-    popular: "인기 글",
     about: "소개",
     archives: "보관함",
     search: "검색",
@@ -46,9 +45,6 @@ export default {
   pages: {
     postsTitle: "글",
     postsDesc: "지금까지 쓴 모든 글",
-
-    popularTitle: "인기 글",
-    popularDesc: "많이 읽힌 글과 먼저 읽어 볼 만한 글",
 
     archivesTitle: "보관함",
     archivesDesc: "모든 글을 날짜별로",

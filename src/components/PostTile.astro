@@ -1,0 +1,64 @@
+---
+// 홈 화면의 정사각형 글 칸. 글에 이미지가 있으면 첫 이미지를 배경으로, 없으면 파란색 배경으로 채운다.
+import type { CollectionEntry } from "astro:content";
+import { getPostUrl } from "@/utils/getPostPaths";
+import { toTransitionName } from "@/utils/toTransitionName";
+
+type Props = CollectionEntry<"posts"> & { index: number };
+
+const { id, data, filePath, body, index } = Astro.props;
+
+// 본문의 첫 마크다운 이미지: ![...](/media/xxx.png)
+const image = body?.match(/!\[[^\]]*\]\(([^)\s]+)\)/)?.[1];
+
+// 이미지가 없는 칸의 배경. 로고의 파란색을 차례로 쓴다.
+const COLORS = [
+  { bg: "#2b73b4", fg: "#ffffff" },
+  { bg: "#38afe1", fg: "#ffffff" },
+  { bg: "#9ed1f4", fg: "#12324f" },
+];
+const color = COLORS[index % COLORS.length];
+
+const date = new Date(data.pubDatetime).toLocaleDateString("ko-KR", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  timeZone: "Asia/Seoul",
+});
+---
+
+<li>
+  <a
+    href={getPostUrl(id, filePath, Astro.currentLocale)}
+    class="group relative flex aspect-square flex-col justify-end overflow-hidden rounded-lg p-4 focus-visible:outline-offset-2"
+    style={image
+      ? undefined
+      : `background-color:${color.bg};color:${color.fg}`}
+  >
+    {
+      image && (
+        <>
+          <img
+            src={image}
+            alt=""
+            loading="lazy"
+            class="absolute inset-0 size-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <span
+            aria-hidden="true"
+            class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"
+          />
+        </>
+      )
+    }
+    <span class:list={["relative", { "text-white": image }]}>
+      <span
+        class="line-clamp-3 text-lg leading-snug font-semibold group-hover:underline sm:text-xl"
+        transition:name={toTransitionName(data.title)}
+      >
+        {data.title}
+      </span>
+      <span class="mt-2 block text-sm opacity-80">{date}</span>
+    </span>
+  </a>
+</li>
