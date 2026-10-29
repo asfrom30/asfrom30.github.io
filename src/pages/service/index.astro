@@ -43,7 +43,7 @@ const formatMonth = (date: Date) =>
             <div class="text-muted-foreground text-sm">
               {formatMonth(data.startDate)}
             </div>
-            <p>{data.description}</p>
+            {data.description && <p>{data.description}</p>}
           </li>
         ))
       }

@@ -18,7 +18,7 @@ const posts = defineCollection({
       featured: z.boolean().optional(),
       draft: z.boolean().optional(),
       ogImage: image().or(z.string()).optional(),
-      description: z.string(),
+      description: z.string().optional(),
       canonicalURL: z.string().optional(),
       hideEditPost: z.boolean().optional(),
       timezone: z.string().optional(),
@@ -30,7 +30,7 @@ const services = defineCollection({
   loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: `./${SERVICE_PATH}` }),
   schema: z.object({
     title: z.string(),
-    description: z.string(),
+    description: z.string().optional(),
     // 서비스를 시작한 날. 목록은 최신순으로 보여 준다.
     startDate: z.coerce.date(),
     url: z.url().optional(),
